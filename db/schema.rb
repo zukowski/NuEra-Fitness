@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101117031806) do
+ActiveRecord::Schema.define(:version => 20101123205019) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -262,6 +262,15 @@ ActiveRecord::Schema.define(:version => 20101117031806) do
   create_table "product_groups_products", :id => false, :force => true do |t|
     t.integer "product_id"
     t.integer "product_group_id"
+  end
+
+  create_table "product_imports", :force => true do |t|
+    t.string   "data_file_file_name"
+    t.string   "data_file_content_type"
+    t.integer  "data_file_file_size"
+    t.datetime "data_file_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "product_option_types", :force => true do |t|
