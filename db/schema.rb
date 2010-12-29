@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101123205019) do
+ActiveRecord::Schema.define(:version => 20101219201531) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -497,6 +497,16 @@ ActiveRecord::Schema.define(:version => 20101123205019) do
   add_index "taxons", ["permalink"], :name => "index_taxons_on_permalink"
   add_index "taxons", ["taxonomy_id"], :name => "index_taxons_on_taxonomy_id"
 
+  create_table "tokenized_permissions", :force => true do |t|
+    t.integer  "permissable_id"
+    t.string   "permissable_type"
+    t.string   "token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
+
   create_table "trackers", :force => true do |t|
     t.string   "environment"
     t.string   "analytics_id"
@@ -507,30 +517,30 @@ ActiveRecord::Schema.define(:version => 20101123205019) do
 
   create_table "users", :force => true do |t|
     t.string   "email"
-    t.string   "crypted_password",          :limit => 128
-    t.string   "salt",                      :limit => 128
+    t.string   "encrypted_password",   :limit => 128
+    t.string   "password_salt",        :limit => 128
     t.string   "remember_token"
-    t.string   "remember_token_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "persistence_token"
-    t.string   "single_access_token"
+    t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "login_count",                              :default => 0, :null => false
-    t.integer  "failed_login_count",                       :default => 0, :null => false
+    t.integer  "sign_in_count",                       :default => 0, :null => false
+    t.integer  "failed_attempts",                     :default => 0, :null => false
     t.datetime "last_request_at"
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
-    t.string   "current_login_ip"
-    t.string   "last_login_ip"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.string   "login"
     t.integer  "ship_address_id"
     t.integer  "bill_address_id"
-    t.string   "openid_identifier"
-    t.string   "api_key",                   :limit => 40
+    t.string   "authentication_token"
+    t.string   "unlock_token"
+    t.datetime "locked_at"
+    t.datetime "remember_created_at"
   end
 
-  add_index "users", ["openid_identifier"], :name => "index_users_on_openid_identifier"
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
   create_table "variants", :force => true do |t|
