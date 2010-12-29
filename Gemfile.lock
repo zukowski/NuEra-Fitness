@@ -37,6 +37,10 @@ GEM
     arel (2.0.6)
     authlogic (2.1.6)
       activesupport
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     braintree (2.6.2)
       builder
     builder (2.1.2)
@@ -149,12 +153,14 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
     will_paginate (3.0.pre2)
+    xml-simple (1.0.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   annotate-models
+  aws-s3
   compass
   factory_girl_rails
   faker
