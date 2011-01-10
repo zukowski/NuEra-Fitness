@@ -1,0 +1,3594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+	<customer>
+		<Customer_ID><![CDATA[1]]></Customer_ID>
+		<Customer_Name><![CDATA[Daniel Zukowski]]></Customer_Name>
+		<First_Name><![CDATA[Daniel]]></First_Name>
+		<Last_Name><![CDATA[Zukowski]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[daniel.zukowski@gmail.com]]></Email>
+		<Phone><![CDATA[9703726691]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[04/08/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[1]]></Address_ID>
+				<Address_Name><![CDATA[Daniel Zukowski]]></Address_Name>
+				<Address_First_Name><![CDATA[Daniel]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Zukowski]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[123 Main St]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Boulder]]></CitySuburb>
+				<StateProvince><![CDATA[Colorado]]></StateProvince>
+				<State_Abbreviation><![CDATA[CO]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[80302]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[9703726691]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[4]]></Address_ID>
+				<Address_Name><![CDATA[Anthony Rochester]]></Address_Name>
+				<Address_First_Name><![CDATA[Anthony]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Rochester]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1651 Washington St #32]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Denver]]></CitySuburb>
+				<StateProvince><![CDATA[Colorado]]></StateProvince>
+				<State_Abbreviation><![CDATA[CO]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[80203]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[6088436668]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[2]]></Customer_ID>
+		<Customer_Name><![CDATA[Bryce Luken]]></Customer_Name>
+		<First_Name><![CDATA[Bryce]]></First_Name>
+		<Last_Name><![CDATA[Luken]]></Last_Name>
+		<Company><![CDATA[Tier 57 Partnership]]></Company>
+		<Email><![CDATA[bryce.luken@gmail.com]]></Email>
+		<Phone><![CDATA[719-314-8657]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[05/25/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[2]]></Address_ID>
+				<Address_Name><![CDATA[Bryce Luken]]></Address_Name>
+				<Address_First_Name><![CDATA[Bryce]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Luken]]></Address_Last_Name>
+				<Address_Company><![CDATA[Tier 57 Partnership]]></Address_Company>
+				<Address_Line_1><![CDATA[11775 La Cienega Blvd #2324]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Los Angeles ]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[90045]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[719-314-8657]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[3]]></Address_ID>
+				<Address_Name><![CDATA[Bryce Luken]]></Address_Name>
+				<Address_First_Name><![CDATA[Bryce]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Luken]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1419 Manhattan Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Hermosa Beach]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[90254]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[719-314-8657]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[3]]></Customer_ID>
+		<Customer_Name><![CDATA[Jason Belvill]]></Customer_Name>
+		<First_Name><![CDATA[Jason]]></First_Name>
+		<Last_Name><![CDATA[Belvill]]></Last_Name>
+		<Company><![CDATA[Tier 57]]></Company>
+		<Email><![CDATA[jbelvill@hotmail.com]]></Email>
+		<Phone><![CDATA[719 360-6500]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[05/26/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[4]]></Customer_ID>
+		<Customer_Name><![CDATA[Robert Mickey]]></Customer_Name>
+		<First_Name><![CDATA[Robert]]></First_Name>
+		<Last_Name><![CDATA[Mickey]]></Last_Name>
+		<Company><![CDATA[MoffFIT Personal Training]]></Company>
+		<Email><![CDATA[b.mickey24@gmail.com]]></Email>
+		<Phone><![CDATA[847-951-0455]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[06/26/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[5]]></Address_ID>
+				<Address_Name><![CDATA[Robert Mickey]]></Address_Name>
+				<Address_First_Name><![CDATA[Robert]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Mickey]]></Address_Last_Name>
+				<Address_Company><![CDATA[MoffFIT Personal Training]]></Address_Company>
+				<Address_Line_1><![CDATA[10389 Vine St.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Huntley]]></CitySuburb>
+				<StateProvince><![CDATA[Illinois]]></StateProvince>
+				<State_Abbreviation><![CDATA[IL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[60142]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[847-951-0455]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[6]]></Address_ID>
+				<Address_Name><![CDATA[James Moffett]]></Address_Name>
+				<Address_First_Name><![CDATA[James]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Moffett]]></Address_Last_Name>
+				<Address_Company><![CDATA[MoffFIT Personal Training]]></Address_Company>
+				<Address_Line_1><![CDATA[10389 Vine St.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Huntley]]></CitySuburb>
+				<StateProvince><![CDATA[Illinois]]></StateProvince>
+				<State_Abbreviation><![CDATA[IL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[60142]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[847-951-0455]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[5]]></Customer_ID>
+		<Customer_Name><![CDATA[Robert Heieck]]></Customer_Name>
+		<First_Name><![CDATA[Robert]]></First_Name>
+		<Last_Name><![CDATA[Heieck]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[robertheieck@gmail.com]]></Email>
+		<Phone><![CDATA[310-426-0324]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[07/02/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[7]]></Address_ID>
+				<Address_Name><![CDATA[Robert Heieck]]></Address_Name>
+				<Address_First_Name><![CDATA[Robert]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Heieck]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1100 manhattan ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[suite 203]]></Address_Line_2>
+				<CitySuburb><![CDATA[manhattan beach]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[90266]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[310-426-0324]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[6]]></Customer_ID>
+		<Customer_Name><![CDATA[katye loughery]]></Customer_Name>
+		<First_Name><![CDATA[katye]]></First_Name>
+		<Last_Name><![CDATA[loughery]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[katyeloughery@yahoo.com]]></Email>
+		<Phone><![CDATA[609 737 1512]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Website Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[07/11/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[8]]></Address_ID>
+				<Address_Name><![CDATA[katye loughery]]></Address_Name>
+				<Address_First_Name><![CDATA[katye]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[loughery]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[19 Hallett Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[pennington]]></CitySuburb>
+				<StateProvince><![CDATA[New Jersey]]></StateProvince>
+				<State_Abbreviation><![CDATA[NJ]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[08534]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[609 737 1512]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[7]]></Customer_ID>
+		<Customer_Name><![CDATA[Leslie ]]></Customer_Name>
+		<First_Name><![CDATA[Leslie]]></First_Name>
+		<Last_Name><![CDATA[]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[leslie0713@hotmail.com]]></Email>
+		<Phone><![CDATA[]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[eBay Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[07/12/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[8]]></Customer_ID>
+		<Customer_Name><![CDATA[Michael  Weyer]]></Customer_Name>
+		<First_Name><![CDATA[Michael ]]></First_Name>
+		<Last_Name><![CDATA[Weyer]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[flavorex@aol.com]]></Email>
+		<Phone><![CDATA[]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[eBay Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[07/14/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[9]]></Customer_ID>
+		<Customer_Name><![CDATA[Anthony Soto]]></Customer_Name>
+		<First_Name><![CDATA[Anthony]]></First_Name>
+		<Last_Name><![CDATA[Soto]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[Asoto620@Yahoo.com]]></Email>
+		<Phone><![CDATA[845-674-2218]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Website Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[07/18/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[9]]></Address_ID>
+				<Address_Name><![CDATA[Anthony Soto]]></Address_Name>
+				<Address_First_Name><![CDATA[Anthony]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Soto]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[3 Commonwealth ave. APT. TH25]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Attleboro]]></CitySuburb>
+				<StateProvince><![CDATA[Massachusetts]]></StateProvince>
+				<State_Abbreviation><![CDATA[MA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[02703]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[845-674-2218]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[10]]></Customer_ID>
+		<Customer_Name><![CDATA[Devin Walsh]]></Customer_Name>
+		<First_Name><![CDATA[Devin]]></First_Name>
+		<Last_Name><![CDATA[Walsh]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[dwalsh19@cox.net]]></Email>
+		<Phone><![CDATA[6178699085]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Website Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[07/19/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[10]]></Address_ID>
+				<Address_Name><![CDATA[Devin Walsh]]></Address_Name>
+				<Address_First_Name><![CDATA[Devin]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Walsh]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[9166 East Maple lane]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Scottsdale]]></CitySuburb>
+				<StateProvince><![CDATA[Arizona]]></StateProvince>
+				<State_Abbreviation><![CDATA[AZ]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[85255]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[6178699085]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[11]]></Customer_ID>
+		<Customer_Name><![CDATA[LaClita Robson]]></Customer_Name>
+		<First_Name><![CDATA[LaClita]]></First_Name>
+		<Last_Name><![CDATA[Robson]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[laclita@me.com]]></Email>
+		<Phone><![CDATA[7705360722]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Website Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[07/20/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[11]]></Address_ID>
+				<Address_Name><![CDATA[LaClita Robson]]></Address_Name>
+				<Address_First_Name><![CDATA[LaClita]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Robson]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[3585 Tanners Mill Circle]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Gainesville]]></CitySuburb>
+				<StateProvince><![CDATA[Georgia]]></StateProvince>
+				<State_Abbreviation><![CDATA[GA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[30507]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[7705360722]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[12]]></Customer_ID>
+		<Customer_Name><![CDATA[Seth Baer]]></Customer_Name>
+		<First_Name><![CDATA[Seth]]></First_Name>
+		<Last_Name><![CDATA[Baer]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[sethbaer82@gmail.com]]></Email>
+		<Phone><![CDATA[910-750-0431]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[07/25/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[12]]></Address_ID>
+				<Address_Name><![CDATA[Seth Baer]]></Address_Name>
+				<Address_First_Name><![CDATA[Seth]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Baer]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1627 Butler Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Midway Park]]></CitySuburb>
+				<StateProvince><![CDATA[North Carolina]]></StateProvince>
+				<State_Abbreviation><![CDATA[NC]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[28544]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[910-750-0431]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[13]]></Customer_ID>
+		<Customer_Name><![CDATA[Herman Gill]]></Customer_Name>
+		<First_Name><![CDATA[Herman]]></First_Name>
+		<Last_Name><![CDATA[Gill]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[hgill@polarsec.com]]></Email>
+		<Phone><![CDATA[905-891-2929]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[07/29/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[13]]></Address_ID>
+				<Address_Name><![CDATA[Herman Gill]]></Address_Name>
+				<Address_First_Name><![CDATA[Herman]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Gill]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[638 Cranleigh Court]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Mississauga]]></CitySuburb>
+				<StateProvince><![CDATA[Ontario]]></StateProvince>
+				<State_Abbreviation><![CDATA[ON]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[L5H4M5]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[905-891-2929]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[14]]></Customer_ID>
+		<Customer_Name><![CDATA[Rodd Granger]]></Customer_Name>
+		<First_Name><![CDATA[Rodd]]></First_Name>
+		<Last_Name><![CDATA[Granger]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[roddgranger@hotmail.com]]></Email>
+		<Phone><![CDATA[303 419-6159]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[07/30/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[14]]></Address_ID>
+				<Address_Name><![CDATA[Rodd Granger]]></Address_Name>
+				<Address_First_Name><![CDATA[Rodd]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Granger]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[10710 Yates Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Westminster]]></CitySuburb>
+				<StateProvince><![CDATA[Colorado]]></StateProvince>
+				<State_Abbreviation><![CDATA[CO]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[80031]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[303 419-6159]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[15]]></Customer_ID>
+		<Customer_Name><![CDATA[gunnar olson]]></Customer_Name>
+		<First_Name><![CDATA[gunnar]]></First_Name>
+		<Last_Name><![CDATA[olson]]></Last_Name>
+		<Company><![CDATA[golifefitness]]></Company>
+		<Email><![CDATA[olson.gunnar@gmail.com]]></Email>
+		<Phone><![CDATA[2395641616]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/03/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[15]]></Address_ID>
+				<Address_Name><![CDATA[gunnar olson]]></Address_Name>
+				<Address_First_Name><![CDATA[gunnar]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[olson]]></Address_Last_Name>
+				<Address_Company><![CDATA[golifefitness]]></Address_Company>
+				<Address_Line_1><![CDATA[1947 holiday lane ]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[naples]]></CitySuburb>
+				<StateProvince><![CDATA[Florida]]></StateProvince>
+				<State_Abbreviation><![CDATA[FL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[34104]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2395641616]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[16]]></Customer_ID>
+		<Customer_Name><![CDATA[Chad Haas]]></Customer_Name>
+		<First_Name><![CDATA[Chad]]></First_Name>
+		<Last_Name><![CDATA[Haas]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[chaas@twns.com]]></Email>
+		<Phone><![CDATA[6023619568]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[08/04/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[17]]></Customer_ID>
+		<Customer_Name><![CDATA[FREDERIC GUEVENEUX]]></Customer_Name>
+		<First_Name><![CDATA[FREDERIC]]></First_Name>
+		<Last_Name><![CDATA[GUEVENEUX]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[fredgueveneux@yahoo.fr]]></Email>
+		<Phone><![CDATA[5144662506]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/05/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[16]]></Address_ID>
+				<Address_Name><![CDATA[FREDERIC GUEVENEUX]]></Address_Name>
+				<Address_First_Name><![CDATA[FREDERIC]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[GUEVENEUX]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[846 AV MONT ROYAL EST]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[MONTREAL]]></CitySuburb>
+				<StateProvince><![CDATA[Quebec]]></StateProvince>
+				<State_Abbreviation><![CDATA[QC]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[H2J1X1]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[5144662506]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[18]]></Customer_ID>
+		<Customer_Name><![CDATA[Antonio Reyes]]></Customer_Name>
+		<First_Name><![CDATA[Antonio]]></First_Name>
+		<Last_Name><![CDATA[Reyes]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[AReyes5433@gmail.com]]></Email>
+		<Phone><![CDATA[3615379591]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/06/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[17]]></Address_ID>
+				<Address_Name><![CDATA[Antonio Reyes]]></Address_Name>
+				<Address_First_Name><![CDATA[Antonio]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Reyes]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[PO BOX 788]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Portland]]></CitySuburb>
+				<StateProvince><![CDATA[Texas]]></StateProvince>
+				<State_Abbreviation><![CDATA[TX]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[78374]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3615379591]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[18]]></Address_ID>
+				<Address_Name><![CDATA[Antonio Reyes]]></Address_Name>
+				<Address_First_Name><![CDATA[Antonio]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Reyes]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[400 FM 2986]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Gregory]]></CitySuburb>
+				<StateProvince><![CDATA[Texas]]></StateProvince>
+				<State_Abbreviation><![CDATA[TX]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[78359]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3615379591]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[19]]></Customer_ID>
+		<Customer_Name><![CDATA[Antonio Reyes]]></Customer_Name>
+		<First_Name><![CDATA[Antonio]]></First_Name>
+		<Last_Name><![CDATA[Reyes]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[areyes39@mydmc.delmar.edu]]></Email>
+		<Phone><![CDATA[3618162560]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[08/06/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[20]]></Customer_ID>
+		<Customer_Name><![CDATA[James Truskin]]></Customer_Name>
+		<First_Name><![CDATA[James]]></First_Name>
+		<Last_Name><![CDATA[Truskin]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[james.truskin@hotmail.com]]></Email>
+		<Phone><![CDATA[7342760373]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/10/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[19]]></Address_ID>
+				<Address_Name><![CDATA[James Truskin]]></Address_Name>
+				<Address_First_Name><![CDATA[James]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Truskin]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[101 Curry Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[Unit 402]]></Address_Line_2>
+				<CitySuburb><![CDATA[Royal Oak]]></CitySuburb>
+				<StateProvince><![CDATA[Michigan]]></StateProvince>
+				<State_Abbreviation><![CDATA[MI]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[48067]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[7342760373]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[20]]></Address_ID>
+				<Address_Name><![CDATA[James Truskin]]></Address_Name>
+				<Address_First_Name><![CDATA[James]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Truskin]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[806 Estrada]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Belleville]]></CitySuburb>
+				<StateProvince><![CDATA[Michigan]]></StateProvince>
+				<State_Abbreviation><![CDATA[MI]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[48111]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[7342760373]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[21]]></Customer_ID>
+		<Customer_Name><![CDATA[steve drury]]></Customer_Name>
+		<First_Name><![CDATA[steve]]></First_Name>
+		<Last_Name><![CDATA[drury]]></Last_Name>
+		<Company><![CDATA[golder ranch fire district]]></Company>
+		<Email><![CDATA[sdrury@golderranchfire.org]]></Email>
+		<Phone><![CDATA[5203071030]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/12/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[21]]></Address_ID>
+				<Address_Name><![CDATA[steve drury]]></Address_Name>
+				<Address_First_Name><![CDATA[steve]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[drury]]></Address_Last_Name>
+				<Address_Company><![CDATA[golder ranch fire district]]></Address_Company>
+				<Address_Line_1><![CDATA[10266 n. oak knoll ln]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[tucson]]></CitySuburb>
+				<StateProvince><![CDATA[Arizona]]></StateProvince>
+				<State_Abbreviation><![CDATA[AZ]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[85739]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[5203071030]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[22]]></Customer_ID>
+		<Customer_Name><![CDATA[John Taylor]]></Customer_Name>
+		<First_Name><![CDATA[John]]></First_Name>
+		<Last_Name><![CDATA[Taylor]]></Last_Name>
+		<Company><![CDATA[CJSOAC]]></Company>
+		<Email><![CDATA[john.taylor@cfsocc.soccent.centcom.mil]]></Email>
+		<Phone><![CDATA[318-436-5097]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[22]]></Address_ID>
+				<Address_Name><![CDATA[John Taylor]]></Address_Name>
+				<Address_First_Name><![CDATA[John]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Taylor]]></Address_Last_Name>
+				<Address_Company><![CDATA[CJSOAC]]></Address_Company>
+				<Address_Line_1><![CDATA[515 AEW/ CJSOAC SG]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[APO]]></CitySuburb>
+				<StateProvince><![CDATA[Armed Forces Middle East]]></StateProvince>
+				<State_Abbreviation><![CDATA[AM]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[09309]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[318-436-5097]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[23]]></Customer_ID>
+		<Customer_Name><![CDATA[Warren Lanier]]></Customer_Name>
+		<First_Name><![CDATA[Warren]]></First_Name>
+		<Last_Name><![CDATA[Lanier]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[fivemeters@hotmail.com]]></Email>
+		<Phone><![CDATA[858-342-1541]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/16/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[23]]></Address_ID>
+				<Address_Name><![CDATA[Warren Lanier]]></Address_Name>
+				<Address_First_Name><![CDATA[Warren]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Lanier]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[148 Madison Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[San Rafael]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[94903]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[858-342-1541]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[24]]></Customer_ID>
+		<Customer_Name><![CDATA[Chris Christie]]></Customer_Name>
+		<First_Name><![CDATA[Chris]]></First_Name>
+		<Last_Name><![CDATA[Christie]]></Last_Name>
+		<Company><![CDATA[Studio Bootcamp]]></Company>
+		<Email><![CDATA[daxon.c@shaw.ca]]></Email>
+		<Phone><![CDATA[403-880-3305]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[08/16/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[25]]></Customer_ID>
+		<Customer_Name><![CDATA[Sarah Jaros]]></Customer_Name>
+		<First_Name><![CDATA[Sarah]]></First_Name>
+		<Last_Name><![CDATA[Jaros]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[sejaros@aol.com]]></Email>
+		<Phone><![CDATA[630 978 2083]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/18/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[24]]></Address_ID>
+				<Address_Name><![CDATA[Sarah Jaros]]></Address_Name>
+				<Address_First_Name><![CDATA[Sarah]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Jaros]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1946 Wisteria Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Aurora]]></CitySuburb>
+				<StateProvince><![CDATA[Illinois]]></StateProvince>
+				<State_Abbreviation><![CDATA[IL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[60503]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[630 978 2083]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[26]]></Customer_ID>
+		<Customer_Name><![CDATA[David Coppage]]></Customer_Name>
+		<First_Name><![CDATA[David]]></First_Name>
+		<Last_Name><![CDATA[Coppage]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[functionalfitnesstx@live.com]]></Email>
+		<Phone><![CDATA[8323317684]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/19/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[25]]></Address_ID>
+				<Address_Name><![CDATA[David Coppage]]></Address_Name>
+				<Address_First_Name><![CDATA[David]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Coppage]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[2705 Sunshade Ct]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Pearland]]></CitySuburb>
+				<StateProvince><![CDATA[Texas]]></StateProvince>
+				<State_Abbreviation><![CDATA[TX]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[77584]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[8323317684]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[27]]></Customer_ID>
+		<Customer_Name><![CDATA[shondelle solomon]]></Customer_Name>
+		<First_Name><![CDATA[shondelle]]></First_Name>
+		<Last_Name><![CDATA[solomon]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[shondelle@synergizeweightloss.com]]></Email>
+		<Phone><![CDATA[3057852458]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[08/20/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[26]]></Address_ID>
+				<Address_Name><![CDATA[shondelle solomon]]></Address_Name>
+				<Address_First_Name><![CDATA[shondelle]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[solomon]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1200 north federal highway]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[hollywood]]></CitySuburb>
+				<StateProvince><![CDATA[Florida]]></StateProvince>
+				<State_Abbreviation><![CDATA[FL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[33020]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3057852458]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[28]]></Customer_ID>
+		<Customer_Name><![CDATA[Nicholas Bozine]]></Customer_Name>
+		<First_Name><![CDATA[Nicholas]]></First_Name>
+		<Last_Name><![CDATA[Bozine]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[nbjr@tsfpi.net]]></Email>
+		<Phone><![CDATA[856-535-0221]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Website Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[08/30/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[27]]></Address_ID>
+				<Address_Name><![CDATA[Nicholas Bozine]]></Address_Name>
+				<Address_First_Name><![CDATA[Nicholas]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Bozine]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[322 Haines Avenue]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Barrington]]></CitySuburb>
+				<StateProvince><![CDATA[New Jersey]]></StateProvince>
+				<State_Abbreviation><![CDATA[NJ]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[08007]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[856-535-0221]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[29]]></Customer_ID>
+		<Customer_Name><![CDATA[Richard Kice]]></Customer_Name>
+		<First_Name><![CDATA[Richard]]></First_Name>
+		<Last_Name><![CDATA[Kice]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jikharra@yahoo.com]]></Email>
+		<Phone><![CDATA[947-266-3413]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Website Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[08/31/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[28]]></Address_ID>
+				<Address_Name><![CDATA[Richard Kice]]></Address_Name>
+				<Address_First_Name><![CDATA[Richard]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Kice]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[9618 Discovery Rise]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Converse]]></CitySuburb>
+				<StateProvince><![CDATA[Texas]]></StateProvince>
+				<State_Abbreviation><![CDATA[TX]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[78109]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[937-266-3413]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[30]]></Customer_ID>
+		<Customer_Name><![CDATA[Nicholas  Pardon]]></Customer_Name>
+		<First_Name><![CDATA[Nicholas ]]></First_Name>
+		<Last_Name><![CDATA[Pardon]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[nicholas@restorationmedia.com]]></Email>
+		<Phone><![CDATA[949-232-6425]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[09/01/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[31]]></Customer_ID>
+		<Customer_Name><![CDATA[Ryan Hawk]]></Customer_Name>
+		<First_Name><![CDATA[Ryan]]></First_Name>
+		<Last_Name><![CDATA[Hawk]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[ryan.hawk@gmail.com]]></Email>
+		<Phone><![CDATA[4254435267]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Website Purchase]]></Customer_Group>
+		<Date_Joined><![CDATA[09/01/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[29]]></Address_ID>
+				<Address_Name><![CDATA[Ryan Hawk]]></Address_Name>
+				<Address_First_Name><![CDATA[Ryan]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Hawk]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[214 Mesa Loop]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[San Antonio]]></CitySuburb>
+				<StateProvince><![CDATA[Texas]]></StateProvince>
+				<State_Abbreviation><![CDATA[TX]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[78258]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[4254435267]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[32]]></Customer_ID>
+		<Customer_Name><![CDATA[Justin Misko]]></Customer_Name>
+		<First_Name><![CDATA[Justin]]></First_Name>
+		<Last_Name><![CDATA[Misko]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jdmisko@yahoo.com]]></Email>
+		<Phone><![CDATA[]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[09/03/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[30]]></Address_ID>
+				<Address_Name><![CDATA[Justin Misko]]></Address_Name>
+				<Address_First_Name><![CDATA[Justin]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Misko]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[6921 Bernese Blvd]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Lincoln]]></CitySuburb>
+				<StateProvince><![CDATA[Nebraska]]></StateProvince>
+				<State_Abbreviation><![CDATA[NE]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[68516]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[402-499-5938]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[36]]></Customer_ID>
+		<Customer_Name><![CDATA[Seth  Cameron]]></Customer_Name>
+		<First_Name><![CDATA[Seth ]]></First_Name>
+		<Last_Name><![CDATA[Cameron]]></Last_Name>
+		<Company><![CDATA[Prince William Wrestling Club]]></Company>
+		<Email><![CDATA[camerosw@pwcs.edu]]></Email>
+		<Phone><![CDATA[703-887-1572]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/14/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[31]]></Address_ID>
+				<Address_Name><![CDATA[Seth  Cameron]]></Address_Name>
+				<Address_First_Name><![CDATA[Seth ]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Cameron]]></Address_Last_Name>
+				<Address_Company><![CDATA[Prince William Wrestling Club]]></Address_Company>
+				<Address_Line_1><![CDATA[11125 Luxberry Ct]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Manassas]]></CitySuburb>
+				<StateProvince><![CDATA[Virginia]]></StateProvince>
+				<State_Abbreviation><![CDATA[VA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[20109]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[703-887-1572]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[34]]></Customer_ID>
+		<Customer_Name><![CDATA[Trevor Cook]]></Customer_Name>
+		<First_Name><![CDATA[Trevor]]></First_Name>
+		<Last_Name><![CDATA[Cook]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[trevormcm@hotmail.com]]></Email>
+		<Phone><![CDATA[]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[09/13/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[35]]></Customer_ID>
+		<Customer_Name><![CDATA[Robin Luken]]></Customer_Name>
+		<First_Name><![CDATA[Robin]]></First_Name>
+		<Last_Name><![CDATA[Luken]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[lukenrb@msn.com]]></Email>
+		<Phone><![CDATA[805-736-0887]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[09/13/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[37]]></Customer_ID>
+		<Customer_Name><![CDATA[Darren Savella]]></Customer_Name>
+		<First_Name><![CDATA[Darren]]></First_Name>
+		<Last_Name><![CDATA[Savella]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[keola.monavie@gmail.com]]></Email>
+		<Phone><![CDATA[310.633.4707]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[32]]></Address_ID>
+				<Address_Name><![CDATA[Darren Savella]]></Address_Name>
+				<Address_First_Name><![CDATA[Darren]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Savella]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[3430 S. Centinela]]></Address_Line_1>
+				<Address_Line_2><![CDATA[#1]]></Address_Line_2>
+				<CitySuburb><![CDATA[Los Angeles]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[90066]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[310.633.4707]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[33]]></Address_ID>
+				<Address_Name><![CDATA[Darren Savella]]></Address_Name>
+				<Address_First_Name><![CDATA[Darren]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Savella]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[21 Beverly Park]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Beverly Hills]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[90210]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[310.633.47070]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[38]]></Customer_ID>
+		<Customer_Name><![CDATA[Leah kilchrist]]></Customer_Name>
+		<First_Name><![CDATA[Leah]]></First_Name>
+		<Last_Name><![CDATA[kilchrist]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[lhkilchrist@me.com]]></Email>
+		<Phone><![CDATA[337-356-7844]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[34]]></Address_ID>
+				<Address_Name><![CDATA[Leah kilchrist]]></Address_Name>
+				<Address_First_Name><![CDATA[Leah]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[kilchrist]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[404 N. Wilderness Trail]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Carencro]]></CitySuburb>
+				<StateProvince><![CDATA[Louisiana]]></StateProvince>
+				<State_Abbreviation><![CDATA[LA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[70520]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[337-356-7844]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[39]]></Customer_ID>
+		<Customer_Name><![CDATA[Reachel Bright]]></Customer_Name>
+		<First_Name><![CDATA[Reachel]]></First_Name>
+		<Last_Name><![CDATA[Bright]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[cjgirl26@yahoo.com]]></Email>
+		<Phone><![CDATA[360-481-4064]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[35]]></Address_ID>
+				<Address_Name><![CDATA[Reachel Bright]]></Address_Name>
+				<Address_First_Name><![CDATA[Reachel]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Bright]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[3154 C Heath Loop]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[West Point]]></CitySuburb>
+				<StateProvince><![CDATA[New York]]></StateProvince>
+				<State_Abbreviation><![CDATA[NY]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[10996]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[360-481-4064]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[40]]></Customer_ID>
+		<Customer_Name><![CDATA[nadia paonessa]]></Customer_Name>
+		<First_Name><![CDATA[nadia]]></First_Name>
+		<Last_Name><![CDATA[paonessa]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[nadiadreamer@hotmail.com]]></Email>
+		<Phone><![CDATA[7802910097]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[36]]></Address_ID>
+				<Address_Name><![CDATA[nadia paonessa]]></Address_Name>
+				<Address_First_Name><![CDATA[nadia]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[paonessa]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[5121. 56 th ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[high prairie]]></CitySuburb>
+				<StateProvince><![CDATA[Alberta]]></StateProvince>
+				<State_Abbreviation><![CDATA[AB]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[t0g1e0]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[7802910097]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[41]]></Customer_ID>
+		<Customer_Name><![CDATA[Tommy Lee]]></Customer_Name>
+		<First_Name><![CDATA[Tommy]]></First_Name>
+		<Last_Name><![CDATA[Lee]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[tommylee83@gmail.com]]></Email>
+		<Phone><![CDATA[4438487334]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[37]]></Address_ID>
+				<Address_Name><![CDATA[Tommy Lee]]></Address_Name>
+				<Address_First_Name><![CDATA[Tommy]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Lee]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1212 1/2 S Cloverdale Avenue]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Los Angeles]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[90019]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[4438487334]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[42]]></Customer_ID>
+		<Customer_Name><![CDATA[Heather Silberman]]></Customer_Name>
+		<First_Name><![CDATA[Heather]]></First_Name>
+		<Last_Name><![CDATA[Silberman]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[hlsilberman@yahoo.com]]></Email>
+		<Phone><![CDATA[253-355-0456]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/20/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[38]]></Address_ID>
+				<Address_Name><![CDATA[Heather Silberman]]></Address_Name>
+				<Address_First_Name><![CDATA[Heather]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Silberman]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[10909 188th Ave E]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Bonney Lake]]></CitySuburb>
+				<StateProvince><![CDATA[Washington]]></StateProvince>
+				<State_Abbreviation><![CDATA[WA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[98391]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[253-355-0456]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[43]]></Customer_ID>
+		<Customer_Name><![CDATA[Paul Regulinski]]></Customer_Name>
+		<First_Name><![CDATA[Paul]]></First_Name>
+		<Last_Name><![CDATA[Regulinski]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[paulreg@hotmail.com]]></Email>
+		<Phone><![CDATA[310-463-1775]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/20/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[39]]></Address_ID>
+				<Address_Name><![CDATA[Paul Regulinski]]></Address_Name>
+				<Address_First_Name><![CDATA[Paul]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Regulinski]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[2297 Stacy Lane]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Camarillo]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[93012]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[310-463-1775]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[44]]></Customer_ID>
+		<Customer_Name><![CDATA[Sara Gall]]></Customer_Name>
+		<First_Name><![CDATA[Sara]]></First_Name>
+		<Last_Name><![CDATA[Gall]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[goldsteingall@yahoo.com]]></Email>
+		<Phone><![CDATA[617-566-6601]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/22/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[40]]></Address_ID>
+				<Address_Name><![CDATA[Sara Gall]]></Address_Name>
+				<Address_First_Name><![CDATA[Sara]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Gall]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[611 Washington st.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Brookline]]></CitySuburb>
+				<StateProvince><![CDATA[Massachusetts]]></StateProvince>
+				<State_Abbreviation><![CDATA[MA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[02446]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[617-566-6601]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[45]]></Customer_ID>
+		<Customer_Name><![CDATA[Jeremy Anfinson]]></Customer_Name>
+		<First_Name><![CDATA[Jeremy]]></First_Name>
+		<Last_Name><![CDATA[Anfinson]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[janfin1394@gmail.com]]></Email>
+		<Phone><![CDATA[321 243 8175]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/22/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[41]]></Address_ID>
+				<Address_Name><![CDATA[Jeremy Anfinson]]></Address_Name>
+				<Address_First_Name><![CDATA[Jeremy]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Anfinson]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[154 Donna Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Morgantown]]></CitySuburb>
+				<StateProvince><![CDATA[West Virginia]]></StateProvince>
+				<State_Abbreviation><![CDATA[WV]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[26505]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[321 243 8175]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[46]]></Customer_ID>
+		<Customer_Name><![CDATA[Frank Sauve]]></Customer_Name>
+		<First_Name><![CDATA[Frank]]></First_Name>
+		<Last_Name><![CDATA[Sauve]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[froggy146@hotmail.com]]></Email>
+		<Phone><![CDATA[506-357-5948]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/23/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[42]]></Address_ID>
+				<Address_Name><![CDATA[Frank Sauve]]></Address_Name>
+				<Address_First_Name><![CDATA[Frank]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Sauve]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[48 Canaan dr]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Waasis]]></CitySuburb>
+				<StateProvince><![CDATA[New Brunswick]]></StateProvince>
+				<State_Abbreviation><![CDATA[NB]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[e3b0n3]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[506-357-5948]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[47]]></Customer_ID>
+		<Customer_Name><![CDATA[ ]]></Customer_Name>
+		<First_Name><![CDATA[]]></First_Name>
+		<Last_Name><![CDATA[]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[glendae@videotron.ca]]></Email>
+		<Phone><![CDATA[]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/24/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[48]]></Customer_ID>
+		<Customer_Name><![CDATA[john rabold]]></Customer_Name>
+		<First_Name><![CDATA[john]]></First_Name>
+		<Last_Name><![CDATA[rabold]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jrabold9@live.com]]></Email>
+		<Phone><![CDATA[828-850-4589]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/30/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[43]]></Address_ID>
+				<Address_Name><![CDATA[john rabold]]></Address_Name>
+				<Address_First_Name><![CDATA[john]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[rabold]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[725 Gulfshore Drive Unit 102B]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Destin]]></CitySuburb>
+				<StateProvince><![CDATA[Florida]]></StateProvince>
+				<State_Abbreviation><![CDATA[FL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[32541]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[828-850-4589]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[49]]></Customer_ID>
+		<Customer_Name><![CDATA[Tina Peterson]]></Customer_Name>
+		<First_Name><![CDATA[Tina]]></First_Name>
+		<Last_Name><![CDATA[Peterson]]></Last_Name>
+		<Company><![CDATA[Bay Area Medical Center]]></Company>
+		<Email><![CDATA[tpeterson@bamc.org]]></Email>
+		<Phone><![CDATA[715-735-6621]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[09/30/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[44]]></Address_ID>
+				<Address_Name><![CDATA[Tina Peterson]]></Address_Name>
+				<Address_First_Name><![CDATA[Tina]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Peterson]]></Address_Last_Name>
+				<Address_Company><![CDATA[Bay Area Medical Center]]></Address_Company>
+				<Address_Line_1><![CDATA[3100 Shore Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[PO#  137564]]></Address_Line_2>
+				<CitySuburb><![CDATA[Marinette]]></CitySuburb>
+				<StateProvince><![CDATA[Wisconsin]]></StateProvince>
+				<State_Abbreviation><![CDATA[WI]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[54143]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[715-735-6621]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[50]]></Customer_ID>
+		<Customer_Name><![CDATA[Bruce Knolmayer]]></Customer_Name>
+		<First_Name><![CDATA[Bruce]]></First_Name>
+		<Last_Name><![CDATA[Knolmayer]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[knolmayer@comcast.net]]></Email>
+		<Phone><![CDATA[3015270242]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/01/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[45]]></Address_ID>
+				<Address_Name><![CDATA[Bruce Knolmayer]]></Address_Name>
+				<Address_First_Name><![CDATA[Bruce]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Knolmayer]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[4900 Ripplemead Court]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Laytonsville]]></CitySuburb>
+				<StateProvince><![CDATA[Maryland]]></StateProvince>
+				<State_Abbreviation><![CDATA[MD]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[20882]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3015270242]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[51]]></Customer_ID>
+		<Customer_Name><![CDATA[peter weiss]]></Customer_Name>
+		<First_Name><![CDATA[peter]]></First_Name>
+		<Last_Name><![CDATA[weiss]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[peter7859@gmail.com]]></Email>
+		<Phone><![CDATA[941 302 7576]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/01/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[46]]></Address_ID>
+				<Address_Name><![CDATA[peter weiss]]></Address_Name>
+				<Address_First_Name><![CDATA[peter]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[weiss]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[7859 saddle creek trl ]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[sarasota]]></CitySuburb>
+				<StateProvince><![CDATA[Florida]]></StateProvince>
+				<State_Abbreviation><![CDATA[FL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[34241]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[941 302 7576]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[52]]></Customer_ID>
+		<Customer_Name><![CDATA[John Miller]]></Customer_Name>
+		<First_Name><![CDATA[John]]></First_Name>
+		<Last_Name><![CDATA[Miller]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jmille67@columbus.rr.com]]></Email>
+		<Phone><![CDATA[614-436-6837]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/03/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[47]]></Address_ID>
+				<Address_Name><![CDATA[John Miller]]></Address_Name>
+				<Address_First_Name><![CDATA[John]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Miller]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1189 McCleary Ct.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Columbus]]></CitySuburb>
+				<StateProvince><![CDATA[Ohio]]></StateProvince>
+				<State_Abbreviation><![CDATA[OH]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[43235]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[614-436-6837]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[53]]></Customer_ID>
+		<Customer_Name><![CDATA[teresa kestenis]]></Customer_Name>
+		<First_Name><![CDATA[teresa]]></First_Name>
+		<Last_Name><![CDATA[kestenis]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jkninvestments@hotmail.com]]></Email>
+		<Phone><![CDATA[6023889204]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/04/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[48]]></Address_ID>
+				<Address_Name><![CDATA[teresa kestenis]]></Address_Name>
+				<Address_First_Name><![CDATA[teresa]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[kestenis]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1422 e thornton ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[gilbert]]></CitySuburb>
+				<StateProvince><![CDATA[Arizona]]></StateProvince>
+				<State_Abbreviation><![CDATA[AZ]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[85297]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[6023889204]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[54]]></Customer_ID>
+		<Customer_Name><![CDATA[Adam Findlay]]></Customer_Name>
+		<First_Name><![CDATA[Adam]]></First_Name>
+		<Last_Name><![CDATA[Findlay]]></Last_Name>
+		<Company><![CDATA[DND]]></Company>
+		<Email><![CDATA[findlay.ah@gmail.com]]></Email>
+		<Phone><![CDATA[418-550-4041]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/10/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[49]]></Address_ID>
+				<Address_Name><![CDATA[Adam Findlay]]></Address_Name>
+				<Address_First_Name><![CDATA[Adam]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Findlay]]></Address_Last_Name>
+				<Address_Company><![CDATA[DND]]></Address_Company>
+				<Address_Line_1><![CDATA[2039 R-J Audet]]></Address_Line_1>
+				<Address_Line_2><![CDATA[CPP 778]]></Address_Line_2>
+				<CitySuburb><![CDATA[Alouette]]></CitySuburb>
+				<StateProvince><![CDATA[Quebec]]></StateProvince>
+				<State_Abbreviation><![CDATA[QC]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[G0V1A0]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[418-550-4041]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[55]]></Customer_ID>
+		<Customer_Name><![CDATA[edward  toppino]]></Customer_Name>
+		<First_Name><![CDATA[edward ]]></First_Name>
+		<Last_Name><![CDATA[toppino]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[melindamorrison@hotmail.com]]></Email>
+		<Phone><![CDATA[3052965606]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/10/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[50]]></Address_ID>
+				<Address_Name><![CDATA[edward  toppino]]></Address_Name>
+				<Address_First_Name><![CDATA[edward ]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[toppino]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[p.o. box 787]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[key west]]></CitySuburb>
+				<StateProvince><![CDATA[Florida]]></StateProvince>
+				<State_Abbreviation><![CDATA[FL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[33041]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3052965606]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[51]]></Address_ID>
+				<Address_Name><![CDATA[melinda toppino]]></Address_Name>
+				<Address_First_Name><![CDATA[melinda]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[toppino]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[202 navajo st]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[tavernier]]></CitySuburb>
+				<StateProvince><![CDATA[Florida]]></StateProvince>
+				<State_Abbreviation><![CDATA[FL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[33070]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3057316967]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[56]]></Customer_ID>
+		<Customer_Name><![CDATA[Mike Moffett]]></Customer_Name>
+		<First_Name><![CDATA[Mike]]></First_Name>
+		<Last_Name><![CDATA[Moffett]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[mtmoffett@gmail.com]]></Email>
+		<Phone><![CDATA[8479970787]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/11/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[57]]></Customer_ID>
+		<Customer_Name><![CDATA[Forrest Jung]]></Customer_Name>
+		<First_Name><![CDATA[Forrest]]></First_Name>
+		<Last_Name><![CDATA[Jung]]></Last_Name>
+		<Company><![CDATA[CrossFit Southbay]]></Company>
+		<Email><![CDATA[forrest@crossfitsouthbay.com]]></Email>
+		<Phone><![CDATA[3107798531]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/11/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[58]]></Customer_ID>
+		<Customer_Name><![CDATA[Sergio Nazzaro]]></Customer_Name>
+		<First_Name><![CDATA[Sergio]]></First_Name>
+		<Last_Name><![CDATA[Nazzaro]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[sergio.nazzaro11@gmail.com]]></Email>
+		<Phone><![CDATA[3033247641]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/11/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[59]]></Customer_ID>
+		<Customer_Name><![CDATA[Derrick Luken]]></Customer_Name>
+		<First_Name><![CDATA[Derrick]]></First_Name>
+		<Last_Name><![CDATA[Luken]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[derrick.luken@gmail.com]]></Email>
+		<Phone><![CDATA[8057577313]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/11/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[60]]></Customer_ID>
+		<Customer_Name><![CDATA[Brett Freeman]]></Customer_Name>
+		<First_Name><![CDATA[Brett]]></First_Name>
+		<Last_Name><![CDATA[Freeman]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[kylandfreeman@yahoo.com]]></Email>
+		<Phone><![CDATA[9103749884]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/11/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[61]]></Customer_ID>
+		<Customer_Name><![CDATA[Alicia Danaher]]></Customer_Name>
+		<First_Name><![CDATA[Alicia]]></First_Name>
+		<Last_Name><![CDATA[Danaher]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[surfbeachchic7813@yahoo.com]]></Email>
+		<Phone><![CDATA[2408638935]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/13/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[52]]></Address_ID>
+				<Address_Name><![CDATA[Alicia Danaher]]></Address_Name>
+				<Address_First_Name><![CDATA[Alicia]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Danaher]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[216 Onley Rd Apartment 101 A]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Salsibury]]></CitySuburb>
+				<StateProvince><![CDATA[Maryland]]></StateProvince>
+				<State_Abbreviation><![CDATA[MD]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[21804]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2408638935]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[62]]></Customer_ID>
+		<Customer_Name><![CDATA[Charly Sith]]></Customer_Name>
+		<First_Name><![CDATA[Charly]]></First_Name>
+		<Last_Name><![CDATA[Sith]]></Last_Name>
+		<Company><![CDATA[Camp Combe YMCA]]></Company>
+		<Email><![CDATA[mhurdlere@gmail.com]]></Email>
+		<Phone><![CDATA[2122036964]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/14/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[53]]></Address_ID>
+				<Address_Name><![CDATA[Charly Sith]]></Address_Name>
+				<Address_First_Name><![CDATA[Charly]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Sith]]></Address_Last_Name>
+				<Address_Company><![CDATA[Camp Combe YMCA]]></Address_Company>
+				<Address_Line_1><![CDATA[684 Peekskill Hollow Rd]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Putnam Valley]]></CitySuburb>
+				<StateProvince><![CDATA[New York]]></StateProvince>
+				<State_Abbreviation><![CDATA[NY]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[10579]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2122036964]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[57]]></Address_ID>
+				<Address_Name><![CDATA[Charly Sith]]></Address_Name>
+				<Address_First_Name><![CDATA[Charly]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Sith]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[23 Grandview Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[White Plains]]></CitySuburb>
+				<StateProvince><![CDATA[New York]]></StateProvince>
+				<State_Abbreviation><![CDATA[NY]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[10605]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2122036964]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[63]]></Customer_ID>
+		<Customer_Name><![CDATA[ ]]></Customer_Name>
+		<First_Name><![CDATA[]]></First_Name>
+		<Last_Name><![CDATA[]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[chris.phillips@JPAC.pacom.mil]]></Email>
+		<Phone><![CDATA[]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/14/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[64]]></Customer_ID>
+		<Customer_Name><![CDATA[Peter Sniderman]]></Customer_Name>
+		<First_Name><![CDATA[Peter]]></First_Name>
+		<Last_Name><![CDATA[Sniderman]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[peter@litton.tv]]></Email>
+		<Phone><![CDATA[843-224-7795]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/16/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[54]]></Address_ID>
+				<Address_Name><![CDATA[Peter Sniderman]]></Address_Name>
+				<Address_First_Name><![CDATA[Peter]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Sniderman]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[153 Sandshell]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Charleston]]></CitySuburb>
+				<StateProvince><![CDATA[South Carolina]]></StateProvince>
+				<State_Abbreviation><![CDATA[SC]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[29492]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[843-224-7795]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[65]]></Customer_ID>
+		<Customer_Name><![CDATA[Matthew Fromm]]></Customer_Name>
+		<First_Name><![CDATA[Matthew]]></First_Name>
+		<Last_Name><![CDATA[Fromm]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[frommmatt@yahoo.com]]></Email>
+		<Phone><![CDATA[717-938-9956]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/18/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[55]]></Address_ID>
+				<Address_Name><![CDATA[Matthew Fromm]]></Address_Name>
+				<Address_First_Name><![CDATA[Matthew]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Fromm]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[316 Braeburn Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Etters]]></CitySuburb>
+				<StateProvince><![CDATA[Pennsylvania]]></StateProvince>
+				<State_Abbreviation><![CDATA[PA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[17319]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[717-938-9956]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[66]]></Customer_ID>
+		<Customer_Name><![CDATA[Erin Jackson]]></Customer_Name>
+		<First_Name><![CDATA[Erin]]></First_Name>
+		<Last_Name><![CDATA[Jackson]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[ermo18@yahoo.com]]></Email>
+		<Phone><![CDATA[713-208-6865]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/19/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[56]]></Address_ID>
+				<Address_Name><![CDATA[Erin Jackson]]></Address_Name>
+				<Address_First_Name><![CDATA[Erin]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Jackson]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[2374 E. 127th Pl.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Thornton]]></CitySuburb>
+				<StateProvince><![CDATA[Colorado]]></StateProvince>
+				<State_Abbreviation><![CDATA[CO]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[80241]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[713-208-6865]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[67]]></Customer_ID>
+		<Customer_Name><![CDATA[Lydia Bouthillier]]></Customer_Name>
+		<First_Name><![CDATA[Lydia]]></First_Name>
+		<Last_Name><![CDATA[Bouthillier]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[libbi14@hotmail.com]]></Email>
+		<Phone><![CDATA[613-735-5170]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/24/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[58]]></Address_ID>
+				<Address_Name><![CDATA[Lydia Bouthillier]]></Address_Name>
+				<Address_First_Name><![CDATA[Lydia]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Bouthillier]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[622 Moss Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Pembroke]]></CitySuburb>
+				<StateProvince><![CDATA[Ontario]]></StateProvince>
+				<State_Abbreviation><![CDATA[ON]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[k8a8r7]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[613-735-5170]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[59]]></Address_ID>
+				<Address_Name><![CDATA[Lydia Bouthillier]]></Address_Name>
+				<Address_First_Name><![CDATA[Lydia]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Bouthillier]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1278 Green Lake Road]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Pembroke]]></CitySuburb>
+				<StateProvince><![CDATA[Ontario]]></StateProvince>
+				<State_Abbreviation><![CDATA[ON]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[k8a6w4]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[613-735-5170]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[68]]></Customer_ID>
+		<Customer_Name><![CDATA[Neil Robertson]]></Customer_Name>
+		<First_Name><![CDATA[Neil]]></First_Name>
+		<Last_Name><![CDATA[Robertson]]></Last_Name>
+		<Company><![CDATA[PlatoonFX]]></Company>
+		<Email><![CDATA[neilr28@hotmail.com]]></Email>
+		<Phone><![CDATA[587-999-5399]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/25/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[60]]></Address_ID>
+				<Address_Name><![CDATA[Neil Robertson]]></Address_Name>
+				<Address_First_Name><![CDATA[Neil]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Robertson]]></Address_Last_Name>
+				<Address_Company><![CDATA[PlatoonFX]]></Address_Company>
+				<Address_Line_1><![CDATA[1351 Aviation Park N.E.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Calgary]]></CitySuburb>
+				<StateProvince><![CDATA[Alberta]]></StateProvince>
+				<State_Abbreviation><![CDATA[AB]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[T2E 8M7]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[587-999-5399]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[61]]></Address_ID>
+				<Address_Name><![CDATA[Neil Robertson]]></Address_Name>
+				<Address_First_Name><![CDATA[Neil]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Robertson]]></Address_Last_Name>
+				<Address_Company><![CDATA[PlatoonFX]]></Address_Company>
+				<Address_Line_1><![CDATA[135 Coverton Hts. N.E.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Calgary]]></CitySuburb>
+				<StateProvince><![CDATA[Alberta]]></StateProvince>
+				<State_Abbreviation><![CDATA[AB]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[T3K 5B2]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[587-999-5399]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[69]]></Customer_ID>
+		<Customer_Name><![CDATA[Michael Nelson]]></Customer_Name>
+		<First_Name><![CDATA[Michael]]></First_Name>
+		<Last_Name><![CDATA[Nelson]]></Last_Name>
+		<Company><![CDATA[Body Works]]></Company>
+		<Email><![CDATA[getfitquick@yahoo.com]]></Email>
+		<Phone><![CDATA[8067983764]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/25/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[70]]></Customer_ID>
+		<Customer_Name><![CDATA[ronny thomas]]></Customer_Name>
+		<First_Name><![CDATA[ronny]]></First_Name>
+		<Last_Name><![CDATA[thomas]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[rthomas@faispdx.org]]></Email>
+		<Phone><![CDATA[503-516-4097]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/27/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[62]]></Address_ID>
+				<Address_Name><![CDATA[ronny thomas]]></Address_Name>
+				<Address_First_Name><![CDATA[ronny]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[thomas]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[8500 nw johnson st]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[portland]]></CitySuburb>
+				<StateProvince><![CDATA[Oregon]]></StateProvince>
+				<State_Abbreviation><![CDATA[OR]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[97229]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[503-516-4097]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[71]]></Customer_ID>
+		<Customer_Name><![CDATA[Jennifer Purdy]]></Customer_Name>
+		<First_Name><![CDATA[Jennifer]]></First_Name>
+		<Last_Name><![CDATA[Purdy]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[Jennpurdy@gmail.com]]></Email>
+		<Phone><![CDATA[404-964-1319]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[10/29/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[63]]></Address_ID>
+				<Address_Name><![CDATA[Jennifer Purdy]]></Address_Name>
+				<Address_First_Name><![CDATA[Jennifer]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Purdy]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[42 Clarendon Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Avondale Estates]]></CitySuburb>
+				<StateProvince><![CDATA[Georgia]]></StateProvince>
+				<State_Abbreviation><![CDATA[GA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[30002]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[404-964-1319]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[72]]></Customer_ID>
+		<Customer_Name><![CDATA[douglas freer]]></Customer_Name>
+		<First_Name><![CDATA[douglas]]></First_Name>
+		<Last_Name><![CDATA[freer]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[agilelion46@hotmail.com]]></Email>
+		<Phone><![CDATA[720.318.7106]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/02/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[64]]></Address_ID>
+				<Address_Name><![CDATA[douglas freer]]></Address_Name>
+				<Address_First_Name><![CDATA[douglas]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[freer]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[18858 E. Powers Pl]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Aurora]]></CitySuburb>
+				<StateProvince><![CDATA[Colorado]]></StateProvince>
+				<State_Abbreviation><![CDATA[CO]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[80015]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[720.318.7106]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[73]]></Customer_ID>
+		<Customer_Name><![CDATA[douglas freer]]></Customer_Name>
+		<First_Name><![CDATA[douglas]]></First_Name>
+		<Last_Name><![CDATA[freer]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[douglas.freer.contractor@usap.gov]]></Email>
+		<Phone><![CDATA[720.318.7106]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/02/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[65]]></Address_ID>
+				<Address_Name><![CDATA[douglas freer]]></Address_Name>
+				<Address_First_Name><![CDATA[douglas]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[freer]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[18858 E. Powers Pl]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Aurora]]></CitySuburb>
+				<StateProvince><![CDATA[Colorado]]></StateProvince>
+				<State_Abbreviation><![CDATA[CO]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[80015]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[720.318.7106]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[74]]></Customer_ID>
+		<Customer_Name><![CDATA[ALLEN  SAMSON]]></Customer_Name>
+		<First_Name><![CDATA[ALLEN ]]></First_Name>
+		<Last_Name><![CDATA[SAMSON]]></Last_Name>
+		<Company><![CDATA[D4C4FITNESS]]></Company>
+		<Email><![CDATA[SAMSON3RD@COX.NET]]></Email>
+		<Phone><![CDATA[2258061416]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/03/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[66]]></Address_ID>
+				<Address_Name><![CDATA[ALLEN  SAMSON]]></Address_Name>
+				<Address_First_Name><![CDATA[ALLEN ]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[SAMSON]]></Address_Last_Name>
+				<Address_Company><![CDATA[D4C4FITNESS]]></Address_Company>
+				<Address_Line_1><![CDATA[6710 GREENMEADOW DR.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[GREENWELL SPRINGS]]></CitySuburb>
+				<StateProvince><![CDATA[Louisiana]]></StateProvince>
+				<State_Abbreviation><![CDATA[LA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[70739]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2258061416]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[75]]></Customer_ID>
+		<Customer_Name><![CDATA[Bob Del Vecchio]]></Customer_Name>
+		<First_Name><![CDATA[Bob]]></First_Name>
+		<Last_Name><![CDATA[Del Vecchio]]></Last_Name>
+		<Company><![CDATA[Vero Beach Athletic Club]]></Company>
+		<Email><![CDATA[bobbydtkd@msn.com]]></Email>
+		<Phone><![CDATA[7724800321]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/04/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[67]]></Address_ID>
+				<Address_Name><![CDATA[Bob Del Vecchio]]></Address_Name>
+				<Address_First_Name><![CDATA[Bob]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Del Vecchio]]></Address_Last_Name>
+				<Address_Company><![CDATA[Vero Beach Athletic Club]]></Address_Company>
+				<Address_Line_1><![CDATA[2300 5th Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[Unit 149]]></Address_Line_2>
+				<CitySuburb><![CDATA[Vero Beach]]></CitySuburb>
+				<StateProvince><![CDATA[Florida]]></StateProvince>
+				<State_Abbreviation><![CDATA[FL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[32960]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[7724800321]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[76]]></Customer_ID>
+		<Customer_Name><![CDATA[mark day]]></Customer_Name>
+		<First_Name><![CDATA[mark]]></First_Name>
+		<Last_Name><![CDATA[day]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[mday@golderranchfire.org]]></Email>
+		<Phone><![CDATA[5208255920]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/04/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[68]]></Address_ID>
+				<Address_Name><![CDATA[mark day]]></Address_Name>
+				<Address_First_Name><![CDATA[mark]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[day]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[3885 E. Golder Ranch Dr.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Tucson]]></CitySuburb>
+				<StateProvince><![CDATA[Arizona]]></StateProvince>
+				<State_Abbreviation><![CDATA[AZ]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[85739]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[5208255920]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[77]]></Customer_ID>
+		<Customer_Name><![CDATA[Kevin  Nizi]]></Customer_Name>
+		<First_Name><![CDATA[Kevin ]]></First_Name>
+		<Last_Name><![CDATA[Nizi]]></Last_Name>
+		<Company><![CDATA[Movement Matters]]></Company>
+		<Email><![CDATA[kevin@movementmattersfernie.com]]></Email>
+		<Phone><![CDATA[250-531-0780]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/05/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[78]]></Customer_ID>
+		<Customer_Name><![CDATA[Sean Catto]]></Customer_Name>
+		<First_Name><![CDATA[Sean]]></First_Name>
+		<Last_Name><![CDATA[Catto]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[Seancatto@gmail.com]]></Email>
+		<Phone><![CDATA[704-560-1155]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/09/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[79]]></Customer_ID>
+		<Customer_Name><![CDATA[s schertzer]]></Customer_Name>
+		<First_Name><![CDATA[s]]></First_Name>
+		<Last_Name><![CDATA[schertzer]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[shelleyschertzer@yahoo.com]]></Email>
+		<Phone><![CDATA[3139951668]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/12/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[69]]></Address_ID>
+				<Address_Name><![CDATA[s schertzer]]></Address_Name>
+				<Address_First_Name><![CDATA[s]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[schertzer]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[42111 E Ann Arbor Trl]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Plymouth]]></CitySuburb>
+				<StateProvince><![CDATA[Michigan]]></StateProvince>
+				<State_Abbreviation><![CDATA[MI]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[48170]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3139951668]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[80]]></Customer_ID>
+		<Customer_Name><![CDATA[Kenna Peusner]]></Customer_Name>
+		<First_Name><![CDATA[Kenna]]></First_Name>
+		<Last_Name><![CDATA[Peusner]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[anakdp@gwumc.edu]]></Email>
+		<Phone><![CDATA[202-33700227]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[70]]></Address_ID>
+				<Address_Name><![CDATA[Kenna Peusner]]></Address_Name>
+				<Address_First_Name><![CDATA[Kenna]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Peusner]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[3501 Davis St NW]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Washington]]></CitySuburb>
+				<StateProvince><![CDATA[District of Columbia]]></StateProvince>
+				<State_Abbreviation><![CDATA[DC]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[20007]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[202-33700227]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[81]]></Customer_ID>
+		<Customer_Name><![CDATA[Gerry Glessing]]></Customer_Name>
+		<First_Name><![CDATA[Gerry]]></First_Name>
+		<Last_Name><![CDATA[Glessing]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[gglessing@gmail.com]]></Email>
+		<Phone><![CDATA[760-770-1955]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[71]]></Address_ID>
+				<Address_Name><![CDATA[Gerry Glessing]]></Address_Name>
+				<Address_First_Name><![CDATA[Gerry]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Glessing]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[8 Dover Court]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Rancho Mirage, CA ]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[92270]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[760-770-1955]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[82]]></Customer_ID>
+		<Customer_Name><![CDATA[Justin Willis]]></Customer_Name>
+		<First_Name><![CDATA[Justin]]></First_Name>
+		<Last_Name><![CDATA[Willis]]></Last_Name>
+		<Company><![CDATA[CrossFit Warrenton]]></Company>
+		<Email><![CDATA[justin@crossfitwarrenton.com]]></Email>
+		<Phone><![CDATA[7033341960]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/16/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[72]]></Address_ID>
+				<Address_Name><![CDATA[Justin Willis]]></Address_Name>
+				<Address_First_Name><![CDATA[Justin]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Willis]]></Address_Last_Name>
+				<Address_Company><![CDATA[CrossFit Warrenton]]></Address_Company>
+				<Address_Line_1><![CDATA[1601 Gough Lane]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Amissville]]></CitySuburb>
+				<StateProvince><![CDATA[Virginia]]></StateProvince>
+				<State_Abbreviation><![CDATA[VA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[20106]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[7033341960]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[83]]></Customer_ID>
+		<Customer_Name><![CDATA[Becca Barr]]></Customer_Name>
+		<First_Name><![CDATA[Becca]]></First_Name>
+		<Last_Name><![CDATA[Barr]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[rlbcuda@me.com]]></Email>
+		<Phone><![CDATA[2812225657]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/23/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[73]]></Address_ID>
+				<Address_Name><![CDATA[Becca Barr]]></Address_Name>
+				<Address_First_Name><![CDATA[Becca]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Barr]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[16911 Cottonwood Way]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Houston]]></CitySuburb>
+				<StateProvince><![CDATA[Texas]]></StateProvince>
+				<State_Abbreviation><![CDATA[TX]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[77059]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2812225657]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[84]]></Customer_ID>
+		<Customer_Name><![CDATA[Patsy Karen Owen]]></Customer_Name>
+		<First_Name><![CDATA[Patsy Karen]]></First_Name>
+		<Last_Name><![CDATA[Owen]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[richowen2@aol.com]]></Email>
+		<Phone><![CDATA[559-734-3310]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/25/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[74]]></Address_ID>
+				<Address_Name><![CDATA[Patsy Karen Owen]]></Address_Name>
+				<Address_First_Name><![CDATA[Patsy Karen]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Owen]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[4825 West Ceres Court]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Visalia]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[93291]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[559-734-3310]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[85]]></Customer_ID>
+		<Customer_Name><![CDATA[michele cady]]></Customer_Name>
+		<First_Name><![CDATA[michele]]></First_Name>
+		<Last_Name><![CDATA[cady]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[cadyzign@gmail.com]]></Email>
+		<Phone><![CDATA[999-999-9999]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/26/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[75]]></Address_ID>
+				<Address_Name><![CDATA[michele cady]]></Address_Name>
+				<Address_First_Name><![CDATA[michele]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[cady]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[6n855 hastings dr]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[st charles]]></CitySuburb>
+				<StateProvince><![CDATA[Illinois]]></StateProvince>
+				<State_Abbreviation><![CDATA[IL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[60175]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[999-999-9999]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[86]]></Customer_ID>
+		<Customer_Name><![CDATA[Dee Lewis]]></Customer_Name>
+		<First_Name><![CDATA[Dee]]></First_Name>
+		<Last_Name><![CDATA[Lewis]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[deelewis@comcast.net]]></Email>
+		<Phone><![CDATA[2538629667]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/30/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[76]]></Address_ID>
+				<Address_Name><![CDATA[Dee Lewis]]></Address_Name>
+				<Address_First_Name><![CDATA[Dee]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Lewis]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[po box 7934]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[bonney lake]]></CitySuburb>
+				<StateProvince><![CDATA[Washington]]></StateProvince>
+				<State_Abbreviation><![CDATA[WA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[98391]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2538629667]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[77]]></Address_ID>
+				<Address_Name><![CDATA[Dee Lewis]]></Address_Name>
+				<Address_First_Name><![CDATA[Dee]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Lewis]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[22720 Connells Prairie Road]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Buckley]]></CitySuburb>
+				<StateProvince><![CDATA[Washington]]></StateProvince>
+				<State_Abbreviation><![CDATA[WA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[98321]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2538629667]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[87]]></Customer_ID>
+		<Customer_Name><![CDATA[Brittany Sulcer]]></Customer_Name>
+		<First_Name><![CDATA[Brittany]]></First_Name>
+		<Last_Name><![CDATA[Sulcer]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[aprilfool77@hotmail.com]]></Email>
+		<Phone><![CDATA[770-993-4022]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/30/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[78]]></Address_ID>
+				<Address_Name><![CDATA[Brittany Sulcer]]></Address_Name>
+				<Address_First_Name><![CDATA[Brittany]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Sulcer]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[105 Dove Court]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Roswell]]></CitySuburb>
+				<StateProvince><![CDATA[Georgia]]></StateProvince>
+				<State_Abbreviation><![CDATA[GA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[30075]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[770-993-4022]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[88]]></Customer_ID>
+		<Customer_Name><![CDATA[Patrick  Keating]]></Customer_Name>
+		<First_Name><![CDATA[Patrick ]]></First_Name>
+		<Last_Name><![CDATA[Keating]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[keatingpk@aol.com]]></Email>
+		<Phone><![CDATA[301 370 4281]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/30/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[79]]></Address_ID>
+				<Address_Name><![CDATA[Patrick  Keating]]></Address_Name>
+				<Address_First_Name><![CDATA[Patrick ]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Keating]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[10930 Montrose Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[P.O. Box 61]]></Address_Line_2>
+				<CitySuburb><![CDATA[Garrett Park]]></CitySuburb>
+				<StateProvince><![CDATA[Maryland]]></StateProvince>
+				<State_Abbreviation><![CDATA[MD]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[20896]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[301 370 4281]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[89]]></Customer_ID>
+		<Customer_Name><![CDATA[Fredericka Abcarius]]></Customer_Name>
+		<First_Name><![CDATA[Fredericka]]></First_Name>
+		<Last_Name><![CDATA[Abcarius]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[f.Abcarius@hotmail.com]]></Email>
+		<Phone><![CDATA[514-485-2427]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[11/30/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[90]]></Customer_ID>
+		<Customer_Name><![CDATA[Konstantine Panfilov]]></Customer_Name>
+		<First_Name><![CDATA[Konstantine]]></First_Name>
+		<Last_Name><![CDATA[Panfilov]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[kpanfilov@yahoo.com]]></Email>
+		<Phone><![CDATA[(201)982-1000]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/01/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[80]]></Address_ID>
+				<Address_Name><![CDATA[Konstantine Panfilov]]></Address_Name>
+				<Address_First_Name><![CDATA[Konstantine]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Panfilov]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[231 Lawton ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Cliffside Park]]></CitySuburb>
+				<StateProvince><![CDATA[New Jersey]]></StateProvince>
+				<State_Abbreviation><![CDATA[NJ]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[07010]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[(201)982-1000]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[91]]></Customer_ID>
+		<Customer_Name><![CDATA[Andrew Owens ]]></Customer_Name>
+		<First_Name><![CDATA[Andrew]]></First_Name>
+		<Last_Name><![CDATA[Owens ]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[sandybanana23@gmail.com]]></Email>
+		<Phone><![CDATA[2174125777]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/01/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[92]]></Customer_ID>
+		<Customer_Name><![CDATA[Erin Anley]]></Customer_Name>
+		<First_Name><![CDATA[Erin]]></First_Name>
+		<Last_Name><![CDATA[Anley]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[im-that-lady@hotmail.com]]></Email>
+		<Phone><![CDATA[15198302792]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/03/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[81]]></Address_ID>
+				<Address_Name><![CDATA[Erin Anley]]></Address_Name>
+				<Address_First_Name><![CDATA[Erin]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Anley]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[57 Thompson Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Guelph]]></CitySuburb>
+				<StateProvince><![CDATA[Ontario]]></StateProvince>
+				<State_Abbreviation><![CDATA[ON]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[N1E7A2]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[15198302792]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[93]]></Customer_ID>
+		<Customer_Name><![CDATA[Dave Wentz]]></Customer_Name>
+		<First_Name><![CDATA[Dave]]></First_Name>
+		<Last_Name><![CDATA[Wentz]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[dave.wentz@us.usana.com]]></Email>
+		<Phone><![CDATA[435 649-3793]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/05/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[82]]></Address_ID>
+				<Address_Name><![CDATA[Dave Wentz]]></Address_Name>
+				<Address_First_Name><![CDATA[Dave]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Wentz]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[9230 Sandtrap Ct]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Park City]]></CitySuburb>
+				<StateProvince><![CDATA[Utah]]></StateProvince>
+				<State_Abbreviation><![CDATA[UT]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[84098]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[435 649-3793]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[94]]></Customer_ID>
+		<Customer_Name><![CDATA[Boris Zlatich]]></Customer_Name>
+		<First_Name><![CDATA[Boris]]></First_Name>
+		<Last_Name><![CDATA[Zlatich]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[bzlatich@nyc.rr.com]]></Email>
+		<Phone><![CDATA[718-783-4716]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/06/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[83]]></Address_ID>
+				<Address_Name><![CDATA[Boris Zlatich]]></Address_Name>
+				<Address_First_Name><![CDATA[Boris]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Zlatich]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[30  8th Ave.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Brooklyn]]></CitySuburb>
+				<StateProvince><![CDATA[New York]]></StateProvince>
+				<State_Abbreviation><![CDATA[NY]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[11217]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[718-783-4716]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[95]]></Customer_ID>
+		<Customer_Name><![CDATA[John  Munson]]></Customer_Name>
+		<First_Name><![CDATA[John ]]></First_Name>
+		<Last_Name><![CDATA[Munson]]></Last_Name>
+		<Company><![CDATA[Optio CrossFit]]></Company>
+		<Email><![CDATA[munson_john@hotmail.com]]></Email>
+		<Phone><![CDATA[(254)462-2572]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/07/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[96]]></Customer_ID>
+		<Customer_Name><![CDATA[Suzanne Merritt]]></Customer_Name>
+		<First_Name><![CDATA[Suzanne]]></First_Name>
+		<Last_Name><![CDATA[Merritt]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[suzanneem@roadrunner.com]]></Email>
+		<Phone><![CDATA[413-637-8244]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/08/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[84]]></Address_ID>
+				<Address_Name><![CDATA[Suzanne Merritt]]></Address_Name>
+				<Address_First_Name><![CDATA[Suzanne]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Merritt]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[99 New Lenox Road]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Lenox]]></CitySuburb>
+				<StateProvince><![CDATA[Massachusetts]]></StateProvince>
+				<State_Abbreviation><![CDATA[MA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[01240]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[413-637-8244]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[97]]></Customer_ID>
+		<Customer_Name><![CDATA[ ]]></Customer_Name>
+		<First_Name><![CDATA[]]></First_Name>
+		<Last_Name><![CDATA[]]></Last_Name>
+		<Company><![CDATA[Borrego Springs Fire Protection District]]></Company>
+		<Email><![CDATA[pbye@borrego-fire.org]]></Email>
+		<Phone><![CDATA[7607675436]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[12/08/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[98]]></Customer_ID>
+		<Customer_Name><![CDATA[Casey Quesnell]]></Customer_Name>
+		<First_Name><![CDATA[Casey]]></First_Name>
+		<Last_Name><![CDATA[Quesnell]]></Last_Name>
+		<Company><![CDATA[Palos Verdes High School]]></Company>
+		<Email><![CDATA[caseyquesnell@aol.com]]></Email>
+		<Phone><![CDATA[]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/09/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[99]]></Customer_ID>
+		<Customer_Name><![CDATA[Mirta Lin]]></Customer_Name>
+		<First_Name><![CDATA[Mirta]]></First_Name>
+		<Last_Name><![CDATA[Lin]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[mllee7@hotmail.com]]></Email>
+		<Phone><![CDATA[630=863-1784]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/09/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[85]]></Address_ID>
+				<Address_Name><![CDATA[Mirta Lin]]></Address_Name>
+				<Address_First_Name><![CDATA[Mirta]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Lin]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[5 E. 14th Place #801]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Chicago]]></CitySuburb>
+				<StateProvince><![CDATA[Illinois]]></StateProvince>
+				<State_Abbreviation><![CDATA[IL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[60605]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[630=863-1784]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[100]]></Customer_ID>
+		<Customer_Name><![CDATA[Shannon Hurley]]></Customer_Name>
+		<First_Name><![CDATA[Shannon]]></First_Name>
+		<Last_Name><![CDATA[Hurley]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[Shannon@hurleyauctions.com]]></Email>
+		<Phone><![CDATA[717-360-0800]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/11/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[86]]></Address_ID>
+				<Address_Name><![CDATA[Shannon Hurley]]></Address_Name>
+				<Address_First_Name><![CDATA[Shannon]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Hurley]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[2505 Buchanan Trail East]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Greencastle]]></CitySuburb>
+				<StateProvince><![CDATA[Pennsylvania]]></StateProvince>
+				<State_Abbreviation><![CDATA[PA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[17225]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[717-360-0800]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[101]]></Customer_ID>
+		<Customer_Name><![CDATA[Clay McGillvary]]></Customer_Name>
+		<First_Name><![CDATA[Clay]]></First_Name>
+		<Last_Name><![CDATA[McGillvary]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[claymcgillivary@gmail.com]]></Email>
+		<Phone><![CDATA[7199304502]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[Direct Order]]></Customer_Group>
+		<Date_Joined><![CDATA[12/13/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[102]]></Customer_ID>
+		<Customer_Name><![CDATA[Jay Page]]></Customer_Name>
+		<First_Name><![CDATA[Jay]]></First_Name>
+		<Last_Name><![CDATA[Page]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jaybpage@gmail.com]]></Email>
+		<Phone><![CDATA[6782323854]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/15/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[87]]></Address_ID>
+				<Address_Name><![CDATA[Jay Page]]></Address_Name>
+				<Address_First_Name><![CDATA[Jay]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Page]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[10632 Mount Jefferson Ave ]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Las Vegas]]></CitySuburb>
+				<StateProvince><![CDATA[Nevada]]></StateProvince>
+				<State_Abbreviation><![CDATA[NV]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[89166]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[6782323854]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[103]]></Customer_ID>
+		<Customer_Name><![CDATA[Jon Markovitch]]></Customer_Name>
+		<First_Name><![CDATA[Jon]]></First_Name>
+		<Last_Name><![CDATA[Markovitch]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jonathon.markovich@gmail.com]]></Email>
+		<Phone><![CDATA[714-981-6558]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/15/2010]]></Date_Joined>
+		<Addresses>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[104]]></Customer_ID>
+		<Customer_Name><![CDATA[kurt soileau]]></Customer_Name>
+		<First_Name><![CDATA[kurt]]></First_Name>
+		<Last_Name><![CDATA[soileau]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jksoileau@gmail.com]]></Email>
+		<Phone><![CDATA[2253379560]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/17/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[88]]></Address_ID>
+				<Address_Name><![CDATA[kurt soileau]]></Address_Name>
+				<Address_First_Name><![CDATA[kurt]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[soileau]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[14189 bert allen rd]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[gonzales]]></CitySuburb>
+				<StateProvince><![CDATA[Louisiana]]></StateProvince>
+				<State_Abbreviation><![CDATA[LA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[70737]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[2253379560]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[105]]></Customer_ID>
+		<Customer_Name><![CDATA[Angel Bartlett]]></Customer_Name>
+		<First_Name><![CDATA[Angel]]></First_Name>
+		<Last_Name><![CDATA[Bartlett]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[angelb31766@yahoo.com]]></Email>
+		<Phone><![CDATA[860-848-7773]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/17/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[89]]></Address_ID>
+				<Address_Name><![CDATA[Angel Bartlett]]></Address_Name>
+				<Address_First_Name><![CDATA[Angel]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Bartlett]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[122 Cottonwood Lane]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Uncasville]]></CitySuburb>
+				<StateProvince><![CDATA[Connecticut]]></StateProvince>
+				<State_Abbreviation><![CDATA[CT]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[06382]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[860-848-7773]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[106]]></Customer_ID>
+		<Customer_Name><![CDATA[Therese Terndrup]]></Customer_Name>
+		<First_Name><![CDATA[Therese]]></First_Name>
+		<Last_Name><![CDATA[Terndrup]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[tterndrup00@hotmail.com]]></Email>
+		<Phone><![CDATA[614-853-0322]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/18/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[90]]></Address_ID>
+				<Address_Name><![CDATA[Therese Terndrup]]></Address_Name>
+				<Address_First_Name><![CDATA[Therese]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Terndrup]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1455 Trabue Woods Blvd.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Columbus]]></CitySuburb>
+				<StateProvince><![CDATA[Ohio]]></StateProvince>
+				<State_Abbreviation><![CDATA[OH]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[43228]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[614-853-0322]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[107]]></Customer_ID>
+		<Customer_Name><![CDATA[NONTAPORN KONGKAEOW]]></Customer_Name>
+		<First_Name><![CDATA[NONTAPORN]]></First_Name>
+		<Last_Name><![CDATA[KONGKAEOW]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[nkongk1@yahoo.com]]></Email>
+		<Phone><![CDATA[3124049811]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/18/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[91]]></Address_ID>
+				<Address_Name><![CDATA[NONTAPORN KONGKAEOW]]></Address_Name>
+				<Address_First_Name><![CDATA[NONTAPORN]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[KONGKAEOW]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1110 CHAMPIONSHIP DR]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[ELGIN]]></CitySuburb>
+				<StateProvince><![CDATA[Illinois]]></StateProvince>
+				<State_Abbreviation><![CDATA[IL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[60124]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3124049811]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[108]]></Customer_ID>
+		<Customer_Name><![CDATA[Panfi Temiquel]]></Customer_Name>
+		<First_Name><![CDATA[Panfi]]></First_Name>
+		<Last_Name><![CDATA[Temiquel]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[panfit@comcast.net]]></Email>
+		<Phone><![CDATA[815-625-1176]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/19/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[92]]></Address_ID>
+				<Address_Name><![CDATA[Panfi Temiquel]]></Address_Name>
+				<Address_First_Name><![CDATA[Panfi]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Temiquel]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[1911 3rd Ave]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Rock Falls]]></CitySuburb>
+				<StateProvince><![CDATA[Illinois]]></StateProvince>
+				<State_Abbreviation><![CDATA[IL]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[61071]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[815-625-1176]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[109]]></Customer_ID>
+		<Customer_Name><![CDATA[Nick Ngo]]></Customer_Name>
+		<First_Name><![CDATA[Nick]]></First_Name>
+		<Last_Name><![CDATA[Ngo]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[ngo.nicholas@gmail.com]]></Email>
+		<Phone><![CDATA[3106225776]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/21/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[93]]></Address_ID>
+				<Address_Name><![CDATA[Nick Ngo]]></Address_Name>
+				<Address_First_Name><![CDATA[Nick]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Ngo]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[4309 Redwood Ave #3]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Marina Del Rey]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[90292]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3106225776]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[94]]></Address_ID>
+				<Address_Name><![CDATA[Lt NIcholas Ngo]]></Address_Name>
+				<Address_First_Name><![CDATA[Lt NIcholas]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Ngo]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[KBR Operations (DCMA)]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[APO]]></CitySuburb>
+				<StateProvince><![CDATA[Armed Forces Europe]]></StateProvince>
+				<State_Abbreviation><![CDATA[AE]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[09391]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[3106225776]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[110]]></Customer_ID>
+		<Customer_Name><![CDATA[Patrick Wilson]]></Customer_Name>
+		<First_Name><![CDATA[Patrick]]></First_Name>
+		<Last_Name><![CDATA[Wilson]]></Last_Name>
+		<Company><![CDATA[Air Force]]></Company>
+		<Email><![CDATA[popswilson39@yahoo.com]]></Email>
+		<Phone><![CDATA[623 262-2284]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/22/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[95]]></Address_ID>
+				<Address_Name><![CDATA[Patrick Wilson]]></Address_Name>
+				<Address_First_Name><![CDATA[Patrick]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Wilson]]></Address_Last_Name>
+				<Address_Company><![CDATA[Air Force]]></Address_Company>
+				<Address_Line_1><![CDATA[18228 W. Port Royale Ln]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Surprise]]></CitySuburb>
+				<StateProvince><![CDATA[Arizona]]></StateProvince>
+				<State_Abbreviation><![CDATA[AZ]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[85388]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[623 262-2284]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[96]]></Address_ID>
+				<Address_Name><![CDATA[Patrick Wilson]]></Address_Name>
+				<Address_First_Name><![CDATA[Patrick]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Wilson]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[HQ AETC/A7SM]]></Address_Line_1>
+				<Address_Line_2><![CDATA[1851 First Stree East, Suite 2]]></Address_Line_2>
+				<CitySuburb><![CDATA[Randolph Air Force Base]]></CitySuburb>
+				<StateProvince><![CDATA[Texas]]></StateProvince>
+				<State_Abbreviation><![CDATA[TX]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[78150]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[623 262-2284]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[111]]></Customer_ID>
+		<Customer_Name><![CDATA[Alva Morrison]]></Customer_Name>
+		<First_Name><![CDATA[Alva]]></First_Name>
+		<Last_Name><![CDATA[Morrison]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[alvamorrison@gmail.com]]></Email>
+		<Phone><![CDATA[505-470-7917]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/23/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[97]]></Address_ID>
+				<Address_Name><![CDATA[Alva Morrison]]></Address_Name>
+				<Address_First_Name><![CDATA[Alva]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Morrison]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[P.O. Box 358]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Dixon]]></CitySuburb>
+				<StateProvince><![CDATA[New Mexico]]></StateProvince>
+				<State_Abbreviation><![CDATA[NM]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[87527]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[505-470-7917]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[98]]></Address_ID>
+				<Address_Name><![CDATA[Christine Bey]]></Address_Name>
+				<Address_First_Name><![CDATA[Christine]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Bey]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[P.O. Box 436]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Vallecito]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[95251]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[209-736-0870]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[112]]></Customer_ID>
+		<Customer_Name><![CDATA[Brittany Sulcer]]></Customer_Name>
+		<First_Name><![CDATA[Brittany]]></First_Name>
+		<Last_Name><![CDATA[Sulcer]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[bsulcer@starlitemedia.com]]></Email>
+		<Phone><![CDATA[770-993-4022]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/27/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[99]]></Address_ID>
+				<Address_Name><![CDATA[Brittany Sulcer]]></Address_Name>
+				<Address_First_Name><![CDATA[Brittany]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Sulcer]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[105 Dove Court]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Roswell]]></CitySuburb>
+				<StateProvince><![CDATA[Georgia]]></StateProvince>
+				<State_Abbreviation><![CDATA[GA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[30075]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[770-993-4022]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[113]]></Customer_ID>
+		<Customer_Name><![CDATA[Elizabeth  Donahue]]></Customer_Name>
+		<First_Name><![CDATA[Elizabeth ]]></First_Name>
+		<Last_Name><![CDATA[Donahue]]></Last_Name>
+		<Company><![CDATA[The Corner Studio]]></Company>
+		<Email><![CDATA[thecornerstudiosf@yahoo.com]]></Email>
+		<Phone><![CDATA[415-550-1673]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/30/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[100]]></Address_ID>
+				<Address_Name><![CDATA[Elizabeth  Donahue]]></Address_Name>
+				<Address_First_Name><![CDATA[Elizabeth ]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Donahue]]></Address_Last_Name>
+				<Address_Company><![CDATA[The Corner Studio]]></Address_Company>
+				<Address_Line_1><![CDATA[2727 Mariposa St]]></Address_Line_1>
+				<Address_Line_2><![CDATA[Suite 103]]></Address_Line_2>
+				<CitySuburb><![CDATA[San Francisco]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[94110]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[415-550-1673]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[101]]></Address_ID>
+				<Address_Name><![CDATA[Elizabeth Donahue]]></Address_Name>
+				<Address_First_Name><![CDATA[Elizabeth]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Donahue]]></Address_Last_Name>
+				<Address_Company><![CDATA[The Corner Studio]]></Address_Company>
+				<Address_Line_1><![CDATA[1910 Bryant St]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[San Francisco]]></CitySuburb>
+				<StateProvince><![CDATA[California]]></StateProvince>
+				<State_Abbreviation><![CDATA[CA]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[94110]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[415-550-1673]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[114]]></Customer_ID>
+		<Customer_Name><![CDATA[Kevin Runyan]]></Customer_Name>
+		<First_Name><![CDATA[Kevin]]></First_Name>
+		<Last_Name><![CDATA[Runyan]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[kevin_runyan@yahoo.com]]></Email>
+		<Phone><![CDATA[214-407-2145]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/31/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[102]]></Address_ID>
+				<Address_Name><![CDATA[Kevin Runyan]]></Address_Name>
+				<Address_First_Name><![CDATA[Kevin]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Runyan]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[2726 Avon St]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Dallas]]></CitySuburb>
+				<StateProvince><![CDATA[Texas]]></StateProvince>
+				<State_Abbreviation><![CDATA[TX]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[75211]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[214-407-2145]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[115]]></Customer_ID>
+		<Customer_Name><![CDATA[Mark  Villella]]></Customer_Name>
+		<First_Name><![CDATA[Mark ]]></First_Name>
+		<Last_Name><![CDATA[Villella]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[mark.j.villella@gmail.com]]></Email>
+		<Phone><![CDATA[910-584-9444]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[12/31/2010]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[103]]></Address_ID>
+				<Address_Name><![CDATA[Mark  Villella]]></Address_Name>
+				<Address_First_Name><![CDATA[Mark ]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Villella]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[10682 Two Notch Road]]></Address_Line_1>
+				<Address_Line_2><![CDATA[apt 11203]]></Address_Line_2>
+				<CitySuburb><![CDATA[elgin]]></CitySuburb>
+				<StateProvince><![CDATA[South Carolina]]></StateProvince>
+				<State_Abbreviation><![CDATA[SC]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[29045]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[910-584-9444]]></Address_Phone>
+			</item>
+			<item>
+				<Address_ID><![CDATA[104]]></Address_ID>
+				<Address_Name><![CDATA[Mark Villella]]></Address_Name>
+				<Address_First_Name><![CDATA[Mark]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Villella]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[813 Fire Break Rd]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Clarksville]]></CitySuburb>
+				<StateProvince><![CDATA[Tennessee]]></StateProvince>
+				<State_Abbreviation><![CDATA[TN]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[37040]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[910-584-9444]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[116]]></Customer_ID>
+		<Customer_Name><![CDATA[Xavier Christie]]></Customer_Name>
+		<First_Name><![CDATA[Xavier]]></First_Name>
+		<Last_Name><![CDATA[Christie]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[ixchristie@hotmail.com]]></Email>
+		<Phone><![CDATA[(519) 860-2507]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[01/04/2011]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[105]]></Address_ID>
+				<Address_Name><![CDATA[Xavier Christie]]></Address_Name>
+				<Address_First_Name><![CDATA[Xavier]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Christie]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[699 Talbot Street, Apt # 902]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[London]]></CitySuburb>
+				<StateProvince><![CDATA[Ontario]]></StateProvince>
+				<State_Abbreviation><![CDATA[ON]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[N6A5L8]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[(519) 860-2507]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[117]]></Customer_ID>
+		<Customer_Name><![CDATA[Kim Coffin]]></Customer_Name>
+		<First_Name><![CDATA[Kim]]></First_Name>
+		<Last_Name><![CDATA[Coffin]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[bkduke@live.ca]]></Email>
+		<Phone><![CDATA[7055265308]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[01/04/2011]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[106]]></Address_ID>
+				<Address_Name><![CDATA[Kim Coffin]]></Address_Name>
+				<Address_First_Name><![CDATA[Kim]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Coffin]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[99 Concession 8 E.]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Perkinsfield]]></CitySuburb>
+				<StateProvince><![CDATA[Ontario]]></StateProvince>
+				<State_Abbreviation><![CDATA[ON]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[L0L2J0]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[7055265308]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[118]]></Customer_ID>
+		<Customer_Name><![CDATA[Gregory Ikhilov]]></Customer_Name>
+		<First_Name><![CDATA[Gregory]]></First_Name>
+		<Last_Name><![CDATA[Ikhilov]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[gregikh@gmail.com]]></Email>
+		<Phone><![CDATA[347-564-4848]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[01/05/2011]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[107]]></Address_ID>
+				<Address_Name><![CDATA[Gregory Ikhilov]]></Address_Name>
+				<Address_First_Name><![CDATA[Gregory]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Ikhilov]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[67 Ave S]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Brooklyn]]></CitySuburb>
+				<StateProvince><![CDATA[New York]]></StateProvince>
+				<State_Abbreviation><![CDATA[NY]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[11223]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[347-564-4848]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[119]]></Customer_ID>
+		<Customer_Name><![CDATA[tom stroh]]></Customer_Name>
+		<First_Name><![CDATA[tom]]></First_Name>
+		<Last_Name><![CDATA[stroh]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[tstroh@frontiernet.net]]></Email>
+		<Phone><![CDATA[6128161783]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[01/07/2011]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[108]]></Address_ID>
+				<Address_Name><![CDATA[tom stroh]]></Address_Name>
+				<Address_First_Name><![CDATA[tom]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[stroh]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[21550 golfview circle]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[jordan]]></CitySuburb>
+				<StateProvince><![CDATA[Minnesota]]></StateProvince>
+				<State_Abbreviation><![CDATA[MN]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[55352]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[6128161783]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[120]]></Customer_ID>
+		<Customer_Name><![CDATA[Jason Kitzman]]></Customer_Name>
+		<First_Name><![CDATA[Jason]]></First_Name>
+		<Last_Name><![CDATA[Kitzman]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jason.kitzman@gmail.com]]></Email>
+		<Phone><![CDATA[519-623-5213]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[01/07/2011]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[109]]></Address_ID>
+				<Address_Name><![CDATA[Jason Kitzman]]></Address_Name>
+				<Address_First_Name><![CDATA[Jason]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Kitzman]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[11 Bismark Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Cambridge]]></CitySuburb>
+				<StateProvince><![CDATA[Ontario]]></StateProvince>
+				<State_Abbreviation><![CDATA[ON]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[N1S 4E6]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[519-623-5213]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[121]]></Customer_ID>
+		<Customer_Name><![CDATA[Jason Kitzman]]></Customer_Name>
+		<First_Name><![CDATA[Jason]]></First_Name>
+		<Last_Name><![CDATA[Kitzman]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[jason_kitzman@hotmail.com]]></Email>
+		<Phone><![CDATA[519-623-5213]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[01/07/2011]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[110]]></Address_ID>
+				<Address_Name><![CDATA[Jason Kitzman]]></Address_Name>
+				<Address_First_Name><![CDATA[Jason]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Kitzman]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[11 Bismark Drive]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Cambridge]]></CitySuburb>
+				<StateProvince><![CDATA[Ontario]]></StateProvince>
+				<State_Abbreviation><![CDATA[ON]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[N1S 4E6]]></ZipPostcode>
+				<Country><![CDATA[Canada]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[519-623-5213]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+	<customer>
+		<Customer_ID><![CDATA[122]]></Customer_ID>
+		<Customer_Name><![CDATA[Marilyn Litchfield]]></Customer_Name>
+		<First_Name><![CDATA[Marilyn]]></First_Name>
+		<Last_Name><![CDATA[Litchfield]]></Last_Name>
+		<Company><![CDATA[]]></Company>
+		<Email><![CDATA[wj4mkl@aol.com]]></Email>
+		<Phone><![CDATA[302 738 6389]]></Phone>
+		<Notes><![CDATA[]]></Notes>
+		<Store_Credit><![CDATA[0.00]]></Store_Credit>
+		<Customer_Group><![CDATA[]]></Customer_Group>
+		<Date_Joined><![CDATA[01/09/2011]]></Date_Joined>
+		<Addresses>
+			<item>
+				<Address_ID><![CDATA[111]]></Address_ID>
+				<Address_Name><![CDATA[Marilyn Litchfield]]></Address_Name>
+				<Address_First_Name><![CDATA[Marilyn]]></Address_First_Name>
+				<Address_Last_Name><![CDATA[Litchfield]]></Address_Last_Name>
+				<Address_Company><![CDATA[]]></Address_Company>
+				<Address_Line_1><![CDATA[23 Covered Bridge Lane]]></Address_Line_1>
+				<Address_Line_2><![CDATA[]]></Address_Line_2>
+				<CitySuburb><![CDATA[Newark]]></CitySuburb>
+				<StateProvince><![CDATA[Delaware]]></StateProvince>
+				<State_Abbreviation><![CDATA[DE]]></State_Abbreviation>
+				<ZipPostcode><![CDATA[19711]]></ZipPostcode>
+				<Country><![CDATA[United States]]></Country>
+				<Building_Type><![CDATA[residential]]></Building_Type>
+				<Address_Phone><![CDATA[302 738 6389]]></Address_Phone>
+			</item>
+		</Addresses>
+	</customer>
+</customers>
