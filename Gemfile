@@ -9,9 +9,10 @@ group :development, :test do
   gem 'compass'
   gem 'rspec-rails'
   gem 'faker'
-  gem 'spork', '0.9.0.rc2'
+#  gem 'spork', '0.9.0.rc2'
   gem 'rcov'
   gem 'annotate-models'
+  gem 'nokogiri'
 end
 
 group :noload do
