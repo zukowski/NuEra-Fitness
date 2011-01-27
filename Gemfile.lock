@@ -67,8 +67,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    nokogiri (1.4.4)
     mysql2 (0.2.6)
+    nokogiri (1.4.4)
     orm_adapter (0.0.3)
     paperclip (2.3.8)
       activerecord
@@ -166,8 +166,8 @@ DEPENDENCIES
   compass
   factory_girl_rails
   faker
-  nokogiri
   mysql2
+  nokogiri
   rails (= 3.0.3)
   rcov
   rspec-rails
