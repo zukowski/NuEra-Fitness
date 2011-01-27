@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'spree'
-gem 'aws-s3'
 
 group :development, :test do
   gem 'compass'
@@ -13,6 +12,10 @@ group :development, :test do
   gem 'rcov'
   gem 'annotate-models'
   gem 'nokogiri'
+end
+
+group :production do
+  gem 'mysql2'
 end
 
 group :noload do

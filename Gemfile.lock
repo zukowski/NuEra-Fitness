@@ -35,10 +35,6 @@ GEM
     acts_as_list (0.1.2)
     annotate-models (1.0.4)
     arel (2.0.6)
-    aws-s3 (0.6.2)
-      builder
-      mime-types
-      xml-simple
     bcrypt-ruby (2.1.3)
     braintree (2.6.2)
       builder
@@ -72,6 +68,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     nokogiri (1.4.4)
+    mysql2 (0.2.6)
     orm_adapter (0.0.3)
     paperclip (2.3.8)
       activerecord
@@ -160,18 +157,17 @@ GEM
     warden (1.0.3)
       rack (>= 1.0.0)
     will_paginate (3.0.pre2)
-    xml-simple (1.0.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   annotate-models
-  aws-s3
   compass
   factory_girl_rails
   faker
   nokogiri
+  mysql2
   rails (= 3.0.3)
   rcov
   rspec-rails
