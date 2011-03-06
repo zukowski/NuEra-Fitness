@@ -1,0 +1,5 @@
+<% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Taxon.roots  %> 
+<%= form_tag products_url, :method => :get do %>
+  <%= submit_tag '', :name => nil, :id => 'search-submit' %>
+  <%= text_field_tag :keywords, params[:keywords] %>
+<% end %>

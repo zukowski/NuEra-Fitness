@@ -1,0 +1,24 @@
+<li><%= render 'shared/search' %></li>
+</ul>
+<ul class="nav-bar">
+<% if store_menu? %>
+  <%= render 'shared/store_menu' %>
+<% end %>
+</ul>
+<ul class="nav-bar-2">
+<%= render 'shared/login_bar' %>
+<li>|</li>
+<li><%= link_to_cart %></li>
+</ul>
+<ul class="nav-bar-3">
+<li><%= link_to t("about") %></li>
+<li>|</li>
+<li><%= link_to t("store") %></li>
+<li>|</li>
+<li><%= link_to t("nutrition") %></li>
+<li>|</li>
+<li><%= link_to t("training") %></li>
+<li>|</li>
+<li><%= link_to t("gyms") %></li>
+<li>|</li>
+<li><%= link_to t("crossfit") %></li>
