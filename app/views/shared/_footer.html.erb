@@ -1,31 +1,48 @@
 <div id="footer">
   <div class="col1">
-  	<ul>
-  	  <li><a href="">About Us</li>
-  	  <li><a href="">Product Reviews</li>
-  	  <li><a href="">Return Policies</li>
-  	  <li><a href="">Product Policies</li>
-  	  <li><a href="">GSA Contract Info</li>
-  	  <li><a href="">Contact Us</li>
-  	  <li><a href="">Gift Certificates</li>
-  	  <li><a href="">Gear Registry</li>
-  	</ul>
+  	<ul>	
+  	  <li><a href="">About Us</a></li>
+          <li><a href="">Product Reviews</a></li>
+  	  <li><a href="">Return Policies</a></li>
+  	  <li><a href="">Product Policies</a></li>
+  	  <li><a href="">GSA Contract Info</a></li>
+  	  <li><a href="">Contact Us</a></li>
+  	  <li><a href="">Gift Certificates</a></li>
+  	  <li><a href="">Gear Registry</a></li>
+	</ul>
   </div>
   <div class="col2">
-  	<ul>
-  	  <li></li>
+  	<ul> 
+  	  <li><a href="">About Us</a></li>
+          <li><a href="">Product Reviews</a></li>
+  	  <li><a href="">Return Policies</a></li>
+  	  <li><a href="">Product Policies</a></li>
+  	  <li><a href="">GSA Contract Info</a></li>
+  	  <li><a href="">Contact Us</a></li>
+  	  <li><a href="">Gift Certificates</a></li>
+  	  <li><a href="">Gear Registry</a></li>
   	</ul>
   </div>
   <div class="col3">
-  	<ul>
-  	  <li></li>
+  	<ul> 
+  	  <li><a href="">About Us</a></li>
+          <li><a href="">Product Reviews</a></li>
+  	  <li><a href="">Return Policies</a></li>
+  	  <li><a href="">Product Policies</a></li>
+  	  <li><a href="">GSA Contract Info</a></li>
+  	  <li><a href="">Contact Us</a></li>
+  	  <li><a href="">Gift Certificates</a></li>
+  	  <li><a href="">Gear Registry</a></li>
   	</ul>
   </div>
   <div class="col4">
   	<%= form_tag '', :method => :post do %>
-  		<%= submit_tag '', :name => nil, :class => 'search-submit' %>
-  		<%= text_field_tag :email, params[:email] %>
-		<% end %>
+          <%= text_field_tag :email, params[:email], :value => 'Email' %>  		
+          <%= submit_tag '', :name => nil, :class => 'search-submit' %>
+          <div class="clear"></div>
+        <% end %>
+	<p><br />Sign up for product promotions, deals, and our newsletter.</p>
   </div>
 </div>   
+<div id="subfooter">&copy;&nbsp;NuEra Fitness 2011 | All Rights Reserved</div>
 <%= render 'shared/google_analytics' %>
