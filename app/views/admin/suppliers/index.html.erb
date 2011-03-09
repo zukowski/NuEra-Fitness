@@ -1,0 +1,30 @@
+<div class='toolbar supplier-links'>
+  <%= button_link_to t("new_supplier"), new_admin_supplier_url, :icon => 'add', :id => 'admin_new_supplier' %>
+</div>
+
+<h1>Suppliers</h1>
+
+<table class="index" id="listing_suppliers">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Zip</th>
+      <th># of Products</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @suppliers.each do |supplier| %>
+    <tr>
+      <td><%= supplier.name %></td>
+      <td><%= supplier.city %></td>
+      <td><%= supplier.state %></td>
+      <td><%= supplier.country %></td>
+      <td><%= supplier.zip %></td>
+      <td><%= supplier.products.count %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,3 @@
+LineItem.class_eval do
+  belongs_to :supplier
+end
