@@ -12,4 +12,17 @@ class Hooks < Spree::ThemeSupport::HookListener
     </p>
     )
   end
+
+  replace :order_details_adjustments do
+    %(
+    <tbody id="order-charges">
+      <% squash_adjustments(@order.adjustments).each do |label,amount| %>
+        <tr class="total">
+          <td colspan="3"><strong><%= label %></strong></td>
+          <td class="total"><strong><%= number_to_currency amount %></strong></td>
+        </tr>
+      <% end %>
+    </tbody>
+    %)
+  end
 end
