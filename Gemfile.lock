@@ -67,7 +67,13 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta_search (1.0.1)
+      actionpack (~> 3.0.2)
+      activerecord (~> 3.0.2)
+      activesupport (~> 3.0.2)
+      arel (~> 2.0.2)
     mime-types (1.16)
+    mustache (0.99.2)
     mysql2 (0.2.6)
     nokogiri (1.4.4)
     orm_adapter (0.0.4)
@@ -148,6 +154,12 @@ GEM
       will_paginate (= 3.0.pre2)
     spree_dash (0.40.2)
       spree_core (= 0.40.2)
+    spree_mail (0.40.0.4)
+      mail (>= 2.2.0)
+      meta_search (>= 1.0.1)
+      mustache (>= 0.12.0)
+      spree_auth (>= 0.30.1)
+      spree_core (>= 0.30.1)
     spree_promo (0.40.2)
       spree_core (= 0.40.2)
     spree_sample (0.40.2)
@@ -180,4 +192,5 @@ DEPENDENCIES
   rspec-rails
   spree
   spree_active_shipping
+  spree_mail
   sqlite3-ruby
