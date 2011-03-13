@@ -1,6 +1,5 @@
 Order.class_eval do
   Order.state_machines[:state] = StateMachine::Machine.new(Order, :initial => 'cart', :use_transactions => false) do
-  #state_machine :initial => 'cart', :use_transactions => false do
     event :next do
       transition :from => 'cart', :to => 'address'
       transition :from => 'address', :to => 'payment'
@@ -31,19 +30,64 @@ Order.class_eval do
         end
       end
     end
-
-    after_transition :to => 'payment', :do => :create_tax_charge_and_shipping!
+    
+    before_transition :from => 'address', :do => :create_or_update_shipments!
+    after_transition :to => 'payment', :do => :create_tax_charge!
     after_transition :to => 'complete', :do => :finalize!
     after_transition :to => 'canceled', :do => :after_cancel
   end
 
-  def create_tax_charge_and_shipping!
-    create_tax_charge!
+  def create_or_update_shipments!
     if shipments.any?
-      # ???
+      update!
     else
-      suppliers.each {|supplier| self.shipments << create_shipment(supplier)}
+      suppliers.each do |supplier|
+        shipment = create_shipment(supplier)
+        shipments << shipment
+        line_items_for_supplier(supplier).each {|line_item| shipment.line_items << line_item}
+      end
     end
+  end
+  
+  def add_variant(variant, quantity=1)
+    current_item = contains?(variant)
+    if current_item
+      current_item.quantity += quantity
+      current_item.save
+    else
+      current_item = LineItem.new :quantity => quantity
+      current_item.variant = variant
+      current_item.price = variant.price
+      current_item.supplier = variant.product.supplier
+      self.line_items << current_item
+
+      # If a shipping address is on the order then the customer has already
+      # been to the checkout, and shipments have been created. Since this
+      # item doesn't exist in any shipment, find the shipment the product
+      # belongs in, creating it if necessary, and add the item to the shipment
+      if ship_address
+        shipment = find_or_create_shipment_by_supplier current_item.supplier
+        self.shipments << shipment unless shipments.include? shipment
+        shipment.line_items << current_item
+      end
+    end
+
+    Variant.additional_fields.select {|f| !f[:populate].nil? && f[:populate].include?(:line_item) }.each do |field|
+      value = ""
+      field_name field[:name].gsub(' ','_').downcase
+      if field[:only].nil? || field[:only].include?(:variant)
+        value = variant.send(field_name)
+      elsif field[:only].include?(:product)
+        value = variant.product.send(field_name)
+      end
+      current_item.update_attribute field_name, value
+    end
+    current_item
+  end
+  
+  def find_or_create_shipment_by_supplier(supplier)
+    shipment = shipments.detect {|shipment| shipment.supplier == supplier}
+    shipment || create_shipment(supplier)
   end
 
   def create_shipment(supplier)
