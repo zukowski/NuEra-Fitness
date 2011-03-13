@@ -1,0 +1,26 @@
+Dear Customer,
+
+Your order has been CANCELED.  Please retain this cancellation information for your records.
+
+============================================================
+Order Summary [CANCELED]
+============================================================
+<% for item in @order.line_items %>
+<%=item.variant.sku %> <%=item.variant.product.name%> <%= variant_options(item.variant) %> (<%=item.quantity%>) @ <%= number_to_currency item.price %> = <%= number_to_currency(item.price * item.quantity) %>
+<% end %>
+============================================================
+Subtotal: <%= number_to_currency @order.item_total %>
+<%
+adjustments = @order.adjustments.inject({}) do |adjustments, adjustment|
+  if adjustments.has_key? adjustment.label
+    adjustments[adjustment.label] += adjustment.amount
+  else
+    adjustments[adjustment.label] = adjustment.amount
+  end
+  adjustments
+end
+%>
+<% adjustments.each do |label,amount| %>
+<%= "#{label}: #{number_to_currency amount}"%>
+<% end %>
+Order Total: <%= number_to_currency @order.total %>
