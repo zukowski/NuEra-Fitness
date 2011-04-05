@@ -1,0 +1,27 @@
+<fieldset id="fields">
+  <legend>Supplier Info</legend>
+  <%= f.field_container :name do %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  <% end %>
+
+  <%= f.field_container :city do %>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  <% end %>
+
+  <%= f.field_container :state do %>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  <% end %>
+
+  <%= f.field_container :country do %>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  <% end %>
+
+  <%= f.field_container :zip do %>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  <% end %>
+</fieldset>

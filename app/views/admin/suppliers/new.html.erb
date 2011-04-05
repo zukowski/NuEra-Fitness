@@ -1,0 +1,8 @@
+<h1><%= t("new_supplier") %></h1>
+
+<%= render 'shared/error_messages', :target => @supplier %>
+
+<%= form_for(:supplier, :url => collection_url) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <%= render :partial => 'admin/shared/new_resource_links' %>
+<% end %>

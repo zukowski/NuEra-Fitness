@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails'
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'spree'
+gem 'spree', '0.40.3'
 gem 'spree_active_shipping'
 gem 'spree_mail'
 
