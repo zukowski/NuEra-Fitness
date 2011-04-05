@@ -14,6 +14,7 @@ group :development, :test do
   gem 'rcov'
   gem 'annotate-models'
   gem 'nokogiri'
+  gem 'htmlentities'
 end
 
 group :production do
@@ -23,3 +24,4 @@ end
 group :noload do
   gem 'factory_girl_rails'
 end
+gem "product_feeds", :path => "product_feeds", :require => "product_feeds"

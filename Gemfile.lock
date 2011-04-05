@@ -1,3 +1,9 @@
+PATH
+  remote: product_feeds
+  specs:
+    product_feeds (1.0.0)
+      spree_core (>= 0.40.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -59,6 +65,7 @@ GEM
       i18n (~> 0.4)
     haml (3.0.25)
     highline (1.5.1)
+    htmlentities (4.2.4)
     i18n (0.5.0)
     jquery-rails (0.2.2)
       rails (~> 3.0)
@@ -185,8 +192,10 @@ DEPENDENCIES
   compass
   factory_girl_rails
   faker
+  htmlentities
   mysql2
   nokogiri
+  product_feeds!
   rails (= 3.0.3)
   rcov
   rspec-rails
