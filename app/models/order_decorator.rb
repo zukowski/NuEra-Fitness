@@ -1,7 +1,9 @@
 Order.class_eval do
   Order.state_machines[:state] = StateMachine::Machine.new(Order, :initial => 'cart', :use_transactions => false) do
     event :next do
+      #transition :cart => :address, :address => :payment, :payment => :confirm, :confirm => :complete
       transition :from => 'cart', :to => 'address'
+      transition :from => 'address', :to => 'quote', :if => :needs_quote?
       transition :from => 'address', :to => 'payment'
       transition :from => 'payment', :to => 'confirm'
       transition :from => 'confirm', :to => 'complete'
@@ -18,7 +20,10 @@ Order.class_eval do
     event :authorize_return do
       transition :to => 'awaiting_return'
     end
-
+    event :quote do
+      transition :to => 'quote'
+    end
+    
     before_transition :to => 'complete' do |order|
       begin
         order.process_payments!
@@ -35,6 +40,21 @@ Order.class_eval do
     after_transition :to => 'payment', :do => :create_tax_charge!
     after_transition :to => 'complete', :do => :finalize!
     after_transition :to => 'canceled', :do => :after_cancel
+  end
+  
+  def customer_adjustments
+    adjustments.inject({}) do |i,adjustment|
+      if i.has_key? adjustment.label
+        i[adjustment.label] += adjustment.amount
+      else
+        i[adjustment.label] = adjustment.amount
+      end
+      i
+    end
+  end
+
+  def needs_quote?
+    shipments.any? {|shipment| shipment.state == 'quote'}
   end
 
   def create_or_update_shipments!
@@ -85,6 +105,19 @@ Order.class_eval do
     current_item
   end
   
+  def update_shipment_state
+    self.shipment_state = case shipments.count
+    when 0; then nil
+    when shipments.shipped.count; then 'shipped'
+    when shipments.ready.count;   then 'ready'
+    when shipments.pending.count; then 'pending'
+    else 'partial'
+    end
+
+    self.shipment_state = 'quote' if needs_quote?
+    self.shipment_state = 'backordered' if backordered?
+  end
+
   def find_or_create_shipment_by_supplier(supplier)
     shipment = shipments.detect {|shipment| shipment.supplier == supplier}
     shipment || create_shipment(supplier)
