@@ -36,8 +36,9 @@
   	</ul>
   </div>
   <div class="col4">
-  	<%= form_tag '', :method => :post do %>
-          <%= text_field_tag :email, params[:email], :value => 'Email' %>  		
+  	<%= form_tag '/subscribers', :method => :post do %>
+          <%= text_field_tag :name, params[:name], :name => 'subscriber[name]', :value => 'Name' %>
+          <%= text_field_tag :email, params[:email], :name => 'subscriber[email]', :value => 'Email' %>  		
           <%= submit_tag '', :name => nil, :class => 'search-submit' %>
           <div class="clear"></div>
         <% end %>
