@@ -422,6 +422,37 @@ body.two-col #content {
   text-transform:uppercase;
   color:#fff;
 }
+
+/* Home Page */
+div#store-menu {
+	width:974px;
+	height:73px;
+	margin-left:-20px;
+	background:url(../images/store-menu-bg.jpg) top left no-repeat;
+}
+div#store-menu-items
+{
+	padding:10px 0px 10px 27px;
+}
+a.store-menu-item {
+	display:block;
+	width:172px;
+	height:52px;
+	float:left;
+	margin:0 6px;
+	background:url(../images/store-menu-sprite.jpg);
+}
+a#store-menu-category { background-position: 0px 0px; }
+a#store-menu-category:hover { background-position: -172px 0px; }
+a#store-menu-brands { background-position: 0px -52px; }
+a#store-menu-brands:hover { background-position: -172px -52px; }
+a#store-menu-packages { background-position: 0px -104px; }
+a#store-menu-packages:hover { background-position: -172px -104px; }
+a#store-menu-apparel { background-position: 0px -156px; }
+a#store-menu-apparel:hover { background-position: -172px -156px; }
+a#store-menu-clearance { background-position: 0px -208px; }
+a#store-menu-clearance:hover { background-position: -172px -208px; }
+
 h { font-size: 2.5em; }
 .form-buttons, .clear { clear: both; }
 input.title { width: auto; }
