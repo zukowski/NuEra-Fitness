@@ -1,6 +1,7 @@
-class Hooks < Spree::ThemeSupport::HookListener
+class SiteHooks < Spree::ThemeSupport::HookListener
   insert_after :admin_tabs do
     %(<%= tab(:suppliers) %>)
+    %(<%= tab(:quotes) %>)
   end
 
   insert_after :admin_product_form_right do
@@ -23,6 +24,13 @@ class Hooks < Spree::ThemeSupport::HookListener
         </tr>
       <% end %>
     </tbody>
-    %)
+    )
+  end
+  
+  replace :cart_item_description do
+    %(
+    <h4><%= link_to variant.product.name, product_path(variant.product) %></h4>
+    <%= variant_options variant %>
+    )
   end
 end

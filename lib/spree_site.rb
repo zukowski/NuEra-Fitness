@@ -1,4 +1,4 @@
-require 'site_hooks'
+require 'site_hooks.rb'
 
 module SpreeSite
   class Engine < Rails::Engine
