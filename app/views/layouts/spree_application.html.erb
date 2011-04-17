@@ -21,10 +21,19 @@ end
           <div id="header" class="container_bg">
             <div class="container">
             <div id="login-bar">
-              <ul class="nav-bar">
                 <%= render 'shared/nav_bar' %>
-              </ul>
             </div>
+            <ul class="nav-bar-3">
+				<li><%= link_to t("store"), products_path %></li>
+				<li>|</li>
+				<li><%= link_to t("nutrition"), '/nutrition' %></li>
+				<li>|</li>
+				<li><%= link_to t("training"), '/training' %></li>
+				<li>|</li>
+				<li><%= link_to t("gyms"), '/gyms' %></li>
+				<li>|</li>
+				<li><%= link_to t("crossfit"), '/crossfit' %></li>
+			</ul>
           <%= logo %>
           </div>
           </div>

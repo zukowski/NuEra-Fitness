@@ -329,12 +329,14 @@ body.two-col #content {
   position: relative;
   color: #2e6ab1;
   clear: both;
+  height:170px;
 }
 #header a {
   color: #353535;
   text-decoration: none;
 }
 #header a:hover { color: #eeeeee; }
+#header img {margin:38px 0 0 16px;}
 #header input.search-submit,
 #footer input.search-submit {
   display: block;
@@ -633,7 +635,7 @@ ul.nav-bar-3 {
   clear: both;
   font-size: 1.4em;
   list-style: none;
-  margin:0;
+  margin:20px 0 0 0;
   background:url(../images/menu-bg.png) top left no-repeat;
 }
 ul.nav-bar-3 li {

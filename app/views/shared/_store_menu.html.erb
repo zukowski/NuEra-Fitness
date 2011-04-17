@@ -1,10 +1,14 @@
 <li><%= link_to t("about"), '/about' %></li>
 <li>|</li>
-<li><%= link_to t("terms"), '/terms' %></li>
-<li>|</li>
 <li><%= link_to t("contact"), '/contact_us' %></li>
 <li>|</li>
-<li><%= link_to t("gsa_contracts"), '/gsa' %></li>
+<% if current_user %>
+  <li><%= link_to t('my_account'), account_path %></li>
+  <li>|</li>
+  <li><%= link_to t('logout'), destroy_user_session_path %></li>
+<% else %>
+  <li><%= link_to t('log_in'), login_path %></li>
+<% end %>
 <li>|</li>
 <li><%= link_to_cart %></li>
 
