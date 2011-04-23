@@ -1,7 +1,6 @@
 class SiteHooks < Spree::ThemeSupport::HookListener
   insert_after :admin_tabs do
     %(<%= tab(:suppliers) %>)
-    %(<%= tab(:quotes) %>)
   end
 
   insert_after :admin_product_form_right do
