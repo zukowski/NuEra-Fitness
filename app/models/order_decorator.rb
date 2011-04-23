@@ -1,4 +1,7 @@
 Order.class_eval do
+
+  scope :quotes, where("shipment_state = 'quote'")
+
   Order.state_machines[:state] = StateMachine::Machine.new(Order, :initial => 'cart', :use_transactions => false) do
     event :next do
       #transition :cart => :address, :address => :payment, :payment => :confirm, :confirm => :complete

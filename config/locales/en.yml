@@ -11,10 +11,12 @@ en:
   terms: "Terms & Conditions"
   training: "Training"
   suppliers: "Suppliers"
+  quotes: "Quotes"
   new_supplier: "New Supplier"
   quote: "quote"
   get_quote: "Request Quote"
   quote_processed_successfully: "Your quote has been accepted, your order will be updated shortly."
+  listing_quotes: "Listing Quotes"
   order_state:
     quote: "quote"
   shipment_states:
