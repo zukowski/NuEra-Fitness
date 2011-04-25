@@ -3,6 +3,14 @@
 <%= hook :inside_head do %>
   <%= render :partial => 'shared/head'%>
 <% end %>
+<!-- cufon text -->
+<script type="text/javascript" src="/javascripts/cufon.js" ></script>
+<script type="text/javascript" src="/javascripts/Din_400.font.js" ></script>
+<script type="text/javascript">
+  Cufon.replace('h1');
+  Cufon.replace('a.root');
+</script>
+<!-- end cufon -->
 </head>
 <%
 if @body_class.nil?
