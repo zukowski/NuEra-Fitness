@@ -67,6 +67,7 @@ h1 {
   color: #222222;
   font-size: 3em;
   line-height: 1;
+  letter-spacing:1px;
   margin-top: 0.1em;
   margin-bottom: 0.1em;
   margin-left:0.2em;
@@ -375,6 +376,7 @@ body.two-col #content {
 #footer input#email{float:left;}
 #header a img { position:absolute; padding:6px 0 0 15px; }
 #footer {
+  position: relative;
   margin-left: 27px;
   width: 974px;
   height: 189px;
@@ -580,7 +582,7 @@ p img {
   color: #666666;
 }
 .breadcrumbs ul li span { color: #333333; }
-div#login-bar { float:right; margin-top: 60px; }
+div#login-bar { float:right; margin-top: 70px; }
 ul#language-bar {
   list-style-type: none;
   margin: 0px;
@@ -642,7 +644,7 @@ ul.nav-bar-3 {
   font-weight:bold;
   letter-spacing:1px;
   list-style: none;
-  margin:20px 0 0 0;
+  margin:10px 0 0 0;
   background:url(../images/menu-bg.png) top left no-repeat;
 }
 ul.nav-bar-3 li {
@@ -653,6 +655,7 @@ ul.nav-bar-3 li {
 }
 #header ul.nav-bar-3 li a { color: #e1e1e1; }
 #header ul.nav-bar-3 li a:hover { color: #00ff00; }
+#header .nuera-phone { position:absolute; top:35px; right:85px; font-size:35px; color:#999; }
 .pagination a.page {
   padding: 0px 5px;
   margin: 0px 3px;
