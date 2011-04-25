@@ -7,8 +7,10 @@
   <li>|</li>
   <li><%= link_to t('logout'), destroy_user_session_path %></li>
 <% end %>
-<%=
-if current_order.nil? or current_order.line_items.empty?
-  print "<li>|</li>" + link_to_cart
-end %>
+<% if current_order.nil? or current_order.line_items.empty? %>
+<% else %>
+<li>|</li><li>
+<%= link_to_cart %>
+</li>
+<% end %>
 

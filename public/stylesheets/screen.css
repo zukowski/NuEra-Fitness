@@ -598,6 +598,7 @@ ul#language-bar strong { font-weight: normal; }
 ul.nav-bar {
   line-height: 30px;
   float: right;
+  font-weight:bold;
   clear: both;
   font-size: 0.9em;
   list-style: none;

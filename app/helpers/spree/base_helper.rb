@@ -1,10 +1,10 @@
 module Spree::BaseHelper
 
   def link_to_cart(text = t('cart'))
-    return "" if current_page?(cart_path)
+    #return "#{text}" if current_page?(cart_path)
     css_class = nil
     if current_order.nil? or current_order.line_items.empty?
-      text = ""
+      text = "#{text}"
       css_class = 'empty'
     else
       text = "#{text}: (#{current_order.item_count}) #{order_price(current_order)}"
