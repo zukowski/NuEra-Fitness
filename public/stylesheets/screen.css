@@ -655,7 +655,7 @@ ul.nav-bar-3 li {
 }
 #header ul.nav-bar-3 li a { color: #e1e1e1; }
 #header ul.nav-bar-3 li a:hover { color: #00ff00; }
-#header .nuera-phone { position:absolute; top:35px; right:85px; font-size:35px; color:#999; }
+#header .nuera-phone { position:absolute; top:35px; right:85px; font-size:35px; color:#bbb; }
 .pagination a.page {
   padding: 0px 5px;
   margin: 0px 3px;
