@@ -1,7 +1,7 @@
 class Package < ActiveRecord::Migration
   def self.up
     create_table :packages do |t|
-      t.integer :produt_id
+      t.integer :product_id
     end
   end
 
