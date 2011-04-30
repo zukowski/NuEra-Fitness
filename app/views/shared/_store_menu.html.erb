@@ -2,13 +2,15 @@
 <li>|</li>
 <li><%= link_to t("contact"), '/contact_us' %></li>
 <li>|</li>
-<% if current_user %>
-  <li><%= link_to t('my_account'), account_path %></li>
+<li><%= link_to t('my_account'), account_path %></li>
+<% if current_user %> 
   <li>|</li>
   <li><%= link_to t('logout'), destroy_user_session_path %></li>
-<% else %>
-  <li><%= link_to t('log_in'), login_path %></li>
 <% end %>
-<li>|</li>
-<li><%= link_to_cart %></li>
+<% if current_order.nil? or current_order.line_items.empty? %>
+<% else %>
+<li>|</li><li>
+<%= link_to_cart %>
+</li>
+<% end %>
 

@@ -3,6 +3,16 @@
 <%= hook :inside_head do %>
   <%= render :partial => 'shared/head'%>
 <% end %>
+<!-- cufon text -->
+<script type="text/javascript" src="/javascripts/cufon.js" ></script>
+<script type="text/javascript" src="/javascripts/Din_400.font.js" ></script>
+<script type="text/javascript">
+  Cufon.replace('h1');
+  Cufon.replace('h2');
+  Cufon.replace('a.root');
+  Cufon.replace('.nuera-phone');
+</script>
+<!-- end cufon -->
 </head>
 <%
 if @body_class.nil?
@@ -19,6 +29,7 @@ end
       <div id="steel-main"> <!-- includes flat bg color and main steel graphic -->
         <div id="steel-top">
           <div id="header" class="container_bg">
+          	<div class="nuera-phone">800-555-6666</div>
             <div class="container">
             <div id="login-bar">
                 <%= render 'shared/nav_bar' %>
