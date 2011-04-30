@@ -1,0 +1,39 @@
+<table class="index">
+  <thead>
+    <tr>
+      <th>Variant Name</th>
+      <th>Price</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @package.variants.each do |variant| %>
+      <tr>
+        <td><%= variant.name %></td>
+        <td><%= number_to_currency variant.price %></td>
+        <td><%= number_to_currency variant.cost_price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table class="index">
+  <tbody>
+    <tr>
+      <td>Retail Price:</td>
+      <td><%= number_to_currency @package.retail %></td>
+    </tr>
+    <tr>
+      <td>Cost:</td>
+      <td><%= number_to_currency @package.cost %></td>
+    </tr>
+    <tr>
+      <td>Customer Savings:</td>
+      <td><%= number_to_currency @package.savings %></td>
+    </tr>
+    <tr>
+      <td>Profit:</td>
+      <td><%= number_to_currency @package.profit %></td>
+    </tr>
+  </tbody>
+</table>

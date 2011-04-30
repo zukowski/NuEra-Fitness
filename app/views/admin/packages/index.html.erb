@@ -1,0 +1,22 @@
+<h1>Packages</h1>
+
+<table class="index" id="listing_packages">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cost</th>
+      <th>Price</th>
+      <th>Retail</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @packages.each do |package| %>
+    <tr>
+      <td><%= link_to package.name, edit_admin_package_path(package) %></td>
+      <td><%= package.cost %></td>
+      <td><%= package.price %></td>
+      <td><%= package.retail %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

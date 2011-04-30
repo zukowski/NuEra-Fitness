@@ -3,6 +3,6 @@ NuEraFitness::Application.routes.draw do
 
   namespace :admin do
     resources :suppliers
-    resources :quotes
+    resources :packages
   end
 end
