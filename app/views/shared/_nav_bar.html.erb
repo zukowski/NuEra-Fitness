@@ -1,5 +1,23 @@
-<ul class="nav-bar">
-<li><%= render 'shared/search' %></li>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('img.hover').hover(
+	function() {
+		var temp = $(this).attr('src');
+		$(this).attr('src',$(this).attr('togglesrc'));
+		$(this).attr('togglesrc',temp);
+	},
+	function() {
+		var temp = $(this).attr('src');
+		$(this).attr('src',$(this).attr('togglesrc'));
+		$(this).attr('togglesrc',temp);
+	});
+});
+</script>
+<ul id="social-and-search">
+  <li><a href="#"><img class="hover" togglesrc="/images/facebook-over.png" src="/images/facebook.png" border="0" /></a></li>
+  <li><a href="#"><img class="hover" togglesrc="/images/flickr-over.png" src="/images/flickr.png" border="0" /></a></li>
+  <li><a href="#"><img class="hover" togglesrc="/images/twitter-over.png" style="margin-top:-1px;" src="/images/twitter.png" border="0" /></a></li>
+  <li><%= render 'shared/search' %></li>
 </ul>
 <ul class="nav-bar">
 <% if store_menu? %>

@@ -128,6 +128,39 @@ a {
   text-decoration: underline;
   color: #00ff00;
 }
+
+div#content { padding-top:15px; }
+div#content div.three-col .col {
+  float: left;
+  margin-right:15px;
+  width:270px;
+  color:#ddd;
+  background-color:rgba(0,0,0,0.7);
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  padding: 15px;
+  -moz-box-shadow: inset 5px 5px 12px 5px #000;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #000;
+  box-shadow: inset 5px 5px 12px 5px #000;
+}
+div#content div.three-col .double {
+  float: left;
+  margin-right:15px;
+  width: 585px;
+  color: #ddd;
+  background-color:rgba(0,0,0,0.7);
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  padding: 15px;
+  -moz-box-shadow: inset 5px 5px 12px 5px #000;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #000;
+  box-shadow: inset 5px 5px 12px 5px #000;
+}
+div#content div.three-col .last {
+	margin:0;
+}
+div#content h2 { color:#aaa; margin-bottom:5px;}
+
 table#cart-detail { font-size:14px; }
 table#cart-detail th { font-size:16px; }
 table#cart-detail h4 { font-size:28px; }
@@ -365,7 +398,7 @@ body.two-col #content {
   text-decoration: none;
 }
 #header a:hover { color: #eeeeee; }
-#header img {margin:32px 0 0 16px;}
+#header #logo img {margin:32px 0 0 16px;}
 #header input.search-submit,
 #footer input.search-submit {
   display: block;
@@ -397,7 +430,7 @@ body.two-col #content {
 #footer input#email,
 #footer input#name { float:left; }
 #footer input#email{float:left;}
-#header a img { position:absolute; padding:6px 0 0 15px; }
+#header #logo a img { position:absolute; padding:6px 0 0 15px; }
 #footer {
   position: relative;
   margin-left: 27px;
@@ -618,6 +651,21 @@ ul#language-bar li {
   display: inline;
 }
 ul#language-bar strong { font-weight: normal; }
+ul#social-and-search {
+  line-height: 30px;
+  float: right;
+  font-weight:bold;
+  clear: both;
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0 50px 0 0;
+  padding: 0;
+}
+ul#social-and-search li {
+	display:inline;
+	float:left;
+	margin-left:7px;
+}
 ul.nav-bar {
   line-height: 30px;
   float: right;
