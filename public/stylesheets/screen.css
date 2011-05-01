@@ -159,7 +159,8 @@ div#content div.three-col .double {
 div#content div.three-col .last {
 	margin:0;
 }
-div#content h2 { color:#aaa; margin-bottom:5px;}
+div#content h2,
+div#content h3{ color:#aaa; margin-bottom:5px;}
 
 table#cart-detail { font-size:14px; }
 table#cart-detail th { font-size:16px; }
