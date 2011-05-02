@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110423172958) do
+ActiveRecord::Schema.define(:version => 20110502224756) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20110423172958) do
     t.datetime "updated_at"
     t.string   "state_name"
     t.string   "alternative_phone"
+    t.string   "company"
   end
 
   add_index "addresses", ["firstname"], :name => "index_addresses_on_firstname"
