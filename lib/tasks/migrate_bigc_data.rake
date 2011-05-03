@@ -42,9 +42,29 @@
 
 namespace :migrate do
   
+  desc "Test order totals"
+  task :test_order_totals => :environment do
+    doc = load_xml 'bigc/orders.xml'
+    count = 0
+    wrong = 0
+    doc.xpath('//orders/order').each do |order|
+      count = count + 1
+      id = order./('.//Order_ID').first.content
+      subtotal = order./('.//Subtotal').first.content.to_f
+      shipping = order./('.//Shipping_Cost').first.content.to_f
+      total    = order./('.//Order_Total').first.content.to_f
+      subship  = (subtotal + shipping).round(2)
+      if (subship) != total
+        wrong = wrong + 1
+        puts "#{subtotal} + #{shipping} != #{total} [#{subship}] #{id}" 
+      end
+    end
+    puts "#{count} orders / #{wrong}"
+  end
+
   desc "Migrate users from BigCommerce into Spree"
   task :users => :environment do
-    doc = load_xml 'bigc/customers-2011-01-09.xml'  
+    doc = load_xml 'bigc/customers.xml'  
     
     count = 0
     doc.xpath('//customers//customer').each do |customer|
@@ -63,8 +83,9 @@ namespace :migrate do
       # create a default password for all users
       # TODO change this to a unique random pw when we send out 
       # pw reset emails
-      user.password = "abc123"
-      
+      user.password = "aw3d#4$"
+      user.password_confirmation = "aw3d#4$"
+
       # insert the user record
       user.save
       count += 1
@@ -75,7 +96,7 @@ namespace :migrate do
   
   desc "Migrate addresses from BigCommerce into Spree"
   task :addresses => :environment do
-    doc = load_xml 'bigc/customers-2011-01-09.xml'
+    doc = load_xml 'bigc/customers.xml'
 
     count_addresses = 0
     count_states = 0
@@ -133,180 +154,144 @@ namespace :migrate do
     puts "Created #{count_addresses} addresses and #{count_states} states."
   end
 
-  desc "Migrate Shipping Methods from BigCommerce to Spree"
-  task :shipping_methods => :environment do
-    doc = load_xml 'bigc/orders-2011-01-09.xml'
-    shipping_methods = []
-    
-    ShippingMethod.all.each do |method|
-      method.destroy
-    end
-    
-    doc.xpath('//orders//order').each do |order|
-      method = order./('.//Ship_Method').first.content
-      if (!method.nil? && method != "" && !shipping_methods.include?(method))
-        shipping_methods.push method
-        spree_ship_method = ShippingMethod.new :name => method
-        spree_ship_method.zone_id = 2 # North America
-        spree_ship_method.display_on = 'back_end';
-        spree_ship_method.save
-        
-        # create calculator associated with shipping method
-        
-      end
-    end
-  end
-
   desc "Migrate orders from BigCommerce into Spree"
   task :orders => :environment do
-    doc = load_xml 'bigc/orders-2011-01-09.xml'
+    doc = load_xml 'bigc/orders.xml'
     
     # first let's run some tests and see if we can match all of the
     # BigC line items to product variants in Spree
-    variants_found = []
-    variants_not_found = []
-    bigc_items_no_sku = []
   
     doc.xpath('//orders//order').each do |order|
+      id = order./('.//Order_ID').first.content
       order./('.//item').each do |item|
         sku = item./('.//Product_SKU').first.content
-        id = item./('.//Product_ID').first.content
         product_name = item./('.//Product_Name').first.content
-        variant = Variant.where("sku = ?",sku)
-        product = Product.where("name = ?",product_name)
-        if variant.nil? && product.nil? && !variants_not_found.include?(product_name)
-          variants_not_found.push product_name
-        end
-        if ((!variant.nil? || product.nil?) && !variants_found.include?(product_name))
-	  variants_found.push product_name
-        end
-        if sku == "" && !bigc_items_no_sku.include?(product_name)
-          bigc_items_no_sku.push product_name
+
+        product = find_sku(sku,product_name)
+
+        if product.nil?
+          puts "Could not find SKU(#{sku}) or Name(#{product_name}) on order ##{id}"
         end
       end  
     end
 
-    puts variants_found.length.to_s + " variants found."
-    puts variants_not_found.length.to_s + " variants not found."
-    puts bigc_items_no_sku.length.to_s + " BigC order items with blank or missing SKU."
     # end tests
     
     # destroy all existing orders
-    Order.all.each do |order|
-      #order.destroy
-    end
+    #Order.all.each do |order|
+    #  order.destroy
+    #end
 
     # create the orders
-    doc = load_xml 'bigc/orders-2011-01-09.xml'
+    doc = load_xml 'bigc/orders.xml'
     doc.xpath('//orders//order').each do |order|
-      puts "Creating new order..."
-      spree_order = Order.new
+      order_id = order./('.//Order_ID').first.content
       email = order./('.//Customer_Email').first.content
       bigc_id = order./('.//Customer_ID').first.content
       billing_email = order./('.//Billing_Email').first.content
       status = order./('.//Order_Status').first.content
-      if status == 'Cancelled'
-        puts 'Cancelled'
+
+      unless status == 'Shipped' || status == 'Completed'
+        puts "Skipping #{order_id}, not shipped or completed (#{status})"
         next
       end
-      user = User.where('bigc_id = ? OR email = ?',bigc_id,email).first
+
+      user = User.find_by_bigc_id(bigc_id)
+      user ||= User.find_by_email(email)
+
       if user.nil?
-        #puts "\t****WARNING: No user with bigc_id = #{bigc_id} OR email = '#{email}'"
-        #puts "\tCreating new user..."
-        user = User.new
-        user.email = billing_email
-        user.login = billing_email
-        user.password = 'abc123'
-        user.save
-        #puts "\tCreated new user for #{billing_email}"
-      else        
-        #puts "    Found user match for #{email} based on BigC Customer_ID"
+        puts "Skipping #{order_id}, customer not found"
+        next
       end
-      
+
+      spree_order = Order.new
       spree_order.user_id = user.id
       spree_order.email = user.email
       spree_order.state = 'complete';
-     
       shipping_method = ShippingMethod.where('name = ?','Legacy').first
-      if shipping_method.nil?
-        #puts "****ERROR: You must have a shipping method called 'Legacy' before importing orders from BigC"
-      end
- 
       spree_order.shipping_method_id = shipping_method.id
       spree_order.shipment_state = 'shipped'
       spree_order.save
 
+      bill_country = Country.find_by_name(order./('.//Billing_Country').first.content
+      ship_country = Country.find_by_name(order./('.//Shipping_Country').first.content
+      bill_state   = State.find_by_abbr(order./('.//Billing_State_Abbreviation').first.content
+      ship_state   = State.find_by_abbr(order./('.//Shipping_state_abbreviation').first.content
+      
+      spree_order.bill_address = Address.create({
+        :firstname => order./('.//Billing_First_Name').first.content,
+        :lastname  => order./('.//Billing_Last_Name').first.content,
+        :address1  => order./('.//Billing_Street_1').first.content,
+        :address2  => order./('.//Billing_Street_2').first.content,
+        :city      => order./('.//Billing_Suburb').first.content,
+        :zipcode   => order./('.//Billing_Zip').first.content,
+        :phone     => order./('.//Billing_Phone').first.content,
+        :company   => order./('.//Billing_Company').first.content,
+        :state     => bill_state,
+        :country   => bill_country
+      })
+      spree_order.ship_address = Address.create({
+        :firstname => order./('.//Shipping_First_Name').first.content,
+        :lastname  => order./('.//Shipping_Last_Name').first.content,
+        :address1  => order./('.//Shipping_Street_1').first.content,
+        :address2  => order./('.//Shipping_Street_2').first.content,
+        :city      => order./('.//Shipping_Suburb').first.content,
+        :zipcode   => order./('.//Shipping_Zip').first.content,
+        :phone     => order./('.//Shipping_Phone').first.content,
+        :company   => order./('.//Shipping_Company').first.content,
+        :state     => ship_state,
+        :country   => ship_country
+      })
+
+      spree_order.save
+
       # add line items to order
-      #puts "\tCreating line items..."
       order./('.//item').each do |item|
-        #puts "\t\tCreating line item..."
         item_name = item./('.//Product_Name').first.content
-        # provide some corrections to product names
-        if item_name == 'The Prospect - Modified'
-          item_name = 'The Prospect'
-        end
         item_sku = item./('.//Product_SKU').first.content
-	#puts "\t\t\tBigC line item found: #{item_name}"
-        #puts "\t\t\tSearching for Spree product..."
-        product = Product.where("name = ?",item_name).first
-        if product.nil?
-	  #puts "\t\t****WARNING: No Spree product found by that name, trying with variant SKU..."
-          product = Product.where("id = (SELECT product_id FROM variants where sku = ?)",item_sku).first
+
+        variant = find_variant_by_sku_or_name(item_sku,item_name)
+        
+        line_item = LineItem.new(:quantity => item./('.//Product_Qty').first.content)
+	    line_item.variant = variant
+        line_item.price = variant.price
+        line_item.supplier = variant.product.supplier
+        line_item.save
+        spree_order.line_items << line_item
+
+        shipment = spree_order.shipments.detect {|s| s.supplier == line_item.supplier}
+        if shipment.nil?
+          shipment = Shipment.create({
+            :order => spree_order,
+            :supplier => supplier,
+            :shipping_method => shipping_method,
+            :address => spree_order.ship_address
+          })
+          spree_order.shipments << shipment
+          ship_date = order./('.//Date_Shipped').first.content       
+          shipment.shipped_at = "#{ship_date.slice(6,4)}-#{ship_date.slice(0,2)}-#{ship_date.slice(3,2)}"
+          shipment.tracking = order./('.//Tracking_No').first.content
+          shipment.state = shipped
+          shipment.save
         end
-        if product.nil?
-          #puts "****ERROR: No Spree product found by searching on variant SKU = '#{item_sku}'"
-        else
-          #puts "\t\t\tSpree product found"
-          #puts "\t\t\tSearching for Spree variant for this product..."
-          variant = Variant.where("id = ?",product.id).first
-          if variant.nil?
-	    #puts "****ERROR: No Spree variant found"
-          else       
-            #puts "\t\t\tSpree variant found"
-            line_item = LineItem.new
-	    line_item.variant_id = variant.id
-            line_item.order_id = spree_order.id
-            line_item.quantity = item./('.//Product_Qty').first.content
-            line_item.save
-            #puts "\t\tLine item created"
-          end
-        end
+        shipment.line_items << line_item
       end
-      #puts "\tCreate line item"
+      
+      order.adjustments << Adjustment.create({
+        :label => 'shipping',
+        :amount => order./('.//Shipping_Cost').first.content,
+        :locked => true
+      })
 
-      # create adjustment for shipping cost
-      #adjustment = Adjustment.new
-      #adjustment.order_id = spree_order.id
-      #adjustment.label = 'shipping';
-      #adjustment.amount = order./('.//Shipping_Cost').first.content
-      #adjustment.save
-
-      # create shipment
-      #puts "\tCreating shipment..."
-      #ship_date = order./('.//Date_Shipped').first.content       
-      #shipment = spree_order.shipment #Shipment.new :cost => order./('.//Shipping_Cost').first.content
-      #if shipment.nil?
-      #  spree_order.create_shipment!
-      #  shipment = spree_order.shipment
-      #end
-      #shipment.order_id = spree_order.id
-      #shipment.shipped_at = "#{ship_date.slice(6,4)}-#{ship_date.slice(0,2)}-#{ship_date.slice(3,2)}"
-      #shipment.shipping_method_id = shipping_method.id
-      #shipment.tracking = order./('.//Tracking_No').first.content
-      #shipment.state = "shipped";
-      #shipment.save
-      #puts "\tShipment created"
-      #spree_order.update!
-      #spree_order.save
-
-      # create adjustment for shipping cost
-      #adjustment = Adjustment.new
-      #adjustment.order_id = spree_order.id
-      #adjustment.label = 'shipping';
-      #adjustment.amount = order./('.//Shipping_Cost').first.content
-      #puts adjustment.inspect
-      #adjustment.save
-      #puts adjustment.errors
+      tax_name = order./('.//Tax_Name')
+      
+      if tax_name == 'Colorado State Tax'
+        order.adjustments << Adjustment.create({
+          :label => 'state tax',
+          :amount => order./('.//Tax_Total').first.content,
+          :locked => true
+        })
+      end
 
       # create payment
       #puts "\tCreating payment..."
@@ -349,4 +334,32 @@ namespace :migrate do
     f.close
     doc
   end
+end
+
+def find_varaitn_by_sku_or_name(item_sku, name)
+  if item_sku == "ERFR36"; then item_sku = "NEFR36"; end
+  if name =~ /^(?:Crossfit )?Strength Bands Starter Package/
+    item_sku = "SBSP"
+  elsif name =~ /^Strength Bands Complete Package/
+    item_sku = "SBCP"
+  elsif name =~ /^Nu Era (?:Fitness )?([0-9]{2})lb Medicine Ball/
+    item_sku = "NEFMB#{$1}"
+  elsif name =~ /([0-9]{2})lb Nu Era Med Ball/
+    item_sku = "NEFMB#{$1}"
+  elsif name =~ /^The Prospect/
+    item_sku = "LEGACY001"
+  elsif name =~ /^Nu Era Champ Customer Pkg/
+    item_sku = "LEGACY002"
+  elsif name =~ /^The Basics/
+    item_sku = "LEGACY003"
+  elsif name =~ /^The Elite/
+    item_sku = "LEGACY004"
+  elsif name =~ /^The Essential/
+    item_sku = "LEGACY005"
+  elsif name =~ /^Manilla Rope w\/ Poly End & Metal Clamp \(9 ft\)/
+    item_sku = "M29M"
+  elsif name =~ /^6ft Nylon Rope w\/ Poly End & Metal Clamp 1 1\/2 inch/
+    item_sku = "M26M"
+  end
+  Variant.find_by_sku(item_sku)
 end
