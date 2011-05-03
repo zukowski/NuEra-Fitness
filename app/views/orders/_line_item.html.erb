@@ -5,11 +5,13 @@
   <td class="first">
     <%- locals = {:item_form => item_form, :variant => variant, :line_item => line_item} %>
     <%= hook :cart_item_image, locals do %>
+    <div class="line-item-image">
       <% if variant.images.length == 0 %>
         <%= small_image(variant.product) %>
       <% else %>
         <%=  image_tag variant.images.first.attachment.url(:small)   %>
       <% end %>
+    </div>
     <% end %>
   </td>
   <td>

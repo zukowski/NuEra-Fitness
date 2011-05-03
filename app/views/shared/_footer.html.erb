@@ -4,15 +4,15 @@
   	  <li><a href="/about">About Us</a></li>
   	  <li><a href="/terms">Terms & Conditions</a></li>
   	  <li><a href="/gsa">GSA Contract Info</a></li>
-  	  <li><a href="/gift-certificates">Gift Certificates</a></li>
-  	  <li><a href="/contact">Contact Us</a></li>
+  	  <% #<li><a href="/gift-certificates">Gift Certificates</a></li> %>
+  	  <!-- <li><a href="/contact">Contact Us</a></li> -->
 	</ul>
   </div>
   <div class="col2">
-  	<span style="color:#959595;">Check out these<br /><span style="color:#fff;">Nu</span><span style="color:#00ff00;">Era</span> Affiliate Gyms:</span><br /><br />
+  	<span style="color:#959595;">Check out these<br /><span style="color:#fff;">Nu</span> <span style="color:#00ff00;">Era</span> Affiliate Gyms:</span><br /><br />
   	<ul> 
-  	  <li><a href="http://crossfithuntley.com" target="_blank"><span style="font-weight:bold;color:#aaa;font-size:14px;">Crossfit Huntley</span></a></li>
-      <li><a href="http://northhavencrossfit.com" target="_blank"><span style="font-weight:bold;color:#aaa;font-size:14px;">Crossfit North Haven</span></a></li>
+  	  <li><a href="http://crossfithuntley.com" target="_blank"><span style="font-weight:bold;color:#aaa;font-size:13px;">Crossfit Huntley</span></a></li>
+      <li><a href="http://northhavencrossfit.com" target="_blank"><span style="font-weight:bold;color:#aaa;font-size:13px;">Crossfit North Haven</span></a></li>
   	</ul>
   </div>
   <div class="col3">
@@ -24,9 +24,9 @@
           <%= text_field_tag :name, params[:name], :name => 'subscriber[name]', :value => 'Name' %>
           <%= text_field_tag :email, params[:email], :name => 'subscriber[email]', :value => 'Email' %>  		
           <%= submit_tag '', :name => nil, :class => 'search-submit' %>
-          <div class="clear"></div>
-        <% end %>
-	  </div>
-</div>   
-<div id="subfooter">&copy;&nbsp;NuEra Fitness 2011. All Rights Reserved. | 800-555-6666 | <a href="mailto:info@nuerafitness.com">info@nuerafitness.com</a></div>
+    <div class="clear"></div>
+    <% end %>
+	</div>
+</div><br />
+<div id="subfooter">&copy;&nbsp;Nu Era Fitness 2011. All Rights Reserved. | 888-469-3445 | <a href="mailto:questions@nuerafitness.com">questions@nuerafitness.com</a></div>
 <%= render 'shared/google_analytics' %>

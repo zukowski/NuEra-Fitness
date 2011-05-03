@@ -129,44 +129,90 @@ a {
   color: #00ff00;
 }
 
+/* CONTENT PAGES */
 div#content { padding-top:15px; }
 div#content div.three-col .col {
   float: left;
   margin-right:15px;
+  margin-bottom:15px;
   width:270px;
   color:#ddd;
+  background-color:#222;
   background-color:rgba(0,0,0,0.7);
   -moz-border-radius: 15px;
   border-radius: 15px;
   padding: 15px;
-  -moz-box-shadow: inset 5px 5px 12px 5px #000;
-  -webkit-box-shadow: inset 5px 5px 12px 5px #000;
-  box-shadow: inset 5px 5px 12px 5px #000;
+  -moz-box-shadow: inset 5px 5px 12px 5px #161616;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #161616;
+  box-shadow: inset 5px 5px 12px 5px #161616;
 }
 div#content div.three-col .double {
   float: left;
   margin-right:15px;
   width: 585px;
   color: #ddd;
+  background-color:#222;
   background-color:rgba(0,0,0,0.7);
   -moz-border-radius: 15px;
   border-radius: 15px;
   padding: 15px;
-  -moz-box-shadow: inset 5px 5px 12px 5px #000;
-  -webkit-box-shadow: inset 5px 5px 12px 5px #000;
-  box-shadow: inset 5px 5px 12px 5px #000;
+  -moz-box-shadow: inset 5px 5px 12px 5px #161616;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #161616;
+  box-shadow: inset 5px 5px 12px 5px #161616;
+}
+div#content div.three-col .triple {
+  float: left;
+  width: 905px;
+  color: #ddd;
+  background-color:#222;
+  background-color:rgba(0,0,0,0.7);
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  padding: 15px;
+  -moz-box-shadow: inset 5px 5px 12px 5px #161616;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #161616;
+  box-shadow: inset 5px 5px 12px 5px #161616;
 }
 div#content div.three-col .last {
 	margin:0;
 }
 div#content h2,
-div#content h3{ color:#aaa; margin-bottom:5px;}
+div#content h3{ color:#aaa; color:#00ff00; margin-bottom:5px;}
+div#content h4{ color:#aaa; margin-bottom:5px;}
+div#content h5{ color:#00ff00; margin:0 0 2px 0; font-size:11px; }
+table.top-crossfit-products td { padding:4px; }
+div.top-product-category {
+	text-align:center;
+	background-color:#444;
+	background-color:rgba(255,255,255,0.2);
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:4px;
+}
+div.top-product-category:hover {
+	text-align:center;
+	
+	background-color:rgba(255,255,255,0.2);
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:3px;
+  border:1px solid #ddd;
+}
+div.top-product-category a { text-decoration:none; }
+div.top-product-category-image {
+	display:table-cell;
+	vertical-align:middle;
+	height:100px;
+	width:100px;
+	margin:0 auto;
+}
 
 table#cart-detail { font-size:14px; }
 table#cart-detail th { font-size:16px; }
 table#cart-detail h4 { font-size:28px; }
 table#cart-detail a { display:block; padding:3px; text-decoration:none;}
 table#cart-detail a:hover { display:block; padding:3px; text-decoration:underline;}
+table#cart-detail tr.line-item td div.line-item-image img { width:130px; }
 table#cart-detail tr.line-item td {
 	background:#333;
 	background-color:rgba(0,0,0,0.7);
@@ -728,7 +774,7 @@ ul.nav-bar-3 li {
 }
 #header ul.nav-bar-3 li a { color: #e1e1e1; }
 #header ul.nav-bar-3 li a:hover { color: #00ff00; }
-#header .nuera-phone { position:absolute; top:35px; right:85px; font-size:35px; color:#bbb; }
+#header .nuera-phone { position:absolute; top:77px; right:435px; font-size:35px; color:#bbb; }
 .pagination a.page {
   padding: 0px 5px;
   margin: 0px 3px;
@@ -1280,10 +1326,19 @@ table#cart h4 { margin-bottom: 0em; }
   border-right: 1px solid #eeeeee;
 }
 #signup #new-customer {
+	color:#ccc;
   display: inline;
   float: left;
   width: 470px;
   margin-right: 10px;
+  background-color:#222;
+  background-color:rgba(0,0,0,0.7);
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -moz-box-shadow: inset 5px 5px 12px 5px #161616;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #161616;
+  box-shadow: inset 5px 5px 12px 5px #161616;
+  padding:12px;
 }
 #signup #new-customer h2 { margin-bottom: 0.25em; }
 #signup #new-customer p { margin-bottom: 10px; }
@@ -1301,6 +1356,7 @@ table#cart h4 { margin-bottom: 0em; }
   width: 432px;
   height: 260px;
   margin-right: 20px;
+  background-color:#222;
   background-color:rgba(0,0,0,0.7);
   border-radius: 15px;
   -moz-border-radius: 15px;
@@ -1312,10 +1368,22 @@ table#cart h4 { margin-bottom: 0em; }
   float: left;
   width: 432px;
   height: 260px;
+  background-color:#222;
   background-color:rgba(0,0,0,0.7);
   border-radius: 15px;
   -moz-border-radius: 15px;
   padding:12px;
+}
+#login #existing-customer {
+	color:#ccc;
+	padding:12px;
+	background-color:#222;
+	background-color:rgba(0,0,0,0.7);
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -moz-box-shadow: inset 5px 5px 12px 5px #161616;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #161616;
+  box-shadow: inset 5px 5px 12px 5px #161616;
 }
 #login #existing-customer h2 { }
 #login #existing-customer p { margin-bottom: 10px; }
@@ -1324,6 +1392,7 @@ table#cart h4 { margin-bottom: 0em; }
   margin: 0px;
 }
 #login #existing-customer input[type=checkbox] { top: 0em; }
+#login #existing-customer label { color:#ccc; }
 input.openid_url {
   background: #ffffff url(../images/openid-inputicon.gif) no-repeat scroll 0pt 50%;
   padding-left: 18px;
@@ -1369,24 +1438,29 @@ ol.progress-steps {
   list-style: none;
   margin: 0;
   padding: 0;
-  line-height: 1em;
-  font-size: 12px;
+  line-height: 2.3em;
+  font-size: 15px;
+  font-weight:bold;
 }
 ol.progress-steps li {
   margin: 0;
+  font-family:arial;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  width:125px;
   padding: 0;
   list-style: none;
   display: block;
   float: left;
-  color: #999999;
+  color: #eee;
   background-position: top left;
   background-repeat: no-repeat;
-  background-image: url(../images/step-progress/incomplete-incomplete.gif);
+  background-image: url(../images/step-progress/incomplete-incomplete.png);
 }
 ol.progress-steps li span {
   padding: 5px 14px 7px 24px;
   display: block;
-  float: left;
+  margin:0 auto;
   background-position: top right;
   background-repeat: no-repeat;
 }
@@ -1396,19 +1470,19 @@ ol.progress-steps li a {
 }
 ol.progress-steps li.current-first span { padding-left: 14px; }
 ol.progress-steps li.completed-first span { padding-left: 14px; }
-ol.progress-steps li.current-first { background-image: url(../images/step-progress/current-first.gif); }
-ol.progress-steps li.completed-first { background-image: url(../images/step-progress/completed-first.gif) !important; }
+ol.progress-steps li.current-first { background-image: url(../images/step-progress/current-first.png); }
+ol.progress-steps li.completed-first { background-image: url(../images/step-progress/completed-first.png) !important; }
 ol.progress-steps li.current { color: #ffffff; }
-ol.progress-steps li.current-first { color: #ffffff; }
+ol.progress-steps li.current-first { color: #fff; }
 ol.progress-steps li.current-last { color: #ffffff; }
-ol.progress-steps li.completed { background-image: url(../images/step-progress/completed-completed.gif); }
-ol.progress-steps li.current { background-image: url(../images/step-progress/completed-current.gif); }
-ol.progress-steps li.current-last { background-image: url(../images/step-progress/completed-current.gif); }
-ol.progress-steps li.next { background-image: url(../images/step-progress/current-incomplete.gif); }
-ol.progress-steps li.next-last { background-image: url(../images/step-progress/current-incomplete.gif); }
-ol.progress-steps li.last span { background-image: url(../images/step-progress/incomplete-right.gif); }
-ol.progress-steps li.next-last span { background-image: url(../images/step-progress/incomplete-right.gif); }
-ol.progress-steps li.current-last span { background-image: url(../images/step-progress/current-right.gif); }
+ol.progress-steps li.completed { color:#ccc; background-image: url(../images/step-progress/completed-completed.png); }
+ol.progress-steps li.current { background-image: url(../images/step-progress/completed-current.png); }
+ol.progress-steps li.current-last { background-image: url(../images/step-progress/completed-current.png); }
+ol.progress-steps li.next { color:#eee; background-image: url(../images/step-progress/current-incomplete.png); }
+ol.progress-steps li.next-last { background-image: url(../images/step-progress/current-right.png); }
+ol.progress-steps li.last { background: url(../images/step-progress/incomplete-right.png) top right no-repeat; }
+ol.progress-steps li.next-last span { }
+ol.progress-steps li.current-last span { background-image: url(../images/step-progress/current-right.png); }
 div#checkout { position: relative; }
 div#checkout .progress-steps {
   position: absolute;
