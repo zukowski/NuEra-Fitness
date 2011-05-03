@@ -1468,7 +1468,7 @@ ol.progress-steps li a {
   text-decoration: none;
   color: #333333;
 }
-ol.progress-steps li.current-first span { padding-left: 14px; }
+ol.progress-steps li.current-first span { color:#222; padding-left: 14px; }
 ol.progress-steps li.completed-first span { padding-left: 14px; }
 ol.progress-steps li.current-first { background-image: url(../images/step-progress/current-first.png); }
 ol.progress-steps li.completed-first { background-image: url(../images/step-progress/completed-first.png) !important; }
@@ -1558,14 +1558,15 @@ div#checkout #payment-methods li.last {
   width: 190px;
 }
 div#checkout #checkout-summary {
-  background-color: #c3c9df;
+  background-color: #222;
+  color:#ccc;
   float: right;
   margin-top: 10px;
   padding: 20px;
   width: 180px;
 }
 div#checkout #checkout-summary {
-  background-color: #c3c9df;
+  background-color: #222;
   float: right;
   margin-top: 10px;
   padding: 20px;

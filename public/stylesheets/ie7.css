@@ -1,0 +1,49 @@
+div#login-bar { float:right; margin-top: 70px; }
+ul#social-and-search {
+	width:332px;
+  line-height: 30px;
+  float: right;
+  font-weight:bold;
+  clear: both;
+  font-size: 0.9em;
+  list-style: none;
+  margin-right:50px;
+  padding: 0;
+}
+ul#social-and-search li {
+	display:inline;
+	float:left;
+}
+ul.nav-bar {
+	width:320px;
+  line-height: 30px;
+  text-align:right;
+  float: right;
+  font-weight:bold;
+  clear: both;
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0 50px 0 0;
+  padding: 0;
+}
+ul.nav-bar li {
+	display:inline;
+  float: left;
+  margin-left:0.7em;
+  color: #353535;
+}
+
+div#content div.three-col .col,
+div#content div.three-col .double,
+div#content div.three-col .triple,
+table#cart-detail tr.line-item td,
+#product-images-and-description,
+#signup #new-customer,
+#login #account,
+#login #guest_checkout,
+#login #existing-customer {
+	background-color:#222;
+}
+div.top-product-category {
+	background-color:#444;
+}
