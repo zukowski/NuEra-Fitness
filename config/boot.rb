@@ -1,5 +1,7 @@
-require 'yaml'
-YAML::ENGINE.yamler= 'syck'
+if RUBY_VERSION.to_f > 1.8
+  require 'yaml'
+  YAML::ENGINE.yamler= 'syck'
+end
 
 require 'rubygems'
 
