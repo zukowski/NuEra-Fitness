@@ -16,8 +16,12 @@ Calculator::ActiveShipping.class_eval do
       :city => supplier.city,
       :zip => supplier.zip
     )
-
-    rates = retrieve_rates(origin, destination, packages(shipment))
+    
+    if has_rateable_items(shipment)
+      rates = retrieve_rates(origin, destination, packages(shipment))
+    else
+      return 0
+    end
     return nil if rates.empty? or not rates[self.class.description].present?
     (rates[self.class.description].to_f + (supplier.handling_fee.to_f || 0.0)) / 100.0
   end
@@ -27,6 +31,10 @@ Calculator::ActiveShipping.class_eval do
   end
 
   private
+
+  def has_rateable_items(shipment)
+    shipment.order.weight_of_line_items_for_supplier(shipment.supplier) > 0
+  end
 
   def retrieve_rates(origin, destination, packages)
     #TODO Add rescue block back in
