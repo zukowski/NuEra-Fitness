@@ -12,15 +12,19 @@ Shipment.class_eval do
 
   def line_items
     if order.complete? and Spree::Config[:track_inventory_levels]
-      order.line_items_for_supplier(supplier).select {|li| inventory_units.map(&:variant_id).include(li.variant_id)}
+      order.line_items_for_supplier(self.supplier).select do |li|
+        inventory_units.map(&:variant_id).include?(li.variant_id)
+      end
     else
-      order.line_items_for_supplier(supplier)
+      order.line_items_for_supplier(self.supplier)
     end
   end
 
   private
 
   def determine_state(order)
+    # This is not really valid since a shipment with only a package
+    # will have a 0 amount
     return 'quote'   if adjustment.amount == 0
     return 'pending' if self.inventory_units.any? {|unit| unit.backordered?}
     return 'shipped' if state == 'shipped'

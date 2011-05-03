@@ -148,6 +148,10 @@ Order.class_eval do
   def weight_of_line_items_for_supplier(supplier)
     line_items_for_supplier(supplier).map {|line_item| line_item.variant.weight * line_item.quantity}.sum
   end
+  
+  def inventory_units_for_shipment(shipment)
+    inventory_units.select {|iu| iu.variant.product.supplier == shipment.supplier}
+  end
 
   def line_items_for_supplier(supplier)
     line_items.select {|line_item| supplier == line_item.supplier}
