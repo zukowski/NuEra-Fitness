@@ -6,7 +6,6 @@ Order.class_eval do
     event :next do
       #transition :cart => :address, :address => :payment, :payment => :confirm, :confirm => :complete
       transition :from => 'cart', :to => 'address'
-      transition :from => 'address', :to => 'quote', :if => :needs_quote?
       transition :from => 'address', :to => 'payment'
       transition :from => 'payment', :to => 'confirm'
       transition :from => 'confirm', :to => 'complete'
@@ -24,7 +23,10 @@ Order.class_eval do
       transition :to => 'awaiting_return'
     end
     event :quote do
-      transition :to => 'quote'
+      transition :from => 'payment', :to => 'quote'
+    end
+    event :pay do
+      transition :from => 'quote', :to => 'payment'
     end
     
     before_transition :to => 'complete' do |order|
@@ -40,7 +42,10 @@ Order.class_eval do
     end
     
     before_transition :from => 'address', :do => :create_or_update_shipments!
-    after_transition :to => 'payment', :do => :create_tax_charge!
+    after_transition :from => 'address', :to => 'payment' do |order|
+      order.create_tax_charge!
+      order.quote if order.needs_quote?
+    end
     after_transition :to => 'complete', :do => :finalize!
     after_transition :to => 'canceled', :do => :after_cancel
   end
@@ -58,6 +63,10 @@ Order.class_eval do
 
   def needs_quote?
     shipments.any? {|shipment| shipment.state == 'quote'}
+  end
+
+  def checkout_allowed?
+    line_items.count > 0 && state != "quote"
   end
 
   def create_or_update_shipments!
