@@ -25,7 +25,7 @@ Shipment.class_eval do
   def determine_state(order)
     # This is not really valid since a shipment with only a package
     # will have a 0 amount
-    return 'quote'   if adjustment.amount == 0
+    return 'quote'   if self.adjustment and self.adjustment.amount == 0
     return 'pending' if self.inventory_units.any? {|unit| unit.backordered?}
     return 'shipped' if state == 'shipped'
     order.payment_state == 'balance_due' ? 'pending' : 'ready'
