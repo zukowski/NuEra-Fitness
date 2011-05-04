@@ -19,6 +19,7 @@ end
 
 group :production do
   gem 'mysql2'
+  gem 'hoptoad_notifier'
 end
 
 group :noload do

@@ -4,13 +4,13 @@ Calculator::ActiveShipping.class_eval do
     supplier = shipment.supplier
     addr = shipment.address
 
-    destination = Location.new(
+    destination = ActiveMerchant::Shipping::Location.new(
       :country => addr.country.iso,
       :state => (addr.state ? addr.state.abbr : addr.state_name),
       :city => addr.city,
       :zip => addr.zipcode
     )
-    origin = Location.new(
+    origin = ActiveMerchant::Shipping::Location.new(
       :country => supplier.country,
       :state => supplier.state,
       :city => supplier.city,
@@ -46,7 +46,7 @@ Calculator::ActiveShipping.class_eval do
   def packages(shipment)
     multiplier = Spree::ActiveShipping::Config[:unit_multiplier]
     weight = multiplier * shipment.order.weight_of_line_items_for_supplier(shipment.supplier)
-    package = Package.new(weight, [], :units => Spree::ActiveShipping::Config[:units].to_sym)
+    package = ActiveMerchant::Shipping::Package.new(weight, [], :units => Spree::ActiveShipping::Config[:units].to_sym)
     [package]
   end
 end
