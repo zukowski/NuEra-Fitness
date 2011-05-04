@@ -25,3 +25,5 @@ en:
   new_package: "New Package"
   edit_package: "Edit Package"
   add_variant: "Add Variant"
+  created_at: "Date Created"
+  updated_at: "Date Updated"

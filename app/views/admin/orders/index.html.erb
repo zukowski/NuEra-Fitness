@@ -33,6 +33,8 @@
   <thead>
     <tr>
       <%= hook :admin_orders_index_headers do %>
+        <th><%= order @search, :by => :created_at,       :as => t("created_at") %></th>
+        <th><%= order @search, :by => :updated_at,       :as => t("updated_at") %></th>
         <th><%= order @search, :by => :completed_at,     :as => t("order_date") %></th>
         <th><%= order @search, :by => :number,           :as => t("order_number") %></th>
         <th><%= order @search, :by => :state,            :as => t("status") %></th>
@@ -51,6 +53,8 @@
     <tr>
       <%- locals = {:order => order} %>
       <%= hook :admin_orders_index_rows, locals do %>
+        <td><%= "#{time_ago_in_words(order.created_at)} ago" %></td>
+        <td><%= "#{time_ago_in_words(order.updated_at)} ago" %></td>
         <td><%= order.completed_at.to_date if order.completed_at %></td>
         <td><%= link_to order.number, object_url(order) %></td>
         <td><%= t("order_state.#{order.state.downcase}") %></td>
