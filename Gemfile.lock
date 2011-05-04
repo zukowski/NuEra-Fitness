@@ -65,6 +65,9 @@ GEM
       i18n (~> 0.4)
     haml (3.0.25)
     highline (1.5.1)
+    hoptoad_notifier (2.4.9)
+      activesupport
+      builder
     htmlentities (4.3.0)
     i18n (0.5.0)
     jquery-rails (0.2.2)
@@ -192,6 +195,7 @@ DEPENDENCIES
   compass
   factory_girl_rails
   faker
+  hoptoad_notifier
   htmlentities
   mysql2
   nokogiri

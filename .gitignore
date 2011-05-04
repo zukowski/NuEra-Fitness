@@ -6,3 +6,4 @@ config/database.yml
 .*.swp
 public/assets
 config/initializers/active_shipping.rb
+config/initializers/hoptoad.rb
