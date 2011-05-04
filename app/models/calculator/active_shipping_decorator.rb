@@ -46,7 +46,7 @@ Calculator::ActiveShipping.class_eval do
   def packages(shipment)
     multiplier = Spree::ActiveShipping::Config[:unit_multiplier]
     weight = multiplier * shipment.order.weight_of_line_items_for_supplier(shipment.supplier)
-    package = Package.new(weight, [], :units => Spree::ActiveShipping::Config[:units].to_sym)
+    package = ActiveMerchant::Shipping::Package.new(weight, [], :units => Spree::ActiveShipping::Config[:units].to_sym)
     [package]
   end
 end
