@@ -2,6 +2,8 @@ Order.class_eval do
 
   scope :quotes, where("shipment_state = 'quote'")
 
+  after_create :set_order_number
+
   Order.state_machines[:state] = StateMachine::Machine.new(Order, :initial => 'cart', :use_transactions => false) do
     event :next do
       #transition :cart => :address, :address => :payment, :payment => :confirm, :confirm => :complete
@@ -59,6 +61,14 @@ Order.class_eval do
       end
       i
     end
+  end
+
+  def generate_order_number
+    # No longer used
+  end
+
+  def set_order_number
+    self.update_attribute :number, self.id
   end
 
   def needs_quote?
