@@ -2,8 +2,6 @@ Order.class_eval do
 
   scope :quotes, where("shipment_state = 'quote'")
 
-  after_create :set_order_number
-
   Order.state_machines[:state] = StateMachine::Machine.new(Order, :initial => 'cart', :use_transactions => false) do
     event :next do
       #transition :cart => :address, :address => :payment, :payment => :confirm, :confirm => :complete
@@ -63,12 +61,18 @@ Order.class_eval do
     end
   end
 
-  def generate_order_number
-    # No longer used
+  def finalize!
+    update_attribute(:completed_at, Time.now)
+    self.out_of_stock_items = InventoryUnit.assign_opening_inventory(self)
+    adjustments.optional.each {|adjustment| adjustment.update_attribute(:locked, true)}
+    set_order_number
+    OrderMailer.confirm_email(self).deliver
   end
 
   def set_order_number
-    self.update_attribute :number, self.id
+    num = Spree::Config['current_order_id']
+    Spree::Config.set('current_order_id' => num.to_i + 1)
+    self.update_attribute :number, "R#{num}"
   end
 
   def needs_quote?
