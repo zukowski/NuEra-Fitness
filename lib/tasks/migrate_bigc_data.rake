@@ -156,35 +156,30 @@ namespace :migrate do
 
   desc "Migrate orders from BigCommerce into Spree"
   task :orders => :environment do
-    doc = load_xml 'bigc/orders.xml'
+    shipping_method = ShippingMethod.find_by_name('Legacy')
+    payment_method = PaymentMethod.find_by_name('Legacy')
+
+    unless shipping_method && payment_method
+      puts "Could not find Legacy shipping and payment method, aborting"
+      exit
+    end
     
-    # first let's run some tests and see if we can match all of the
-    # BigC line items to product variants in Spree
-  
-    doc.xpath('//orders//order').each do |order|
-      id = order./('.//Order_ID').first.content
-      order./('.//item').each do |item|
-        sku = item./('.//Product_SKU').first.content
-        product_name = item./('.//Product_Name').first.content
-
-        product = find_sku(sku,product_name)
-
-        if product.nil?
-          puts "Could not find SKU(#{sku}) or Name(#{product_name}) on order ##{id}"
-        end
-      end  
+    unless Rails.env.production?
+      Order.delete_all
+      Shipment.delete_all
+      LineItem.delete_all
+      InventoryUnit.delete_all
+      Adjustment.delete_all
+      Payment.delete_all
+      Address.delete_all
     end
 
-    # end tests
-    
-    # destroy all existing orders
-    #Order.all.each do |order|
-    #  order.destroy
-    #end
-
     # create the orders
+    count = 0
+    skipped_ids = Array.new
     doc = load_xml 'bigc/orders.xml'
     doc.xpath('//orders//order').each do |order|
+      count += 1
       order_id = order./('.//Order_ID').first.content
       email = order./('.//Customer_Email').first.content
       bigc_id = order./('.//Customer_ID').first.content
@@ -193,6 +188,7 @@ namespace :migrate do
 
       unless status == 'Shipped' || status == 'Completed'
         puts "Skipping #{order_id}, not shipped or completed (#{status})"
+        skipped_ids << order_id
         next
       end
 
@@ -201,22 +197,48 @@ namespace :migrate do
 
       if user.nil?
         puts "Skipping #{order_id}, customer not found"
+        skipped_ids << order_id
         next
       end
 
-      spree_order = Order.new
+      subtotal = order./('.//Subtotal').first.content.to_f
+      taxtotal = order./('.//Tax_Total').first.content.to_f
+      shipcost = order./('.//Shipping_Cost').first.content.to_f
+      handcost = order./('.//Handling_Cost').first.content.to_f
+      discount = order./('.//Discount_Total').first.content.to_f rescue 0
+      adjtotal = (taxtotal + shipcost + handcost - discount).round(2)
+      total    = order./('.//Order_Total').first.content.to_f
+
+      #puts "BigC Totals"
+      #puts "SubTotal: #{subtotal}"
+      #puts "Tax: #{taxtotal}"
+      #puts "Shipping: #{shipcost}"
+      #puts "Handling: #{handcost}"
+      #puts "Discount: #{discount}"
+      #puts "Total: #{total}"
+
+      calc_total = (subtotal + taxtotal + shipcost + handcost - discount).round(2) 
+      diff = (total - calc_total).round(2)
+
+      if diff != 0
+        puts "Skipping #{order_id}: #{subtotal} + #{taxtotal} + #{shipcost} + #{handcost} = #{calc_total} != #{total} [#{diff}]"
+        skipped_ids << order_id
+        next
+      end
+
+      spree_order = Order.create
       spree_order.user_id = user.id
       spree_order.email = user.email
       spree_order.state = 'complete';
-      shipping_method = ShippingMethod.where('name = ?','Legacy').first
       spree_order.shipping_method_id = shipping_method.id
       spree_order.shipment_state = 'shipped'
+      spree_order.number = order_id
       spree_order.save
 
-      bill_country = Country.find_by_name(order./('.//Billing_Country').first.content
-      ship_country = Country.find_by_name(order./('.//Shipping_Country').first.content
-      bill_state   = State.find_by_abbr(order./('.//Billing_State_Abbreviation').first.content
-      ship_state   = State.find_by_abbr(order./('.//Shipping_state_abbreviation').first.content
+      bill_country = Country.find_by_name(order./('.//Billing_Country').first.content)
+      ship_country = Country.find_by_name(order./('.//Shipping_Country').first.content)
+      bill_state   = State.find_by_abbr(order./('.//Billing_State_Abbreviation').first.content)
+      ship_state   = State.find_by_abbr(order./('.//Shipping_State_Abbreviation').first.content)
       
       spree_order.bill_address = Address.create({
         :firstname => order./('.//Billing_First_Name').first.content,
@@ -244,7 +266,22 @@ namespace :migrate do
       })
 
       spree_order.save
-
+      
+      ship_date = order./('.//Date_Shipped').first.content
+      date = "#{ship_date.slice(6,4)}-#{ship_date.slice(0,2)}-#{ship_date.slice(3,2)}"
+      spree_order.shipments.create({
+        :supplier => Supplier.first,
+        :shipping_method => shipping_method,
+        :address => spree_order.ship_address,
+        :shipped_at => date,
+        :tracking => order./('.//Tracking_No').first.content,
+        :state => 'shipped'
+      })
+      shipment = spree_order.shipments.first
+      shipment.update_attributes_without_callbacks({
+        :created_at => date,
+        :updated_at => date
+      })
       # add line items to order
       order./('.//item').each do |item|
         item_name = item./('.//Product_Name').first.content
@@ -254,77 +291,80 @@ namespace :migrate do
         
         line_item = LineItem.new(:quantity => item./('.//Product_Qty').first.content)
 	    line_item.variant = variant
-        line_item.price = variant.price
+        line_item.price = item./('./Product_Unit_Price').first.content
         line_item.supplier = variant.product.supplier
-        line_item.save
         spree_order.line_items << line_item
-
-        shipment = spree_order.shipments.detect {|s| s.supplier == line_item.supplier}
-        if shipment.nil?
-          shipment = Shipment.create({
-            :order => spree_order,
-            :supplier => supplier,
-            :shipping_method => shipping_method,
-            :address => spree_order.ship_address
-          })
-          spree_order.shipments << shipment
-          ship_date = order./('.//Date_Shipped').first.content       
-          shipment.shipped_at = "#{ship_date.slice(6,4)}-#{ship_date.slice(0,2)}-#{ship_date.slice(3,2)}"
-          shipment.tracking = order./('.//Tracking_No').first.content
-          shipment.state = shipped
-          shipment.save
-        end
         shipment.line_items << line_item
       end
-      
-      order.adjustments << Adjustment.create({
-        :label => 'shipping',
-        :amount => order./('.//Shipping_Cost').first.content,
+      spree_order.update_attribute(:item_total, spree_order.line_items.collect {|li| li.price * li.quantity}.sum)
+
+      spree_order.adjustments.shipping.first.update_attributes_without_callbacks({
+        :amount => shipcost,
         :locked => true
       })
 
-      tax_name = order./('.//Tax_Name')
-      
-      if tax_name == 'Colorado State Tax'
-        order.adjustments << Adjustment.create({
-          :label => 'state tax',
-          :amount => order./('.//Tax_Total').first.content,
-          :locked => true
+      if taxtotal > 0
+        rate = TaxRate.match(spree_order.bill_address) || TaxRate.match(spree_order.ship_address)
+        if rate.nil?
+          puts "Error getting TaxRate for #{order_id}"
+          next
+        end
+        rate.create_adjustment(I18n.t(:tax), spree_order, spree_order, true)
+      end
+
+      if discount > 0
+        spree_order.adjustments.create({
+          :label => 'Discount',
+          :amount => (0-discount)
         })
       end
 
-      # create payment
-      #puts "\tCreating payment..."
-      #bigc_payment_method = order./('.//Payment_Method').first.content
-      #payment_method = PaymentMethod.where('name = ?',bigc_payment_method).first
-      #payment = Payment.new
-      #if payment_method.nil?
-      #  puts "\t****WARNING: BigC says payment method is '#{bigc_payment_method}', but no such method found in Spree"
-      #  payment_method = PaymentMethod.where('name = ?','Not Specified').first
-      #  puts "\t\tUsing 'Not Specified' method instead"
-      #  payment.payment_method_id = payment_method.id
-      #else
-      # payment.payment_method_id = payment_method.id
-      #end
-      #payment.order_id = spree_order.id
-      #payment.amount = order./('.//Order_Total').first.content
-      #payment.state = "completed"
-      #payment.save
-      #puts "\tPayment created"
-
-      # set some other order properties
-      order_date = order./('.//Order_Date').first.content
-      spree_order.completed_at = spree_order.created_at = "#{order_date.slice(6,4)}-#{order_date.slice(0,2)}-#{order_date.slice(3,2)}"       
-      #spree_order.adjustment_total = spree_order.shipment.cost
-      spree_order.payment_total = order./('.//Order_Total').first.content
-      spree_order.total = order./('.//Order_Total').first.content
+      spree_order.payments.create({
+        :amount => total,
+        :state => 'completed',
+        :payment_method => payment_method,
+        :source => payment_method
+      })
       spree_order.payment_state = 'paid'
-      #spree_order.update!
-      spree_order.save
-      #ad = Adjustment.where('order_id = ?',spree_order.id).first
-      #Adjustment.update(ad.id,:amount => order./('.//Shipping_Cost').first.content)      
-      #puts "Order created\n\n"
+
+      spree_order.adjustments.optional.each {|adjustment| adjustment.update_attribute :locked, true}
+
+      order_date = order./('.//Order_Date').first.content
+      date = "#{order_date.slice(6,4)}-#{order_date.slice(0,2)}-#{order_date.slice(3,2)}"
+      spree_order.update_attributes_without_callbacks({
+        :completed_at => date,
+        :created_at => date,
+        :shipment_state => 'shipped'
+      })
+      spree_order.payments.first.update_attributes_without_callbacks({
+        :created_at => date
+      })
+      
+      spree_order.update_attribute :payment_total, spree_order.payments.first.amount
+      spree_order.update_attribute :adjustment_total, spree_order.adjustments.collect(&:amount).sum
+      spree_order.update_attribute :total, spree_order.item_total + spree_order.adjustment_total
+
+      #puts "Spree Totals"
+      #puts "SubTotal #{spree_order.item_total}"
+      #puts "Tax #{spree_order.adjustments.tax.first.try(:amount)}"
+      #puts "Adjustments #{spree_order.adjustment_total}"
+      #puts "Total #{spree_order.total}"
+      #puts "Payment #{spree_order.payment_total}"
+      
+      if total != spree_order.total
+        puts "Totals do not match #{total} != #{spree_order.total} [#{order_id}]"
+      elsif subtotal != spree_order.item_total
+        puts "Subtotals do not match"
+      elsif adjtotal != spree_order.adjustment_total
+        puts "Adjustments do not match"
+      elsif total != spree_order.payment_total
+        puts "Payment does not match"
+      else
+        puts "Created [#{count}/247]"
+      end
     end
+    puts "Skipped #{skipped_ids.count}/#{count} orders"
+    puts skipped_ids.inspect
   end
  
   # loads an xml file using nokogiri
@@ -336,7 +376,7 @@ namespace :migrate do
   end
 end
 
-def find_varaitn_by_sku_or_name(item_sku, name)
+def find_variant_by_sku_or_name(item_sku, name)
   if item_sku == "ERFR36"; then item_sku = "NEFR36"; end
   if name =~ /^(?:Crossfit )?Strength Bands Starter Package/
     item_sku = "SBSP"
