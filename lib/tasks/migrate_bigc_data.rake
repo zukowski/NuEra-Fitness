@@ -154,8 +154,20 @@ namespace :migrate do
     puts "Created #{count_addresses} addresses and #{count_states} states."
   end
 
+  desc "Clear models for order migration"
+  task :clear_orders => :environment do
+    Order.delete_all
+    Shipment.delete_all
+    LineItem.delete_all
+    InventoryUnit.delete_all
+    Adjustment.delete_all
+    Payment.delete_all
+    Address.delete_all
+  end
+
   desc "Migrate orders from BigCommerce into Spree"
   task :orders => :environment do
+
     shipping_method = ShippingMethod.find_by_name('Legacy')
     payment_method = PaymentMethod.find_by_name('Legacy')
 
@@ -164,16 +176,6 @@ namespace :migrate do
       exit
     end
     
-    unless Rails.env.production?
-      Order.delete_all
-      Shipment.delete_all
-      LineItem.delete_all
-      InventoryUnit.delete_all
-      Adjustment.delete_all
-      Payment.delete_all
-      Address.delete_all
-    end
-
     # create the orders
     count = 0
     skipped_ids = Array.new
@@ -232,7 +234,7 @@ namespace :migrate do
       spree_order.state = 'complete';
       spree_order.shipping_method_id = shipping_method.id
       spree_order.shipment_state = 'shipped'
-      spree_order.number = order_id
+      spree_order.number = "R#{order_id}"
       spree_order.save
 
       bill_country = Country.find_by_name(order./('.//Billing_Country').first.content)
@@ -288,15 +290,17 @@ namespace :migrate do
         item_sku = item./('.//Product_SKU').first.content
 
         variant = find_variant_by_sku_or_name(item_sku,item_name)
+
         
         line_item = LineItem.new(:quantity => item./('.//Product_Qty').first.content)
 	    line_item.variant = variant
-        line_item.price = item./('./Product_Unit_Price').first.content
+        line_item.price = item./('.//Product_Unit_Price').first.content
         line_item.supplier = variant.product.supplier
         spree_order.line_items << line_item
         shipment.line_items << line_item
       end
-      spree_order.update_attribute(:item_total, spree_order.line_items.collect {|li| li.price * li.quantity}.sum)
+      spree_order.update_attribute(:item_total, subtotal)
+      
 
       spree_order.adjustments.shipping.first.update_attributes_without_callbacks({
         :amount => shipcost,
@@ -353,15 +357,17 @@ namespace :migrate do
       
       if total != spree_order.total
         puts "Totals do not match #{total} != #{spree_order.total} [#{order_id}]"
-      elsif subtotal != spree_order.item_total
-        puts "Subtotals do not match"
-      elsif adjtotal != spree_order.adjustment_total
-        puts "Adjustments do not match"
-      elsif total != spree_order.payment_total
-        puts "Payment does not match"
-      else
-        puts "Created [#{count}/247]"
       end
+      if subtotal != spree_order.item_total
+        puts "Subtotals do not match #{subtotal} != #{spree_order.item_total}"
+      end
+      if adjtotal != spree_order.adjustment_total
+        puts "Adjustments do not match"
+      end
+      if total != spree_order.payment_total
+        puts "Payment does not match"
+      end
+      puts "Created [#{count}/247]"
     end
     puts "Skipped #{skipped_ids.count}/#{count} orders"
     puts skipped_ids.inspect
