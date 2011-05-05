@@ -15,6 +15,16 @@
       <li id="product_<%= product.id %>">
         <%= link_to small_image(product), product %>
         <%= link_to raw(product.name + " <span class='price selling'>#{product_price(product)}</span>"), product, :class => 'info' %>
+      	<% if product.has_stock? || Spree::Config[:allow_backorders] %>
+					<%= text_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"),
+						1, :class => "title", :size => 3 %>
+					&nbsp;
+					<button type='submit'>
+						<%= image_tag('/images/add-to-cart.png') + t('add_to_cart') %>
+					</button>
+				<% else %>
+					<%= content_tag('strong', t('out_of_stock')) %>
+				<% end %>
       </li>
     <% end %>
   <% end %>
