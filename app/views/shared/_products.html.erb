@@ -12,19 +12,23 @@
 <ul class="product-listing">
   <% products.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
-      <li id="product_<%= product.id %>">
+      <li id="product_<%= product.id %>" class="<%= product.has_variants? ? "variants" : "" %>">
         <%= link_to small_image(product), product %>
         <%= link_to raw(product.name + " <span class='price selling'>#{product_price(product)}</span>"), product, :class => 'info' %>
       	<% if product.has_stock? || Spree::Config[:allow_backorders] %>
-					<%= text_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"),
-						1, :class => "title", :size => 3 %>
-					&nbsp;
-					<button type='submit'>
-						<%= image_tag('/images/add-to-cart.png') + t('add_to_cart') %>
-					</button>
-				<% else %>
-					<%= content_tag('strong', t('out_of_stock')) %>
-				<% end %>
+          <%= form_for :order, :url => populate_orders_url do |f| %>
+            <% if product.has_variants? %>
+              <%= select_tag "products[#{product.id}]", options_from_collection_for_select(product.variants, :id, :options_text) %>
+            <% end %>
+            <%= text_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"), 1, :class => "title", :size => 3 %>
+            &nbsp;
+            <button type='submit'>
+              <%= image_tag('/images/add-to-cart.png') + t('add_to_cart') %>
+            </button>
+          <% end %>
+        <% else %>
+          <%= content_tag('strong', t('out_of_stock')) %>
+        <% end %>
       </li>
     <% end %>
   <% end %>

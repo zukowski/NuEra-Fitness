@@ -1085,6 +1085,7 @@ p button img { margin: 0 5px 0 0; }
   color: #cccccc;
 }
 .product-listing li input { position:absolute; bottom:5px; left:56px; height:15px; width:18px; padding:0px;}
+.product-listing li select { position:absolute; bottom:5px; left:5px; height:22px;}
 .product-listing li button {
 	position:absolute;
 	bottom:5px;
@@ -1095,6 +1096,9 @@ p button img { margin: 0 5px 0 0; }
 	color:#fff;
 	font-size:11px !important;
 }
+.product-listing li.variants input {left: 97px;}
+.product-listing li.variants button {left: 128px;}
+
 .product-listing li button:hover { background: #aaa !important; color: #222; }
 .product-listing li button img { height:20px; margin-top:-1px; }
 ul.thumbnails {
