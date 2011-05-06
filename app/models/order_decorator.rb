@@ -83,6 +83,10 @@ Order.class_eval do
     line_items.count > 0 && state != "quote"
   end
 
+  def create_shipment!
+    create_or_update_shipments!
+  end
+
   def create_or_update_shipments!
     if shipments.any?
       update!
