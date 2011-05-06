@@ -1085,7 +1085,7 @@ p button img { margin: 0 5px 0 0; }
   color: #cccccc;
 }
 .product-listing li input { position:absolute; bottom:5px; left:56px; height:15px; width:18px; padding:0px;}
-.product-listing li select { position:absolute; bottom:5px; left:5px; height:22px;}
+.product-listing li select { position:absolute; bottom:5px; left:5px; height:22px; width:85px;}
 .product-listing li button {
 	position:absolute;
 	bottom:5px;
