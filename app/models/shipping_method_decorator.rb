@@ -9,8 +9,8 @@ ShippingMethod.class_eval do
 
   def available?(order, display_on=nil, options={})
     begin
-    (self.display_on == display_on.to_s || self.display_on.blank?) && calculator.available?(order, options)
-    rescue
+      (self.display_on == display_on.to_s || self.display_on.blank?) && calculator.available?(order, options)
+    rescue ArgumentError
       (self.display_on == display_on.to_s || self.display_on.blank?) && calculator.available?(order)
     end
   end
