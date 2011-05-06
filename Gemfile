@@ -13,13 +13,14 @@ group :development, :test do
 #  gem 'spork', '0.9.0.rc2'
   gem 'rcov'
   gem 'annotate-models'
-  gem 'nokogiri'
   gem 'htmlentities'
 end
+gem 'nokogiri'
 
 group :production do
   gem 'mysql2'
   gem 'hoptoad_notifier'
+  gem 'newrelic_rpm'
 end
 
 group :noload do
