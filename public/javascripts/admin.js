@@ -70,9 +70,9 @@ jQuery('a[data-remote=true]').live('click', function() {
 });
 
 // remote forms handler
-jQuery('form[data-remote=true]').live('submit', function() {
-  return request({ url : this.action, type : this.method, data : jQuery(this).serialize() });
-});
+//jQuery('form[data-remote=true]').live('submit', function() {
+//  return request({ url : this.action, type : this.method, data : jQuery(this).serialize() });
+//});
 
 
 

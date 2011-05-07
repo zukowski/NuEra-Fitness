@@ -1,0 +1,50 @@
+<table class="index">
+  <thead>
+    <tr>
+      <th><%= t(:supplier) %></td>
+      <th><%= t(:line_items) %></td>
+      <th style="width:80px;"><%= t(:amount) %></td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @adjustments.each do |adjustment| %>
+    <% if adjustment.source.class == Shipment && adjustment.amount == 0 %>
+      <tr>
+        <td><%= adjustment.source.supplier.name %></td>
+        <td>
+          <ul>
+            <% adjustment.source.line_items.each do |line_item| %>
+              <li><%= line_item.variant.name %> x <%= line_item.quantity %></li>
+            <% end %>
+          </ul>
+        </td>
+        <td style="width:80px;">
+          <%= form_for(adjustment, :url => admin_order_adjustment_url(@order, adjustment), :remote => true) do |f| %>
+            <% @adjustment = adjustment %>
+            <%= f.text_field :amount, :style => "width:80px;" %> <%= f.submit "Update" %>
+          <% end %>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $("#edit_adjustment_" + <%= adjustment.id %>)
+                .bind('ajax:before', function(event, data) {
+                  if($(this).find('input[name="adjustment[amount]"]').val() <= 0) {
+                    alert("Adjustment amount must be greater than 0");
+                    return false
+                  }
+                  return true;
+                })
+                .bind('ajax:success', function(event, data, status, xhr) {
+                  size = $($(this).parents("td tbody")).children().size() - 1;
+                  $($(this).parents()[1]).remove();
+                  if(size === 0) {
+                    location.reload();
+                  }
+                });
+            });
+          </script>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>

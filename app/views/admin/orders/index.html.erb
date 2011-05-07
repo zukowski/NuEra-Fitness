@@ -10,6 +10,7 @@
 <table class="index">
   <thead>
     <tr>
+      <th>&nbsp;</th>
       <th><%= t("order_number") %></th>
       <th><%= t("customer") %></th>
       <th><%= t("total") %></th>
@@ -18,14 +19,29 @@
   <tbody>
     <% Order.quotes.each do |quote| %>
       <tr>
+        <td><%= link_to '+', admin_order_adjustments_url(quote), :class => 'expand-adjustments', :id => quote.number, 'data-update' => "adjustments-#{quote.number}" %></td>
         <td><%= link_to quote.number, object_url(quote) %></td>
-        <td><%= quote.email %></td>
+        <td><%= quote.name %></td>
         <td><%= number_to_currency quote.total %></td>
+      </tr>
+      <tr style="display:none;">
+        <td colspan="4" id=<%= "adjustments-#{quote.number}" %>>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <% end %>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.expand-adjustments').click(function(quote) {
+    update_target = $(this).attr('data-update');
+    $.getScript(this.href);
+    return false;
+  })
+})
+</script>
 
 <h1><%= t("listing_orders") %></h1>
 
@@ -58,7 +74,7 @@
         <td><%= t("order_state.#{order.state.downcase}") %></td>
         <td><%= link_to t("payment_states.#{order.payment_state}"), admin_order_payments_path(order) if order.payment_state %></td>
         <td><%= link_to t("shipment_states.#{order.shipment_state}"), admin_order_shipments_path(order) if order.shipment_state %></td>
-        <td><%= "#{order.bill_address.firstname} #{order.bill_address.lastname}" %></td>
+        <td><%= order.name %></td>
         <td><%= number_to_currency order.total %></td>
       <% end %>
       <td>
