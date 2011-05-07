@@ -1,0 +1,10 @@
+<div id="order">
+  <%= link_to t(:back_to_store), products_path %> |
+  <%= link_to t(:my_account), account_path %>
+  <br /><br />
+
+  <%= render :partial => 'shared/order_details', :locals => {:order => @order} %>
+
+  <br />
+  <%= link_to t(:back_to_store), products_path %>
+</div>
