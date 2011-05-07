@@ -34,6 +34,27 @@ module Spree::BaseHelper
     utc_to_local(Time.now.utc.yesterday).to_ordinalized_s(:stub)
   end
 
+  def order_status(order)
+    if order.state == 'quote'
+      I18n.t(:quote)
+    elsif order.state != 'complete'
+      I18n.t(:incomplete)
+    else
+      if order.payment_state == 'balance_due'
+        I18n.t(:awaiting_payment_capture)
+      else
+        if order.shipment_state == 'ready'
+          I18n.t(:awaiting_shipment)
+        elsif order.shipment_state == 'partial'
+          I18n.t(:partially_shipped)
+        elsif order.shipment_state == 'backordered'
+          I18n.t(:backordered)
+        else
+          I18n.t(:complete)
+        end
+      end
+    end
+  end
 
   # human readable list of variant options
   def variant_options(v, allow_back_orders = Spree::Config[:allow_backorders], include_style = true)

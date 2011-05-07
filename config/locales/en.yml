@@ -28,3 +28,12 @@ en:
   add_variant: "Add Variant"
   created_at: "Date Created"
   updated_at: "Date Updated"
+
+# Display order status
+  quote: "Quote"
+  incomplete: "Incomplete"
+  awaiting_payment_capture: "Payment Pending"
+  awaiting_shipment: "Awaiting Shipment"
+  partially_shipped: "Partially Shipped"
+  backordered: "Backordered"
+  complete: "Complete"
