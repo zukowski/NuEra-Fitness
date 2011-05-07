@@ -8,8 +8,8 @@ class Calculator::Freight < Calculator
     ShippingMethod.register_calculator(self)
   end
 
-  def compute(order)
-    return 0
+  def compute(shipment)
+    shipment.adjustment.nil? ? 0 : shipment.adjustment.amount
   end
 
   def available?(order,options)

@@ -45,4 +45,10 @@ CheckoutController.class_eval do
   def after_update_confirm
     session[:order_id] = nil
   end
+
+  def before_save_new_order
+    return unless params[:state] == 'payment' && params[:id]
+    order = Order.find_by_id(params[:id])
+    @current_order = order unless order.nil?
+  end
 end

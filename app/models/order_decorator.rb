@@ -136,6 +136,7 @@ Order.class_eval do
   end
   
   def update_shipment_state
+    old_state = self.shipment_state
     self.shipment_state = case shipments.count
     when 0; then nil
     when shipments.shipped.count; then 'shipped'
@@ -146,6 +147,13 @@ Order.class_eval do
 
     self.shipment_state = 'quote' if needs_quote?
     self.shipment_state = 'backordered' if backordered?
+    Rails.logger.debug(old_state)
+    Rails.logger.debug(self.shipment_state)
+    if old_state == 'quote' && self.shipment_state == 'pending'
+      self.pay!
+      OrderMailer.quote_email(self).deliver
+      Rails.logger.debug("quote => pending")
+    end
   end
 
   def find_or_create_shipment_by_supplier(supplier)
