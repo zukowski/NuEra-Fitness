@@ -13,6 +13,7 @@ en:
   suppliers: "Suppliers"
   quotes: "Quotes"
   new_supplier: "New Supplier"
+  supplier: "Supplier"
   quote: "quote"
   get_quote: "Request Quote"
   quote_processed_successfully: "Your order has been received and requires a quote. You will receive an email when it is ready for payment."
