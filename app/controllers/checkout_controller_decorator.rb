@@ -46,6 +46,10 @@ CheckoutController.class_eval do
     session[:order_id] = nil
   end
 
+  def after_update_address
+    session[:order_id] = nil if @order.quote?
+  end
+
   def before_save_new_order
     return unless params[:state] == 'payment' && params[:id]
     order = Order.find_by_id(params[:id])
