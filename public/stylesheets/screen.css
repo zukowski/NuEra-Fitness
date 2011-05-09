@@ -980,7 +980,6 @@ button, a.button, input.button {
   overflow: visible;
   padding: 4px 12px;
   text-decoration: none;
-  text-transform: lowercase;
   width: auto;
   height: auto;
   cursor: pointer;
