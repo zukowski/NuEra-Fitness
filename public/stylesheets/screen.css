@@ -128,7 +128,7 @@ a {
   text-decoration: underline;
   color: #00ff00;
 }
-
+span.note { font-size:11px; }
 /* ROUNDED BOXES */
 div.rounded-box {
   background-color:#222;
@@ -980,6 +980,7 @@ button, a.button, input.button {
   overflow: visible;
   padding: 4px 12px;
   text-decoration: none;
+  text-transform: lowercase;
   width: auto;
   height: auto;
   cursor: pointer;
@@ -988,8 +989,8 @@ button, a.button, input.button {
 .cart-quick-quote span {display:block; margin-bottom:4px; }
 .cart-quick-quote span#zip { font-size:14px; margin-bottom:6px; }
 .cart-quick-quote span#zip input {float:right; width:230px; }
-#empty input.button.red { width:130px; margin-left:13px; float:left; color:#ff0000; }
-#continue a.button.green { width:130px; margin-left:16px; float:left; color:#009900; text-align:center;}
+#empty input.button.red { width:130px; margin-left:13px; float:left; color:#ff0000; font-weight:bold; }
+#continue a.button.green { width:130px; margin-left:16px; float:left; color:#009900; text-align:center; font-weight:bold;}
 
 button.primary, a.button.primary, input.button.primary {
   font-weight: bold;
