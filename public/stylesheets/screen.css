@@ -129,6 +129,30 @@ a {
   color: #00ff00;
 }
 
+/* ROUNDED BOXES */
+div.rounded-box {
+  background-color:#222;
+  background-color:rgba(0,0,0,0.7);
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  padding: 15px;
+  -moz-box-shadow: inset 5px 5px 12px 5px #161616;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #161616;
+  box-shadow: inset 5px 5px 12px 5px #161616;
+}
+
+/* TAXON PAGES */
+div.taxon-description {
+	width:657px;
+	margin:0 0 7px 6px;
+	color:#ddd;
+}
+
+img.taxon-description-image {
+	height:75px;
+	padding-right:8px;
+}
+
 /* CONTENT PAGES */
 div#content { padding-top:15px; }
 div#content div.three-col .col {
@@ -536,7 +560,7 @@ body.two-col #content {
 }
 
 /* Home Page */
-div#store-menu {
+div.store-menu {
 	width:974px;
 	height:73px;
 	margin-left:-20px;
@@ -544,7 +568,7 @@ div#store-menu {
 }
 div#store-menu-items
 {
-	padding:10px 0px 10px 27px;
+	padding:7px 0px 10px 27px;
 }
 a.store-menu-item {
 	display:block;
