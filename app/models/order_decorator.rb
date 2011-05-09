@@ -49,10 +49,16 @@ Order.class_eval do
     after_transition :to => 'complete', :do => :finalize!
     after_transition :to => 'canceled', :do => :after_cancel
   end
+  
+  UNITED_STATES = Country.find_by_name("United States")
 
   def quick_quote(address)
     return false if suppliers.any? {|supplier| weight_of_line_items_for_supplier(supplier) > 150}
-    ShippingMethod.find(7).calculator.quick_quote(self, address)
+    if address.country == UNITED_STATES
+      ShippingMethod.find(7).calculator.quick_quote(self, address)
+    else
+      ShippingMethod.find(8).calculator.quick_quote(self, address)
+    end
   end
   
   def customer_adjustments

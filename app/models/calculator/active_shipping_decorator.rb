@@ -77,9 +77,23 @@ Calculator::ActiveShipping.class_eval do
 
   def retrieve_rates(origin, destination, packages)
     #TODO Add rescue block back in
-    response = carrier.find_rates(origin, destination, packages)
-    rate_hash = Hash[*response.rates.map {|rate| [rate.service_name, rate.price] }.flatten]
-    return rate_hash
+    begin
+      response = carrier.find_rates(origin, destination, packages)
+      rate_hash = Hash[*response.rates.map {|rate| [rate.service_name, rate.price] }.flatten]
+      return rate_hash
+    rescue ActiveMerchant::ActiveMerchantError => e
+      if [ActiveMerchant::ResponseError, ActiveMerchant::Shipping::ResponseError].include? e.class
+        params = e.response.params
+        if params["Response"] && params["Response"]["Error"] && params["Response"]["Error"]["ErrorDescription"]
+          message = params["Response"]["Error"]["ErrorDescription"]
+        else
+          message = e.message
+        end
+      else
+        message = e.to_s
+      end
+    end
+    raise Spree::ShippingError.new("#{I18n.t(:shipping_error)}: #{message})")
   end
 
   def package(weight)

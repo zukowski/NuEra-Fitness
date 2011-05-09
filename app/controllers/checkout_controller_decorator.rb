@@ -35,7 +35,6 @@ CheckoutController.class_eval do
   end
 
   def before_update_address
-    before_address
   end
 
   def before_update_payment
