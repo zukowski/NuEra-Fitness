@@ -2,7 +2,6 @@ $(document).ready(function() {
   // Disable/Enable the Quote button to avoid double clicks
   $('form.cart-quick-quote').bind('ajax:before', function() {
     $(this).find('input[type="submit"]').attr('disabled','disabled');
-    console.debug('ajax:complete');
   }).bind('ajax:complete', function() {
       $(this).find('input[type="submit"]').removeAttr('disabled');
   });
