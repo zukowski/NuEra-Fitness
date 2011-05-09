@@ -47,10 +47,11 @@
       <script type="text/javascript">document.write("<%= raw state_elements %>");</script>
     </span>
     <span id="zip">
-      Zip Code: <%= text_field :address, :zipcode %>
+      <span id="zip-code-label">Zip Code</span>: <%= text_field :address, :zipcode %>
     </span>
     <span id="submit">
       <%= submit_tag "Get Quote", :class => 'button' %>
+      <div id="loading" style="display:none;"><%= image_tag "/images/ajax-loader.gif", :style => "display:inline;" %> Calculating Quote</div>
     </span>
     <div style="clear:both;"></div>
   <% end %>
@@ -69,4 +70,12 @@ span#state select { width: 300px; }
 span#zip input { width: 295px; }
 span#submit { height: 25px; margin-bottom: 5px; display:block; }
 span#submit input { float: right; }
+div#loading { text-align:right; }
+.cart-quick-quote select { font-size:13px; }
+.cart-quick-quote span {display:block; margin-bottom:4px; }
+.cart-quick-quote span#zip { font-size:14px; margin-bottom:6px; }
+.cart-quick-quote span#zip-code-label {display:inline; }
+.cart-quick-quote span#zip input {float:right; width:205px; }
+#empty input.button.red { width:130px; margin-left:13px; float:left; color:#ff0000; font-weight:bold; }
+#continue a.button.green { width:130px; margin-left:16px; float:left; color:#009900; text-align:center; font-weight:bold;}
 </style>
