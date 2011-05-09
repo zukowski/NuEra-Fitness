@@ -1,5 +1,5 @@
 <% if @quote %>
-$("#quick-quote").html('<%= escape_javascript("Shipping: #{number_to_currency @quote}"); %>')
+  $("#quick-quote").html('<%= escape_javascript("Shipping: #{number_to_currency @quote}"); %>')
 <% else %>
-alert('Your order requires a freight shipping quote');
+  alert("<%= @message || 'Your order requires a freight shipping quote' %>");
 <% end %>
