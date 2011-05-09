@@ -1392,32 +1392,29 @@ table#cart h4 { margin-bottom: 0em; }
 #login #guest_checkout h2 { color:#ddd; }
 #login #account {
   color:#ddd;
-  display: inline;
   float: left;
-  width: 432px;
+  width: 440px;
   height: 260px;
   margin-right: 20px;
-  background-color:#222;
-  background-color:rgba(0,0,0,0.7);
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  padding:12px;
 }
 #login #guest_checkout {
   color:#ddd;
-  display: inline;
   float: left;
-  width: 432px;
+  width: 440px;
   height: 260px;
+  padding:12px;
   background-color:#222;
   background-color:rgba(0,0,0,0.7);
   border-radius: 15px;
   -moz-border-radius: 15px;
-  padding:12px;
+  -moz-box-shadow: inset 5px 5px 12px 5px #161616;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #161616;
+  box-shadow: inset 5px 5px 12px 5px #161616;
 }
 #login #existing-customer {
 	color:#ccc;
 	padding:12px;
+	height: 260px;
 	background-color:#222;
 	background-color:rgba(0,0,0,0.7);
   border-radius: 15px;
