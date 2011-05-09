@@ -23,6 +23,18 @@ CheckoutController.class_eval do
   end
   
   private
+
+  def load_order
+    if params[:id] && params[:state] == 'payment'
+      @order = Order.find_by_id(params[:id])
+    end
+    @order = current_order unless @order && @order.user == current_user
+    redirect_to cart_path and return unless @order and @order.checkout_allowed?
+    redirect_to cart_path and return if @order.completed?
+    @order.state = params[:state] if params[:state]
+    state_callback(:before)
+  end
+    
   
   def state_callback(before_or_after = :before)
     state = params[:action] == 'update' ? params[:state] : @order.state
@@ -47,11 +59,5 @@ CheckoutController.class_eval do
 
   def after_update_address
     session[:order_id] = nil if @order.quote?
-  end
-
-  def before_save_new_order
-    return unless params[:state] == 'payment' && params[:id]
-    order = Order.find_by_id(params[:id])
-    @current_order = order unless order.nil?
   end
 end
