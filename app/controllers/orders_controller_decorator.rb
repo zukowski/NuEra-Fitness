@@ -11,6 +11,17 @@ OrdersController.class_eval do
     end
   end
 
+  def edit
+    @address = Address.new(session[:address])
+    @order = current_order(true)
+  end
+
+  def quote
+    session[:address] = params[:address] if session[:address].nil?
+    @order = current_order
+    @quote = @order.quick_quote(Address.new(params[:address]))
+  end
+
   def empty
     if @order = current_order
       @order.shipments.destroy_all

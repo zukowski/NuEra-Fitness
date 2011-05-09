@@ -49,6 +49,11 @@ Order.class_eval do
     after_transition :to => 'complete', :do => :finalize!
     after_transition :to => 'canceled', :do => :after_cancel
   end
+
+  def quick_quote(address)
+    return false if suppliers.any? {|supplier| weight_of_line_items_for_supplier(supplier) > 150}
+    ShippingMethod.find(7).calculator.quick_quote(self, address)
+  end
   
   def customer_adjustments
     adjustments.inject({}) do |i,adjustment|
