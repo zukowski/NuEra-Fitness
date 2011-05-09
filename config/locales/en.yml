@@ -28,6 +28,7 @@ en:
   add_variant: "Add Variant"
   created_at: "Date Created"
   updated_at: "Date Updated"
+  continue_shopping: "Continue Shopping"
 
 # Display order status
   quote: "Quote"
