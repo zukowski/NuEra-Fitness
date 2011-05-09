@@ -3,7 +3,6 @@
 <% content_for :sidebar do %>
   <%= hook :taxon_sidebar_navigation do %>
     <%= render :partial => "shared/taxonomies" %>
-    <%= render(:partial => "shared/filters") if @taxon.children.empty? %>
   <% end %>
 <% end %>
 
