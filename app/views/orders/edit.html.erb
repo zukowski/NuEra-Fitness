@@ -30,7 +30,8 @@
 
   <% end %>
   <% end %>
-
+	<div class="rounded-box" id="quick-quote-container">
+	<h2>Calculate Shipping Quote</h2>
   <%= form_tag quote_cart_path, :remote => true, :method => :post, :class => 'cart-quick-quote' do |f| %>
     <span id="country">
       <%= collection_select :address, :country_id, Country.all, :id, :name %>
@@ -46,19 +47,20 @@
       <script type="text/javascript">document.write("<%= raw state_elements %>");</script>
     </span>
     <span id="zip">
-      <%= text_field :address, :zipcode %>
+      Zip Code: <%= text_field :address, :zipcode %>
     </span>
     <span id="submit">
       <%= submit_tag "Get Quote", :class => 'button' %>
     </span>
-    <hr />
+    <div style="clear:both;"></div>
   <% end %>
-  
-  <span id="continue"><%= link_to t("continue_shopping"), products_path, :class => 'button continue' %></span>
-  <span id="empty"> <%= button_to t("empty_cart"), empty_cart_path, :method => :put, :class => 'button continue' %></span>
+  </div>
+  <span id="empty"> <%= button_to t("empty_cart"), empty_cart_path, :method => :put, :class => 'button continue red' %></span>
+  <span id="continue"><%= link_to t("continue_shopping"), products_path, :class => 'button continue green' %></span>
 <% end %>
-
+  
 <style type="text/css">
+div#quick-quote-container { width:300px; color:#ddd; margin-bottom:10px; } 
 form.cart-quick-quote { width: 300px; }
 span#country select { width: 300px; }
 span#state select { width: 300px; }
