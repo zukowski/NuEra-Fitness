@@ -236,7 +236,7 @@ table#cart-detail th { font-size:16px; }
 table#cart-detail h4 { font-size:28px; }
 table#cart-detail a { display:block; padding:3px; text-decoration:none;}
 table#cart-detail a:hover { display:block; padding:3px; text-decoration:underline;}
-table#cart-detail tr.line-item td div.line-item-image img { width:130px; }
+table#cart-detail tr.line-item td div.line-item-image img { width:90px; }
 table#cart-detail tr.line-item td {
 	background:#333;
 	background-color:rgba(0,0,0,0.7);
@@ -980,6 +980,7 @@ button, a.button, input.button {
   overflow: visible;
   padding: 4px 12px;
   text-decoration: none;
+  text-transform: lowercase;
   width: auto;
   height: auto;
   cursor: pointer;
