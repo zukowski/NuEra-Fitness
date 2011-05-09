@@ -560,7 +560,7 @@ body.two-col #content {
 }
 
 /* Home Page */
-div#store-menu {
+div.store-menu {
 	width:974px;
 	height:73px;
 	margin-left:-20px;
