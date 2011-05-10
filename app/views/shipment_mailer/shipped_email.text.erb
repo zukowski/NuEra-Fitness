@@ -1,0 +1,21 @@
+Dear Customer,
+
+<% if @shipment.order.shipments.count == 1 %>
+Your order has been shipped
+<% else %>
+Shipment <%= @shipment.order.shipments.shipped.count %>/<%= @shipment.order.shipments.count %> has been shipped
+<% end %>
+
+============================================================
+Shipment Summary
+============================================================
+<% units = @shipment.inventory_units.group(:variant_id) %>
+<% variant_count = units.count %>
+<% for unit in units %>
+<%= variant_count[unit.variant.id] %> x <%= unit.variant.name %>
+<% end %>
+============================================================
+
+<%= "Tracking Information: #{@shipment.tracking}" if @shipment.tracking %>
+
+Thank you for your business.
