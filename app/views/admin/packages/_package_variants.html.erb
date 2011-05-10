@@ -4,6 +4,7 @@
       <th>Variant Name</th>
       <th>Price</th>
       <th>Cost</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,11 @@
         <td><%= variant.name %></td>
         <td><%= number_to_currency variant.price %></td>
         <td><%= number_to_currency variant.cost_price %></td>
+        <td>
+          <%= link_to_delete variant, 
+                :url => remove_variant_admin_product_package_url(:variant_id => variant.id),
+                :success => "function(r) {$('#variants-wrapper').html(r);}" %>
+        </td>
       </tr>
     <% end %>
   </tbody>

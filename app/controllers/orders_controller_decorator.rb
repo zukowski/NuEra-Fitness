@@ -3,7 +3,9 @@ OrdersController.class_eval do
     @order = current_order
     if @order.update_attributes(params[:order])
       @order.line_items = @order.line_items.select {|li| li.quantity > 0}
-      @order.shipments = @order.shipments.select {|ship| ship.line_items.count > 0}
+      # Reload orders to ensure the proper suppliers are returned on the next call to shipment.is_required?
+      @order.reload
+      @order.shipments = @order.shipments.select {|shipment| shipment.is_required? }
       @order.adjustments = @order.adjustments.select {|adj| !adj.source.nil?}
       redirect_to cart_path
     else

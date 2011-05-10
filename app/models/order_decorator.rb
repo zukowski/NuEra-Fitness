@@ -100,8 +100,16 @@ Order.class_eval do
 
   def create_or_update_shipments!
     if shipments.any?
+      # We should only land here if a customer went to the payment step of the checkout, then
+      # went back to the store, possibly added or removed items, and now has submitted the address
+      # form again. Since the order had a ship_address, add_variant would have taken care of creating
+      # the shipment, or if they removed all items from a shipment, it would be removed.
+      # TODO Verify this is also the case in the admin order creator
       update!
     else
+      # If a package is in the order then the suppliers will get pulled out, and shipments created
+      # but no line items will get added to those shipments since the packages don't generally have
+      # a single supplier. The package itself is only related to the order.
       suppliers.each do |supplier|
         shipment = create_shipment(supplier)
         shipments << shipment
@@ -119,14 +127,14 @@ Order.class_eval do
       current_item = LineItem.new :quantity => quantity
       current_item.variant = variant
       current_item.price = variant.price
-      current_item.supplier = variant.product.supplier
+      current_item.supplier = variant.supplier unless variant.is_a_package?
       self.line_items << current_item
 
       # If a shipping address is on the order then the customer has already
       # been to the checkout, and shipments have been created. Since this
       # item doesn't exist in any shipment, find the shipment the product
       # belongs in, creating it if necessary, and add the item to the shipment
-      if ship_address
+      if ship_address && !variant.is_a_package?
         shipment = find_or_create_shipment_by_supplier current_item.supplier
         self.shipments << shipment unless shipments.include? shipment
         shipment.line_items << current_item
@@ -158,12 +166,9 @@ Order.class_eval do
 
     self.shipment_state = 'quote' if needs_quote?
     self.shipment_state = 'backordered' if backordered?
-    Rails.logger.debug(old_state)
-    Rails.logger.debug(self.shipment_state)
     if old_state == 'quote' && self.shipment_state == 'pending'
       self.pay!
       OrderMailer.quote_email(self).deliver
-      Rails.logger.debug("quote => pending")
     end
   end
 
@@ -181,20 +186,30 @@ Order.class_eval do
       :address => self.ship_address
     )
   end
+
+  def has_packages?
+    line_items.any? {|li| !li.variant.package.nil?}
+  end
   
   def weight_of_line_items_for_supplier(supplier)
+    Rails.logger.debug(line_items_for_supplier(supplier).inspect)
     line_items_for_supplier(supplier).map {|line_item| line_item.variant.weight * line_item.quantity}.sum
   end
   
   def inventory_units_for_shipment(shipment)
-    inventory_units.select {|iu| iu.variant.product.supplier == shipment.supplier}
+    inventory_units.select {|iu| iu.supplier == shipment.supplier}
   end
 
   def line_items_for_supplier(supplier)
-    line_items.select {|line_item| supplier == line_item.supplier}
+    line_items.reject {|li| li.supplier.nil?}.select {|li| supplier == li.supplier}
   end
 
   def suppliers
-    @suppliers ||= line_items.map(&:supplier).uniq
+    return line_items.map(&:supplier).uniq unless has_packages?
+    line_items.map(&:variant).map do |variant|
+      supplier = variant.package.variants.map(&:supplier) if variant.is_a_package?
+      supplier ||= variant.supplier
+      supplier
+    end.flatten.uniq
   end
 end

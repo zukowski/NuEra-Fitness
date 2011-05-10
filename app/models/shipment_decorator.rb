@@ -20,12 +20,24 @@ Shipment.class_eval do
     end
   end
 
+  # A shipment is required within an order if there are line_items that exist
+  # for the shipment, order there is a package in the order that will create
+  # inventory units for this shipment
+  def is_required?
+    order.suppliers.any? {|supplier| supplier == self.supplier}
+  end
+
+  def needs_quote?
+    # We need a quote if there are line items that total over 150 lbs
+    order.weight_of_line_items_for_supplier(supplier) > 150
+  end
+
   private
 
   def determine_state(order)
     # This is not really valid since a shipment with only a package
     # will have a 0 amount
-    return 'quote'   if self.adjustment and self.adjustment.amount == 0
+    return 'quote'   if needs_quote? && adjustment.amount == 0
     return 'pending' if self.inventory_units.any? {|unit| unit.backordered?}
     return 'shipped' if state == 'shipped'
     order.payment_state == 'balance_due' ? 'pending' : 'ready'

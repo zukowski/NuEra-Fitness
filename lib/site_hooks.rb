@@ -2,7 +2,16 @@ class SiteHooks < Spree::ThemeSupport::HookListener
   insert_after :admin_tabs do
     %(
     <%= tab(:suppliers) %>
-    <%= tab(:packages) %>
+    )
+  end
+  
+  insert_after :admin_product_tabs do
+    %(
+    <% unless @product.package.nil? %>
+      <li<%= ' class="active"' if current == "Package" %>>
+        <%= link_to "Package", edit_admin_product_package_url(@product) %>
+      </li>
+    <% end %>
     )
   end
 
@@ -15,6 +24,8 @@ class SiteHooks < Spree::ThemeSupport::HookListener
     </p>
     )
   end
+
+  replace :order_details_line_item_row, 'shared/order_details_line_item_row'
 
   replace :order_details_adjustments do
     %(

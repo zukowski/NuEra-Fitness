@@ -1,0 +1,17 @@
+  <td width="300"><%= item.variant.product.name %> <%= "(#{variant_options(item.variant)})" unless item.variant.option_values.empty? %></td>
+  <td class="price"><%= number_to_currency item.price %></td>
+  <td class="qty"><%= item.quantity %></td>
+  <td class="total"><span><%= number_to_currency (item.price * item.quantity) %></span></td>
+<% if item.variant.is_a_package? %>
+</tr>
+<tr>
+  <td colspan="4">
+    <ul class="package-variants">
+      <% variants = item.variant.package.variants.group(:id) %>
+      <% variant_counts = variants.count %>
+      <% variants.each do |variant| %>
+        <li><%= variant_counts[variant.id] %> x <%= variant.name %></li>
+      <% end %>
+    </ul>
+  </td>
+<% end %>
