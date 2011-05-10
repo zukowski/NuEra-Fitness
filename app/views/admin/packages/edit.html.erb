@@ -1,3 +1,7 @@
+<%= render :partial => 'admin/shared/product_sub_menu' %>
+
+<%= render :partial => 'admin/shared/product_tabs', :locals => {:current => "Package"} %>
+
 <h2><%= t(:edit_package) %></h2>
 
 <%= render :partial => 'add_variant' %>

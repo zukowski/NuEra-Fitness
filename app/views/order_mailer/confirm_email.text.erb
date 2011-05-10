@@ -7,20 +7,17 @@ Order Summary
 ============================================================
 <% for item in @order.line_items %>
   <%= item.variant.product.name %> <%= variant_options(item.variant) %> <%= item.quantity %> @ <%= number_to_currency item.price %> = <%= number_to_currency(item.price * item.quantity) %>
+  <% if item.variant.is_a_package? %>
+    <% package_variants = item.variant.package.variants.group(:id) %>
+    <% variant_counts = package_variants.count %>
+    <% package_variants.each do |package_variant| %>
+      <%= variant_counts[package_variant.id] %> x <%= package_variant.name %>
+    <% end %>
+  <% end %>
 <% end %>
 ============================================================
 Subtotal: <%= number_to_currency @order.item_total %>
-<%
-adjustments = @order.adjustments.inject({}) do |adjustments, adjustment|
-  if adjustments.has_key? adjustment.label
-    adjustments[adjustment.label] += adjustment.amount
-  else
-    adjustments[adjustment.label] = adjustment.amount
-  end
-  adjustments
-end
-%>
-<% adjustments.each do |label,amount| %>
+<% @order.customer_adjustments.each do |label,amount| %>
 <%= "#{label}: #{number_to_currency amount}" %>
 <% end %>
 Order Total: <%= number_to_currency @order.total %>

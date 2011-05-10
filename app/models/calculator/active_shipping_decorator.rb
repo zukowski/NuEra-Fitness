@@ -2,8 +2,10 @@ Calculator::ActiveShipping.class_eval do
   def compute(shipment, options={})
     return if shipment.nil?
     supplier = shipment.supplier
-    addr = shipment.address || options[:address]
+    addr = shipment.address
 
+    #destination = location(shipment.address)
+    #destination = location(supplier.address)
     destination = ActiveMerchant::Shipping::Location.new(
       :country => addr.country.iso,
       :state => (addr.state ? addr.state.abbr : addr.state_name),
@@ -31,40 +33,30 @@ Calculator::ActiveShipping.class_eval do
     order.weight_of_line_items_for_supplier(options[:supplier]) <= 150
   end
 
-  def location(address)
-    ActiveMerchant::Shipping::Location.new(address)
-  end
-
-  def multiplier
-    Spree::ActiveShipping::Config[:unit_multiplier]
-  end
-
-  def units
-    Spree::ActiveShipping::Config[:units].to_sym
-  end
-
   def quick_quote(order, address)
-    Rails.logger.debug(order.suppliers.inspect)
-    order.suppliers.map do |supplier|
+    order.suppliers.inject(0) do |sum,supplier|
       weight = order.weight_of_line_items_for_supplier(supplier) * multiplier
-      next unless weight > 0
-      packages = [package(weight)]
-      destination = location({
-        :country => supplier.country,
-        :state => supplier.state,
-        :city => supplier.city,
-        :zip => supplier.zip
-      })
-      origin = location({
-        :country => address.country.iso,
-        :state => (address.state ? address.state.abbr : address.state_name),
-        :city => nil,
-        :zip => address.zipcode
-      })
-      rate = retrieve_rates(origin, destination, packages)[self.description].to_f / 100.0
-      Rails.logger.debug(rate)
-      rate
-    end.sum
+      rate = 0
+      if weight > 0
+        packages = [package(weight)]
+        #destination = location(address)
+        #destination = location(supplier.address)
+        destination = location({
+          :country => supplier.country,
+          :state => supplier.state,
+          :city => supplier.city,
+          :zip => supplier.zip
+        })
+        origin = location({
+          :country => address.country.iso,
+          :state => (address.state ? address.state.abbr : address.state_name),
+          :city => nil,
+          :zip => address.zipcode
+        })
+        rate = retrieve_rates(origin, destination, packages)[self.description].to_f / 100.0
+      end
+      sum + rate
+    end
   end
 
   private
@@ -76,7 +68,6 @@ Calculator::ActiveShipping.class_eval do
   end
 
   def retrieve_rates(origin, destination, packages)
-    #TODO Add rescue block back in
     begin
       response = carrier.find_rates(origin, destination, packages)
       rate_hash = Hash[*response.rates.map {|rate| [rate.service_name, rate.price] }.flatten]
@@ -92,8 +83,8 @@ Calculator::ActiveShipping.class_eval do
       else
         message = e.to_s
       end
+      raise Spree::ShippingError.new("#{I18n.t(:shipping_error)}: #{message})")
     end
-    raise Spree::ShippingError.new("#{I18n.t(:shipping_error)}: #{message})")
   end
 
   def package(weight)
@@ -104,4 +95,17 @@ Calculator::ActiveShipping.class_eval do
     weight = multiplier * shipment.order.weight_of_line_items_for_supplier(shipment.supplier)
     [package(weight)]
   end
+
+  def location(address)
+    ActiveMerchant::Shipping::Location.new(address)
+  end
+
+  def multiplier
+    Spree::ActiveShipping::Config[:unit_multiplier]
+  end
+
+  def units
+    Spree::ActiveShipping::Config[:units].to_sym
+  end
+
 end
