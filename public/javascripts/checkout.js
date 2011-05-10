@@ -66,8 +66,10 @@
       }
     }).triggerHandler('click');
 
-    $('form.edit_checkout').submit(function() {
-      $(this).find(':submit, :image').attr('disabled', true).removeClass('primary').addClass('disabled');
+    $('form.edit_order').submit(function() {
+      //$(this).find(':submit, :image').attr('disabled', true).removeClass('primary').addClass('disabled');
+      $(this).find(':submit').hide();
+      $(this).find('div#loading').show();
     });
 
 
