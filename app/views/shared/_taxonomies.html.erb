@@ -1,12 +1,13 @@
+<% cache("taxonomies_sidebar_#{@taxon ? @taxon.id : '0'}") do %>
 <div id="taxonomies" class="sidebar-item">
 <% get_taxonomies.each do |taxonomy| %>
-  <% if taxonomy.name != 'Google' %>
+  <% next if taxonomy.name == 'Google' %>
   <ul class="navigation-list">
-	  <li<%= ' class="current"' if @taxon && @taxon == taxonomy.root %>><%= link_to t("shop_by_taxonomy", :taxonomy => taxonomy.name.singularize), seo_url(taxonomy.root), :class => 'root' %></li>
-	  <% taxonomy.root.children.each do |taxon| %>
-	    <li<%= ' class="current"' if @taxon and ([@taxon] + @taxon.ancestors).include?(taxon) %>><%= link_to taxon.name, seo_url(taxon) %></li>
-	  <% end %>
-	</ul>
-	<% end %>
+    <li<%= ' class="current"' if @taxon && @taxon == taxonomy.root %>><%= link_to t("shop_by_taxonomy", :taxonomy => taxonomy.name.singularize), seo_url(taxonomy.root), :class => 'root' %></li>
+    <% taxonomy.root.children.each do |taxon| %>
+      <li<%= ' class="current"' if @taxon and ([@taxon] + @taxon.ancestors).include?(taxon) %>><%= link_to taxon.name, seo_url(taxon) %></li>
+    <% end %>
+  </ul>
 <% end %>
 </div>
+<% end %>
