@@ -21,11 +21,20 @@ OrdersController.class_eval do
   def quote
     session[:address] = params[:address] if session[:address].nil?
     @order = current_order
+    @address = Address.new(params[:address])
     begin
-      @quote = @order.quick_quote(Address.new(params[:address]))
+      @quote = @order.quick_quote(@address)
     rescue Spree::ShippingError => e
       @quote = false
       @message = e.message
+    end
+    
+    respond_to do |wants|
+      wants.html do
+        flash[:error] = @message unless @quote
+        render :edit
+      end
+      wants.js
     end
   end
 

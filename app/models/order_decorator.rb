@@ -61,7 +61,7 @@ Order.class_eval do
   end
 
   def quick_quote(address)
-    return false if suppliers.any? {|supplier| weight_of_line_items_for_supplier(supplier) > 150}
+    raise Spree::ShippingError.new(I18n.t(:quote_overweight))  if suppliers.any? {|supplier| weight_of_line_items_for_supplier(supplier) > 150}
     if address.country == UNITED_STATES
       ShippingMethod.find(7).calculator.quick_quote(self, address)
     else
@@ -200,7 +200,6 @@ Order.class_eval do
   end
   
   def weight_of_line_items_for_supplier(supplier)
-    Rails.logger.debug(line_items_for_supplier(supplier).inspect)
     line_items_for_supplier(supplier).map {|line_item| line_item.variant.weight * line_item.quantity}.sum
   end
   

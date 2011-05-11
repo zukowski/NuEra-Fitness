@@ -1,5 +1,5 @@
 <% if @quote %>
   $("#quick-quote").html('<%= escape_javascript("Shipping: #{number_to_currency @quote}"); %>')
 <% else %>
-  alert("<%= @message || 'Due to the insane weight of the items in your cart, your order requires a Freight Shipping Quote. Go ahead and complete your order, and disregard the shipping estimate for now. Once your order comes in, we\'ll contact you with a quote for Freight Shipping. You won\'t need to enter a card number until after you receive and are satisfied with your shipping quote.' %>");
+  alert("<%= @message %>");
 <% end %>
