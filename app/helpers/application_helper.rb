@@ -9,4 +9,16 @@ module ApplicationHelper
       squash
     end
   end
+
+  def link_to_facebook
+    link_to 'http://www.facebook.com/pages/Nu-Era-Fitness/107550029321028', :target => '_blank' do
+      image_tag '/images/facebook-over.png', :togglesrc => '/images/facebook-over.png', :class => 'hover', :border => '0'
+    end
+  end
+
+  def link_to_twitter
+    link_to 'https://twitter.com/#!/NuEraFitness', :target => '_blank' do
+      image_tag '/images/twitter-over.png', :togglesrc => '/images/twitter-over.png', :class => 'hover', :border => '0', :style => 'margin-top: -1px;'
+    end
+  end
 end

@@ -36,27 +36,29 @@ end
       <div id="steel-main"> <!-- includes flat bg color and main steel graphic -->
         <div id="steel-top">
           <div id="header" class="container_bg">
-          	<div class="nuera-phone"><img src="/images/nuera-phone-number.png" /></div>
+          	<div class="nuera-phone"><%= image_tag '/images/nuera-phone-number.png' %></div>
             <div class="container">
             <div id="login-bar">
                 <%= render 'shared/nav_bar' %>
             </div>
-            <ul class="nav-bar-3">
-        <li><%= link_to t("home"), '/' %></li>
-				<li>|</li>
-				<li><%= link_to t("store"), products_path %></li>
-				<li>|</li>
-				<li><%= link_to t("nutrition"), '/nutrition' %></li>
-				<li>|</li>
-				<li><%= link_to t("training"), '/training' %></li>
-				<li>|</li>
-				<li><%= link_to t("gyms"), '/gyms' %></li>
-				<li>|</li>
-				<li><%= link_to t("crossfit"), '/crossfit' %></li>
-			</ul>
-		    <div id="logo">
-              <%= logo %>
-            </div>
+            <% cache(:nav_bar_3_and_logo) do %>
+              <ul class="nav-bar-3">
+                  <li><%= link_to t("home"), '/' %></li>
+                  <li>|</li>
+                  <li><%= link_to t("store"), products_path %></li>
+                  <li>|</li>
+                  <li><%= link_to t("nutrition"), '/nutrition' %></li>
+                  <li>|</li>
+                  <li><%= link_to t("training"), '/training' %></li>
+                  <li>|</li>
+                  <li><%= link_to t("gyms"), '/gyms' %></li>
+                  <li>|</li>
+                  <li><%= link_to t("crossfit"), '/crossfit' %></li>
+              </ul>
+              <div id="logo">
+                <%= logo %>
+              </div>
+            <% end %>
           </div>
           </div>
         
@@ -82,7 +84,9 @@ end
           </div>
         </div>
       </div>
-      <%= render :partial => 'shared/footer'%>
+      <% cache(:footer) do %>
+        <%= render :partial => 'shared/footer'%>
+      <% end %>
     </div>
   </div>
   

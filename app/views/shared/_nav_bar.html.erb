@@ -13,22 +13,15 @@ $(document).ready(function() {
 	});
 });
 </script>
-<ul id="social-and-search">
-  <li><a href="http://www.facebook.com/pages/Nu-Era-Fitness/107550029321028" target="_blank"><img class="hover" togglesrc="/images/facebook-over.png" src="/images/facebook-over.png" border="0" /></a></li>
-  <% #<li><a href="" target="_blank"><img class="hover" togglesrc="/images/flickr-over.png" src="/images/flickr-over.png" border="0" /></a></li> %>
-  <li><a href="https://twitter.com/#!/NuEraFitness" target="_blank"><img class="hover" togglesrc="/images/twitter-over.png" style="margin-top:-1px;" src="/images/twitter-over.png" border="0" /></a></li>
-  <li><%= render 'shared/search' %></li>
-</ul>
-<ul class="nav-bar">
-<% if store_menu? %>
-  <%= render 'shared/store_menu' %>
+<% cache(:social_and_search) do %>
+  <%= render 'shared/social_and_search' %>
 <% end %>
-</ul>
-<!--
-<ul class="nav-bar-2">
-<%= render 'shared/login_bar' %>
-<li>|</li>
-<li><%= link_to_cart %></li>
-</ul>
--->
+<ul class="nav-bar">
+  <% if current_order && current_order.line_items.any? %>
+    <%= render 'shared/store_menu' %>
+  <% else %>
+    <% cache("store-menu-#{current_user ? 1 : 0}") do %>
+      <%= render 'shared/store_menu' %>
+    <% end %>
+  <% end %>
 </ul>
