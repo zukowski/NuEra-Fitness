@@ -49,15 +49,15 @@ class SiteHooks < Spree::ThemeSupport::HookListener
 
   insert_before :taxon_products do
     %(
-      <% pattern = /([A-Za-z\-]*)\\/$/ %>
-			<% m = pattern.match(@taxon.permalink) %>
-			<% path = RAILS_ROOT + "/app/views/taxons/descriptions/_" + m[1] + ".html.erb" %>
-			<% partial = "taxons/descriptions/" + m[1] %>
-			<% if File.exist?(path) %>
-				<div class="rounded-box taxon-description">
-					<%= render :partial => partial %>
-				</div>
-			<% end %>
+    <% pattern = /([A-Za-z\-]*)\\/$/ %>
+    <% m = pattern.match(@taxon.permalink) %>
+    <% path = Rails.root.to_s + "/app/views/taxons/descriptions/_" + m[1] + ".html.erb" %>
+    <% partial = "taxons/descriptions/" + m[1] %>
+    <% if File.exist?(path) %>
+      <div class="rounded-box taxon-description">
+        <%= render :partial => partial %>
+      </div>
+    <% end %>
     )
   end
 end
