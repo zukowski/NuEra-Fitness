@@ -52,8 +52,16 @@ Order.class_eval do
   
   UNITED_STATES = Country.find_by_name("United States")
 
+  def empty
+    # Need to remove any shipments / line items / payments / adjustments
+    self.adjustments.destroy_all
+    self.payments.destroy_all
+    self.shipments.destroy_all
+    self.line_items.destroy_all
+  end
+
   def quick_quote(address)
-    return false if suppliers.any? {|supplier| weight_of_line_items_for_supplier(supplier) > 150}
+    raise Spree::ShippingError.new(I18n.t(:quote_overweight))  if suppliers.any? {|supplier| weight_of_line_items_for_supplier(supplier) > 150}
     if address.country == UNITED_STATES
       ShippingMethod.find(7).calculator.quick_quote(self, address)
     else
@@ -192,7 +200,6 @@ Order.class_eval do
   end
   
   def weight_of_line_items_for_supplier(supplier)
-    Rails.logger.debug(line_items_for_supplier(supplier).inspect)
     line_items_for_supplier(supplier).map {|line_item| line_item.variant.weight * line_item.quantity}.sum
   end
   
