@@ -30,10 +30,7 @@ OrdersController.class_eval do
   end
 
   def empty
-    if @order = current_order
-      @order.shipments.destroy_all
-      @order.line_items.destroy_all
-    end
+    @order.empty if @order = current_order
     redirect_to cart_path
   end
 end

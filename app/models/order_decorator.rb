@@ -52,6 +52,14 @@ Order.class_eval do
   
   UNITED_STATES = Country.find_by_name("United States")
 
+  def empty
+    # Need to remove any shipments / line items / payments / adjustments
+    self.adjustments.destroy_all
+    self.payments.destroy_all
+    self.shipments.destroy_all
+    self.line_items.destroy_all
+  end
+
   def quick_quote(address)
     return false if suppliers.any? {|supplier| weight_of_line_items_for_supplier(supplier) > 150}
     if address.country == UNITED_STATES
