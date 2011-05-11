@@ -32,6 +32,25 @@ Shipment.class_eval do
     order.weight_of_line_items_for_supplier(supplier) > 150
   end
 
+  def update!(order)
+    # Check to see if any of the line_items have been changed for this update
+    new_shipping_method = ShippingMethod.all_available(order, :front_end, :supplier => supplier).first
+    unless new_shipping_method == shipping_method
+      update_attribute_without_callbacks(:shipping_method_id, new_shipping_method.id)
+      # If we changed from UPS to Freight, than any possible adjustment needs to be reset
+      # If the change was from Freight to UPS, then Order#update_adjustments will take
+      # care of the udpate
+      adjustment.update_attribute(:originator, new_shipping_method)
+      if new_shipping_method.calculator.type =~ /Freight/
+        adjustment.update_attribute(:amount, 0)
+      end
+    end
+    old_state = self.state
+    new_state = determine_state(order)
+    update_attributes_without_callbacks(:state => new_state)
+    after_ship if new_state == 'shipped' && old_state != 'shipped'
+  end
+
   private
 
   def determine_state(order)
