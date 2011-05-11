@@ -5,8 +5,7 @@
   <%= render :partial => 'shared/head'%>
 <% end %>
 <!-- cufon text -->
-<script type="text/javascript" src="/javascripts/cufon.js" ></script>
-<script type="text/javascript" src="/javascripts/Din_400.font.js" ></script>
+<%= javascript_include_tag 'cufon.js', 'Din_400.font.js' %>
 <script type="text/javascript">
   Cufon.replace('h1, h2, #cart-detail h4, a.root, .nuera-phone, ');
   Cufon.replace('h2');

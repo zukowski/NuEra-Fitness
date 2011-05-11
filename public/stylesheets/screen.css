@@ -393,7 +393,7 @@ legend {
   border-right: 1px solid #eeeeee;
 }
 body {
-  background: #000000 url(../images/body-bg-repeat.jpg) top center repeat-y;
+  background: #000000 url(http://assets-0.nuerafitness.com/images/body-bg-repeat.jpg) top center repeat-y;
 }
 div.left {
   float: left;
@@ -411,27 +411,27 @@ a { outline: none; }
 body.two-col #wrapper { }
 #bottom-shadow {
   width: 100%;
-  background: url(../images/bottom-shadow.png) center bottom no-repeat; 
+  background: url(http://assets-0.nuerafitness.com/images/bottom-shadow.png) center bottom no-repeat; 
   padding-bottom: 90px;
 }
 #main-wrapper { 
   width: 1028px;
   margin: 0 auto;
-  background: url(../images/shadows-repeat.png) repeat-y; 
+  background: url(http://assets-0.nuerafitness.com/images/shadows-repeat.png) repeat-y; 
 }
 #steel-main {
   width: 974px;
   margin-left: 27px;
-  background: url(../images/steel-main.jpg) 0px 60px repeat-y; 
+  background: url(http://assets-0.nuerafitness.com/images/steel-main.jpg) 0px 60px repeat-y; 
 }
 #steel-top {
   width: 974px;
-  background: url(../images/steel-top.jpg) top left no-repeat; 
+  background: url(http://assets-0.nuerafitness.com/images/steel-top.jpg) top left no-repeat; 
 }
 #main-wrapper-bottom { 
   width: 1000px;
   margin: 0 auto;
-  background: url(../images/wrapper-bg-nuera-bottom.png) 13px 100% no-repeat; 
+  background: url(http://assets-0.nuerafitness.com/images/wrapper-bg-nuera-bottom.png) 13px 100% no-repeat; 
 }
 .container {
   width: 974px;
@@ -477,7 +477,7 @@ body.two-col #content {
   width: 28px;
   height:28px;
   float:right;
-  background: url(../images/search-submit.png) top left no-repeat;
+  background: url(http://assets-0.nuerafitness.com/images/search-submit.png) top left no-repeat;
   margin-left: 4px;
   border: 0;
   outline: 0;
@@ -493,7 +493,7 @@ body.two-col #content {
   margin-right: 2px;
   height: 28px;
   line-height: 30px;
-  background: url(../images/search-box-bg.png) top left no-repeat;
+  background: url(http://assets-0.nuerafitness.com/images/search-box-bg.png) top left no-repeat;
   border: 0;
   font-size: 1.2em;
   color: #ffffff;
@@ -508,7 +508,7 @@ body.two-col #content {
   margin-left: 27px;
   width: 974px;
   height: 189px;
-  background: transparent url(../images/footer.png) top left no-repeat;
+  background: transparent url(http://assets-0.nuerafitness.com/images/footer.png) top left no-repeat;
   clear: both;
 }
 #footer p {color:#959595;}
@@ -565,7 +565,7 @@ div.store-menu {
 	width:974px;
 	height:73px;
 	margin-left:-20px;
-	background:url(../images/store-menu-bg.jpg) top left no-repeat;
+	background:url(http://assets-0.nuerafitness.com/images/store-menu-bg.jpg) top left no-repeat;
 }
 div#store-menu-items
 {
@@ -577,7 +577,7 @@ a.store-menu-item {
 	height:52px;
 	float:left;
 	margin:0 6px;
-	background:url(../images/store-menu-sprite.jpg);
+	background:url(http://assets-0.nuerafitness.com/images/store-menu-sprite.jpg);
 }
 a#store-menu-category { background-position: 0px 0px; }
 a#store-menu-category:hover { background-position: -172px 0px; }
@@ -663,7 +663,7 @@ p img {
 .navigation-list li.current { width: 200px; }
 .navigation-list li.current a {
   width: 180px;
-  background: url(../images/menu-current.png) right center no-repeat;
+  background: url(http://assets-0.nuerafitness.com/images/menu-current.png) right center no-repeat;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -755,10 +755,10 @@ ul.nav-bar li {
 }
 ul.nav-bar li.cart-indicator a {
   padding-right: 40px;
-  background: transparent url(../images/cart-empty_x32.png) center right no-repeat;
+  background: transparent url(http://assets-0.nuerafitness.com/images/cart-empty_x32.png) center right no-repeat;
   display: block;
 }
-ul.nav-bar li.cart-indicator a.full { background-image: url(../images/cart-full_x32.png); }
+ul.nav-bar li.cart-indicator a.full { background-image: url(http://assets-0.nuerafitness.com/images/cart-full_x32.png); }
 .pagination {
   padding-top: 10px;
   text-align: right;
@@ -789,7 +789,7 @@ ul.nav-bar-3 {
   letter-spacing:1px;
   list-style: none;
   margin:10px 0 0 0;
-  background:url(../images/menu-bg.png) top left no-repeat;
+  background:url(http://assets-0.nuerafitness.com/images/menu-bg.png) top left no-repeat;
 }
 ul.nav-bar-3 li {
   float: left;
@@ -877,12 +877,12 @@ ul.nav-bar-3 li {
   padding: 0.8em;
 }
 .flash.notice {
-  background: #ccddff url(../images/shadow_top.png) 0px -50px repeat-x;
+  background: #ccddff url(http://assets-0.nuerafitness.com/images/shadow_top.png) 0px -50px repeat-x;
   color: #556699;
   border: 1px solid #99aacc;
 }
 .flash.errors {
-  background: #f4b4b4 url(../images/shadow_top.png) 0px -50px repeat-x;
+  background: #f4b4b4 url(http://assets-0.nuerafitness.com/images/shadow_top.png) 0px -50px repeat-x;
   color: #000000;
   border: 1px solid #000000;
 }
@@ -893,7 +893,7 @@ ul.nav-bar-3 li {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background: #f4b4b4 url(../images/shadow_top.png) 0px -50px repeat-x;
+  background: #f4b4b4 url(http://assets-0.nuerafitness.com/images/shadow_top.png) 0px -50px repeat-x;
   color: #000000;
   border: 1px solid #000000;
 }
@@ -911,7 +911,7 @@ ul.nav-bar-3 li {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background: #f4b4b4 url(../images/shadow_top.png) 0px -50px repeat-x;
+  background: #f4b4b4 url(http://assets-0.nuerafitness.com/images/shadow_top.png) 0px -50px repeat-x;
   color: #000000;
   border: 1px solid #000000;
 }
@@ -965,7 +965,7 @@ button, a.button, input.button {
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
-  background: #efefef url(../images/buttons/bg-button.png) center left repeat-x !important;
+  background: #efefef url(http://assets-0.nuerafitness.com/images/buttons/bg-button.png) center left repeat-x !important;
   border-style: solid;
   border-width: 1px !important;
   border-color: #dddddd #999999 #999999 #dddddd !important;
@@ -992,9 +992,9 @@ button.primary, a.button.primary, input.button.primary {
   font-weight: bold;
   color: #000000;
 }
-button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
-a.button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
-input.button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
+button:hover { background-image: url(http://assets-0.nuerafitness.com/images/buttons/bg-button-hover.png) !important; }
+a.button:hover { background-image: url(http://assets-0.nuerafitness.com/images/buttons/bg-button-hover.png) !important; }
+input.button:hover { background-image: url(http://assets-0.nuerafitness.com/images/buttons/bg-button-hover.png) !important; }
 button.large, a.button.large, input.button.large {
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
@@ -1089,7 +1089,7 @@ p button img { margin: 0 5px 0 0; }
   margin: 6px;
   padding: 10px 0 0 0;
   position: relative;
-  background: #1e1e1e url(../images/product-list-item-bg.png) top left no-repeat;
+  background: #1e1e1e url(http://assets-0.nuerafitness.com/images/product-list-item-bg.png) top left no-repeat;
 }
 .product-listing li a {
   display: block;
@@ -1108,7 +1108,7 @@ p button img { margin: 0 5px 0 0; }
 .product-listing li a.info span { display: block; }
 .product-listing li:hover { border-color: #1b1b1b; }
 .product-listing li:hover a.info {
-  background: #1b1b1b url(../images/bottom_shine.png) bottom left repeat-x;
+  background: #1b1b1b url(http://assets-0.nuerafitness.com/images/bottom_shine.png) bottom left repeat-x;
   color: #cccccc;
 }
 .product-listing li input { position:absolute; bottom:5px; left:56px; height:15px; width:18px; padding:0px;}
@@ -1435,7 +1435,7 @@ table#cart h4 { margin-bottom: 0em; }
 #login #existing-customer input[type=checkbox] { top: 0em; }
 #login #existing-customer label { color:#ccc; }
 input.openid_url {
-  background: #ffffff url(../images/openid-inputicon.gif) no-repeat scroll 0pt 50%;
+  background: #ffffff url(http://assets-0.nuerafitness.com/images/openid-inputicon.gif) no-repeat scroll 0pt 50%;
   padding-left: 18px;
   border: 1px solid #bbbbbb;
   font-size: 1.5em;
@@ -1496,7 +1496,7 @@ ol.progress-steps li {
   color: #eee;
   background-position: top left;
   background-repeat: no-repeat;
-  background-image: url(../images/step-progress/incomplete-incomplete.png);
+  background-image: url(http://assets-0.nuerafitness.com/images/step-progress/incomplete-incomplete.png);
 }
 ol.progress-steps li span {
   padding: 5px 14px 7px 24px;
@@ -1511,19 +1511,19 @@ ol.progress-steps li a {
 }
 ol.progress-steps li.current-first span { color:#222; padding-left: 14px; }
 ol.progress-steps li.completed-first span { padding-left: 14px; }
-ol.progress-steps li.current-first { background-image: url(../images/step-progress/current-first.png); }
-ol.progress-steps li.completed-first { background-image: url(../images/step-progress/completed-first.png) !important; }
+ol.progress-steps li.current-first { background-image: url(http://assets-0.nuerafitness.com/images/step-progress/current-first.png); }
+ol.progress-steps li.completed-first { background-image: url(http://assets-0.nuerafitness.com/images/step-progress/completed-first.png) !important; }
 ol.progress-steps li.current { color: #ffffff; }
 ol.progress-steps li.current-first { color: #fff; }
 ol.progress-steps li.current-last { color: #ffffff; }
-ol.progress-steps li.completed { color:#ccc; background-image: url(../images/step-progress/completed-completed.png); }
-ol.progress-steps li.current { background-image: url(../images/step-progress/completed-current.png); }
-ol.progress-steps li.current-last { background-image: url(../images/step-progress/completed-current.png); }
-ol.progress-steps li.next { color:#eee; background-image: url(../images/step-progress/current-incomplete.png); }
-ol.progress-steps li.next-last { background-image: url(../images/step-progress/current-right.png); }
-ol.progress-steps li.last { background: url(../images/step-progress/incomplete-right.png) top right no-repeat; }
+ol.progress-steps li.completed { color:#ccc; background-image: url(http://assets-0.nuerafitness.com/images/step-progress/completed-completed.png); }
+ol.progress-steps li.current { background-image: url(http://assets-0.nuerafitness.com/images/step-progress/completed-current.png); }
+ol.progress-steps li.current-last { background-image: url(http://assets-0.nuerafitness.com/images/step-progress/completed-current.png); }
+ol.progress-steps li.next { color:#eee; background-image: url(http://assets-0.nuerafitness.com/images/step-progress/current-incomplete.png); }
+ol.progress-steps li.next-last { background-image: url(http://assets-0.nuerafitness.com/images/step-progress/current-right.png); }
+ol.progress-steps li.last { background: url(http://assets-0.nuerafitness.com/images/step-progress/incomplete-right.png) top right no-repeat; }
 ol.progress-steps li.next-last span { }
-ol.progress-steps li.current-last span { background-image: url(../images/step-progress/current-right.png); }
+ol.progress-steps li.current-last span { background-image: url(http://assets-0.nuerafitness.com/images/step-progress/current-right.png); }
 div#checkout { position: relative; }
 div#checkout .progress-steps {
   position: absolute;
