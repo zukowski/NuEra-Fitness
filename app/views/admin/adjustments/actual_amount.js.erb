@@ -1,0 +1,3 @@
+$("#amount-form-<%= @adjustment.source.number %>").hide();
+$("#amount-label-<%= @adjustment.source.number %> > span").html("Cost : <%= number_to_currency @adjustment.actual_amount %>");
+$("#amount-label-<%= @adjustment.source.number %>").show();

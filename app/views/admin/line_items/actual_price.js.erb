@@ -1,0 +1,4 @@
+$("#price-form-<%= @line_item.id %>").hide();
+$("#price-label-<%= @line_item.id %> > span").html("Price/Unit: <%= number_to_currency @line_item.actual_price %>");
+$("#price-label-<%= @line_item.id %>").show();
+$("#price-total-<%= @line_item.id %>").html("<%= number_to_currency (@line_item.actual_price * @line_item.quantity) %>")

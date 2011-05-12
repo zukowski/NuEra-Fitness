@@ -1,5 +1,17 @@
 Admin::ShipmentsController.class_eval do
   update.wants.js { render 'tracking', :layout => false }
+
+  def fire
+    success = @shipment.send("#{params[:e]}")
+    respond_to do |wants|
+      wants.html do
+        flash.notice = t(:shipment_updated) if success
+        flast[:error] = t(:cannot_perform_operation) unless sucess
+        redirect_to :back
+      end
+      wants.js { render 'shipped_success', :layout => false } if params[:e] == 'ship'
+    end
+  end
   
   private
 
