@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110502224756) do
+ActiveRecord::Schema.define(:version => 20110512192817) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20110502224756) do
     t.boolean  "locked"
     t.integer  "originator_id"
     t.string   "originator_type"
+    t.decimal  "actual_amount",   :precision => 8, :scale => 2
   end
 
   add_index "adjustments", ["order_id"], :name => "index_adjustments_on_order_id"
@@ -146,12 +147,13 @@ ActiveRecord::Schema.define(:version => 20110502224756) do
   create_table "line_items", :force => true do |t|
     t.integer  "order_id"
     t.integer  "variant_id"
-    t.integer  "quantity",                                  :null => false
-    t.decimal  "price",       :precision => 8, :scale => 2, :null => false
+    t.integer  "quantity",                                   :null => false
+    t.decimal  "price",        :precision => 8, :scale => 2, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "supplier_id"
     t.integer  "shipment_id"
+    t.decimal  "actual_price", :precision => 8, :scale => 2
   end
 
   add_index "line_items", ["order_id"], :name => "index_line_items_on_order_id"
