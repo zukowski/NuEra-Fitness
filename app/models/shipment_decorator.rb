@@ -61,4 +61,10 @@ Shipment.class_eval do
     return 'shipped' if state == 'shipped'
     order.payment_state == 'balance_due' ? 'pending' : 'ready'
   end
+
+  def after_ship
+    inventory_units.each(&:ship!)
+    #TODO Do something with the email
+    #ShipmentMailer.shipped_email(self).deliver
+  end
 end
