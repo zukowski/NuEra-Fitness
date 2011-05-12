@@ -10,7 +10,7 @@
 <table class="index">
   <thead>
     <tr>
-      <th>&nbsp;</th>
+      <th width="15px"></th>
       <th><%= t("order_number") %></th>
       <th><%= t("customer") %></th>
       <th><%= t("total") %></th>
@@ -19,7 +19,7 @@
   <tbody>
     <% Order.quotes.each do |quote| %>
       <tr>
-        <td><%= link_to '+', admin_order_adjustments_url(quote), :class => 'expand-adjustments', :id => quote.number, 'data-update' => "adjustments-#{quote.number}" %></td>
+        <td><%= link_to '+', admin_order_adjustments_url(quote), :class => 'expand-adjustments', :id => quote.number %></td>
         <td><%= link_to quote.number, object_url(quote) %></td>
         <td><%= quote.name %></td>
         <td><%= number_to_currency quote.total %></td>
@@ -35,8 +35,7 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.expand-adjustments').click(function(quote) {
-    update_target = $(this).attr('data-update');
+  $('.expand-adjustments, .expand-orders').click(function(quote) {
     $.getScript(this.href);
     return false;
   })
@@ -49,6 +48,7 @@ $(document).ready(function() {
   <thead>
     <tr>
       <%= hook :admin_orders_index_headers do %>
+        <th width="15px"></th>
         <th><%= order @search, :by => :updated_at,       :as => t("updated_at") %></th>
         <th><%= order @search, :by => :completed_at,     :as => t("order_date") %></th>
         <th><%= order @search, :by => :number,           :as => t("order_number") %></th>
@@ -66,6 +66,7 @@ $(document).ready(function() {
     <tr>
       <%- locals = {:order => order} %>
       <%= hook :admin_orders_index_rows, locals do %>
+        <td><%= link_to '+', admin_order_url(order), :class => 'expand-orders' %></td>
         <td><%= "#{time_ago_in_words(order.updated_at)} ago" %></td>
         <td><%= order.completed_at.to_date if order.completed_at %></td>
         <td><%= link_to order.number, object_url(order) %></td>
@@ -78,6 +79,9 @@ $(document).ready(function() {
           <%= link_to_edit order %>
         <% end %>
       </td>
+    </tr>
+    <tr style="display:none;">
+      <td style="padding:0px"; colspan="8" id="expand-order-<%= order.number %>" class="order-overview-cell"></td>
     </tr>
   <% end %>
   </tbody>

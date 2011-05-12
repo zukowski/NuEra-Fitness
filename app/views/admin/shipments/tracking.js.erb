@@ -1,0 +1,3 @@
+$("#tracking-form-<%= @shipment.number %>").hide();
+$("#tracking-label-<%= @shipment.number %> > span").html("Tracking #: <%= @shipment.tracking %>");
+$("#tracking-label-<%= @shipment.number %>").show();

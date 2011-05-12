@@ -1,0 +1,120 @@
+<style>
+#order-overview span {
+  width: 33.33%;
+}
+#billing-details, #shipping-details { width:25%; }
+#billing-details, #shipping-details, #order-details { float:left; }
+#order-overview table td { border-bottom: 0; }
+.order-overview-cell { background-color: #1268D0; color:#FFF;}
+.order-overview-cell a { color: #FFF !important; }
+#order-overview h3 { text-align: center; background-color: #10B0E6; border-bottom: 3px solid #0000FF; }
+</style>
+<div id="order-overview">
+  <span id="billing-details">
+    <h3>Billing Details</h3>
+    <table>
+      <tr>
+        <td>Customer Details</td>
+        <td><%= customer_details @order.bill_address %></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><%= mail_to @order.email %></td>
+      </tr>
+      <tr>
+        <td>Phone Number:</td>
+        <td><%= @order.bill_address.phone %></td>
+      </tr>
+      <tr>
+        <td>Order Date</td>
+        <td><%= @order.completed_at %></td>
+      </tr>
+      <tr>
+        <td>IP Address:</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Payment Method</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Transaction Id</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Payment Status</td>
+        <td><%= @order.payment_state %></td>
+      </tr>
+    </table>
+  </span>
+  <span id="shipping-details">
+    <h3>Shipping Details</h3>
+    <table>
+      <tr>
+        <td>Customer Details</td>
+        <td><%= customer_details @order.ship_address %></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><%= mail_to @order.email %></td>
+      </tr>
+      <tr>
+        <td>Phone Number:</td>
+        <td><%= @order.ship_address.phone %></td>
+      </tr>
+      <tr>
+        <td>Shipping Cost</td>
+        <td><%= number_to_currency @order.adjustments.shipping.map(&:amount).sum %></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h3 style="text-align: left; padding-left: 5px; margin-bottom:-30px;" >Shipments</h3>
+          <input style="position:relative; float:right; top:-4px; height:23px;" type="submit" value="Ship All" />
+        </td>
+      </tr>
+      <% @order.shipments.each do |shipment| %>
+        <tr>
+          <td colspan="2">
+            <h4 style="margin:0;"><%= shipment.supplier.name %> (<%= shipment.shipping_method.name %>) <%= number_to_currency shipment.adjustment.amount %></h4>
+            <span class="shipment-actions" style="display:block; margin-bottom:8px; width:100%">
+              <!-- <input type="submit" value="invoice" /> -->
+                <%= form_tag fire_admin_order_shipment_path(@order, shipment, :e => 'ship'), :method => :put, :confirm => t('are_you_sure') do |f| %>
+                  <%= submit_tag 'Ship' %>
+                <% end %>
+            </span>
+            <span class="tracking">
+              <span id="tracking-form-<%= shipment.number %>"<%= " style='display:none;'" unless shipment.tracking.blank? %>>
+                <%= form_for(shipment, :url => admin_order_shipment_url(@order, shipment), :remote => true, :html => {:method => :put}) do |ship_form| %>
+                  <%= ship_form.label :tracking, t(:tracking) + '# :' %>
+                  <%= ship_form.text_field :tracking, :style => 'width:40%;' %>
+                  <%= ship_form.submit 'Save' %>
+                <% end %>
+              </span>
+              <span id="tracking-label-<%= shipment.number %>"<%= " style='display:none;'" if shipment.tracking.blank? %>>
+                <span><%= "Tracking #: #{shipment.tracking}" %></span>
+                <input type="submit" onclick='$("#tracking-label-<%= shipment.number %>").hide(); $("#tracking-form-<%= shipment.number %>").show();' value="Edit" />
+              </span>
+            </span>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </span>
+  <span style="float:right;" id="order-details">
+    <h3>Order Details</h3>
+    <table>
+    <% @order.line_items.each do |item| %>
+      <tr>
+        <td>
+          <%= item.quantity %> x <%= link_to item.variant.name, admin_product_url(item.variant.product) %><br />
+          <span class="sku"><%= item.variant.sku %></span>
+        </td>
+        <td style="text-align:right;">
+          <%= number_to_currency(item.quantity * item.price) %><br />
+          <input type="text" width="6" /><input type="submit" />
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </span>
+</div>

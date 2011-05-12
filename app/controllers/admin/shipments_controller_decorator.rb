@@ -1,4 +1,5 @@
 Admin::ShipmentsController.class_eval do
+  update.wants.js { render 'tracking', :layout => false }
   
   private
 
