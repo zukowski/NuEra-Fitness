@@ -78,21 +78,42 @@
             <h4 style="margin:0;"><%= shipment.supplier.name %> (<%= shipment.shipping_method.name %>) <%= number_to_currency shipment.adjustment.amount %></h4>
             <span class="shipment-actions" style="display:block; margin-bottom:8px; width:100%">
               <!-- <input type="submit" value="invoice" /> -->
-                <%= form_tag fire_admin_order_shipment_path(@order, shipment, :e => 'ship'), :method => :put, :confirm => t('are_you_sure') do |f| %>
-                  <%= submit_tag 'Ship' %>
+              <span id="ship-<%= shipment.number %>">
+                <% if shipment.can_ship? %>
+                  <%= form_tag fire_admin_order_shipment_path(@order, shipment, :e => 'ship'), :remote => true, :method => :put, :confirm => t('are_you_sure') do |f| %>
+                    <%= submit_tag 'Ship' %>
+                  <% end %>
+                <% elsif shipment.shipped? %>
+                  Shipped!
+                <% else %>
+                  Pending
                 <% end %>
+              </span>
             </span>
             <span class="tracking">
               <span id="tracking-form-<%= shipment.number %>"<%= " style='display:none;'" unless shipment.tracking.blank? %>>
                 <%= form_for(shipment, :url => admin_order_shipment_url(@order, shipment), :remote => true, :html => {:method => :put}) do |ship_form| %>
-                  <%= ship_form.label :tracking, t(:tracking) + '# :' %>
+                  <%= ship_form.label :tracking, t(:tracking) + '# :', :style => "display:inline-block; width:30%;" %>
                   <%= ship_form.text_field :tracking, :style => 'width:40%;' %>
                   <%= ship_form.submit 'Save' %>
                 <% end %>
               </span>
               <span id="tracking-label-<%= shipment.number %>"<%= " style='display:none;'" if shipment.tracking.blank? %>>
-                <span><%= "Tracking #: #{shipment.tracking}" %></span>
+                <span style="display:inline-block; width:70%;"><%= "Tracking #: #{shipment.tracking}" %></span>
                 <input type="submit" onclick='$("#tracking-label-<%= shipment.number %>").hide(); $("#tracking-form-<%= shipment.number %>").show();' value="Edit" />
+              </span>
+            </span>
+            <span class="actual-amount">
+              <span id="amount-form-<%= shipment.number %>"<%= " style='display:none;'" unless shipment.adjustment.actual_amount.blank? %>>
+                <%= form_for(shipment.adjustment, :url => admin_order_adjustment_url(@order, shipment.adjustment), :remote => true, :html => {:method => :put}) do |adjust_form| %>
+                  <%= adjust_form.label :actual_amount, 'Cost: ', :style => "display:inline-block; width:30%;" %>
+                  <%= adjust_form.text_field :actual_amount, :style => 'width:40%' %>
+                  <%= adjust_form.submit 'Save' %>
+                <% end %>
+              </span>
+              <span id="amount-label-<%= shipment.number %>"<%= " style='display:none;'" if shipment.adjustment.actual_amount.blank? %>>
+                <span style="display:inline-block; width:70%;"><%= "Cost: #{number_to_currency shipment.adjustment.actual_amount}" %></span>
+                <input type="submit" onclick='$("#amount-label-<%= shipment.number %>").hide(); $("#amount-form-<%= shipment.number %>").show();' value="Edit" />
               </span>
             </span>
           </td>
@@ -106,14 +127,30 @@
     <% @order.line_items.each do |item| %>
       <tr>
         <td>
-          <%= item.quantity %> x <%= link_to item.variant.name, admin_product_url(item.variant.product) %><br />
-          <span class="sku"><%= item.variant.sku %></span>
+          <%= item.quantity %> x <%= link_to item.variant.name, admin_product_url(item.variant.product) %>
         </td>
         <td style="text-align:right;">
           <%= number_to_currency(item.quantity * item.price) %><br />
-          <input type="text" width="6" /><input type="submit" />
+          <span id="price-total-<%= item.id %>"><%= number_to_currency(item.actual_price * item.quantity) unless item.actual_price.blank? %></span>
         </td>
       </tr>
+      <tr>
+        <td colspan="2">
+          <span class="sku" style="display:block;"><%= item.variant.sku %></span>
+          <span class="actual-price">
+            <span id="price-form-<%= item.id %>"<%= " style='display:none;'" unless item.actual_price.blank? %>>
+              <%= form_for(item, :url => admin_order_line_item_url(@order, item), :remote => true, :html => {:method => :put}) do |item_form| %>
+                <%= item_form.label :actual_price, 'Price/Unit: ', :style => "display:inline-block; width:60px;" %>
+                <%= item_form.text_field :actual_price, :style => 'width:30%' %>
+                <%= item_form.submit 'Save' %>
+              <% end %>
+            </span>
+            <span id="price-label-<%= item.id %>"<%= " style='display:none;'" if item.actual_price.blank? %>>
+              <span style="display:inline-block; width:100px;"><%= "Price/Unit: #{number_to_currency item.actual_price}" %></span>
+              <input type="submit" onclick='$("#price-label-<%= item.id %>").hide(); $("#price-form-<%= item.id %>").show();' value="Edit" />
+            </span>
+          </span>
+        </td>
     <% end %>
     </table>
   </span>
