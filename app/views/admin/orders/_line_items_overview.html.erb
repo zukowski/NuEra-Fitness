@@ -1,0 +1,31 @@
+    <h3>Line Item Details</h3>
+    <table>
+    <% @order.line_items.each do |item| %>
+      <tr>
+        <td>
+          <%= item.quantity %> x <%= link_to item.variant.name, admin_product_url(item.variant.product) %>
+        </td>
+        <td style="text-align:right;">
+          <%= number_to_currency(item.quantity * item.price) %><br />
+          <span id="price-total-<%= item.id %>"><%= number_to_currency(item.actual_price * item.quantity) unless item.actual_price.blank? %></span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <span class="sku" style="display:block;"><%= item.variant.sku %></span>
+          <span class="actual-price">
+            <span id="price-form-<%= item.id %>"<%= " style='display:none;'" unless item.actual_price.blank? %>>
+              <%= form_for(item, :url => admin_order_line_item_url(@order, item), :remote => true, :html => {:method => :put}) do |item_form| %>
+                <%= item_form.label :actual_price, 'Price/Unit: ', :style => "display:inline-block; width:60px;" %>
+                <%= item_form.text_field :actual_price, :style => 'width:30%' %>
+                <%= item_form.submit 'Save' %>
+              <% end %>
+            </span>
+            <span id="price-label-<%= item.id %>"<%= " style='display:none;'" if item.actual_price.blank? %>>
+              <span style="display:inline-block; width:100px;"><%= "Price/Unit: #{number_to_currency item.actual_price}" %></span>
+              <input type="submit" onclick='$("#price-label-<%= item.id %>").hide(); $("#price-form-<%= item.id %>").show();' value="Edit" />
+            </span>
+          </span>
+        </td>
+    <% end %>
+    </table>
