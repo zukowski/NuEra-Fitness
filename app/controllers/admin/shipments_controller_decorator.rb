@@ -6,7 +6,7 @@ Admin::ShipmentsController.class_eval do
     respond_to do |wants|
       wants.html do
         flash.notice = t(:shipment_updated) if success
-        flast[:error] = t(:cannot_perform_operation) unless sucess
+        flast[:error] = t(:cannot_perform_operation) unless success
         redirect_to :back
       end
       wants.js { render 'shipped_success', :layout => false } if params[:e] == 'ship'
