@@ -15,10 +15,13 @@
           <span class="sku" style="display:block;"><%= item.variant.sku %></span>
           <span class="actual-price">
             <span id="price-form-<%= item.id %>"<%= " style='display:none;'" unless item.actual_price.blank? %>>
-              <%= form_for(item, :url => admin_order_line_item_url(@order, item), :remote => true, :html => {:method => :put}) do |item_form| %>
-                <%= item_form.label :actual_price, 'Price/Unit: ', :style => "display:inline-block; width:60px;" %>
-                <%= item_form.text_field :actual_price, :style => 'width:30%' %>
-                <%= item_form.submit 'Save' %>
+              <%= form_for(@order, :url => admin_order_url(@order), :remote => true, :html => {:method => :put}) do |f| %>
+                <%= f.hidden_field :number %>
+                <%= f.fields_for :line_items, item do |item_form| %>
+                  <%= item_form.label :actual_price, 'Actual Price/Unit' %>
+                  <%= item_form.text_field :actual_price, :style => 'width:30%' %>
+                <% end %>
+                <%= f.submit "Save" %>
               <% end %>
             </span>
             <span id="price-label-<%= item.id %>"<%= " style='display:none;'" if item.actual_price.blank? %>>
