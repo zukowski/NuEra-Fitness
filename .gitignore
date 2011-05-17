@@ -1,6 +1,6 @@
 .bundle
 db/*.sqlite3
-log/*.log
+log/*
 tmp/**/*
 config/database.yml
 .*.swp
@@ -10,3 +10,8 @@ config/initializers/hoptoad.rb
 public/sitemap.xml
 public/ror.xml
 config/newrelic.yml
+public/502.html
+public/BingSiteAuth.xml
+public/googleaf3e1a137a637ca8.html
+public/maintenance.html.off
+public/y_key_fbd47cd6bc97c520.html
