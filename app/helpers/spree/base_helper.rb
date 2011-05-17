@@ -35,13 +35,17 @@ module Spree::BaseHelper
   end
 
   def order_status(order)
-    if order.state == 'quote'
-      I18n.t(:quote)
-    elsif order.state != 'complete'
-      I18n.t(:incomplete)
+    unless order.complete?
+      if order.quote?
+        I18n.t(:quote)
+      elsif order.canceled?
+        I18n.t(:canceled)
+      else
+        I18n.t(:incomplete) + "(#{I18n.t(order.state)})"
+      end
     else
-      if order.payment_state == 'balance_due'
-        I18n.t(:awaiting_payment_capture)
+      unless order.payment_state == 'paid'
+        I18n.t(:awaiting_payment_capture) + "(#{I18n.t(order.payment_state)})"
       else
         if order.shipment_state == 'ready'
           I18n.t(:awaiting_shipment)
