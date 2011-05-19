@@ -1,0 +1,23 @@
+<div class="yui-gc">
+<%= f.field_container :name do %>
+	<%= f.label :name, t("name")%><br />
+	<%= f.text_field :name %>
+<% end %>
+<%= f.field_container :description do %>
+	<%= f.label :description , t("description")%><br />
+	<%= f.text_area :description %>
+<% end %>
+<%= f.field_container :url do %>
+	<%= f.label :url , t("youtube_url")%><br />
+	<%= f.text_field :url %>
+<% end %>
+<%= f.field_container :publish_up do %>
+	<%= f.label :publish_up , t("publish_up")%><br />
+	<%= f.spree_date_picker :publish_up %>
+<% end %>
+<%= f.field_container :publish_down do %>
+	<%= f.label :publish_down , t("publish_down")%><br />
+	<%= f.spree_date_picker :publish_down %>
+<% end %>
+<%= f.label :product_id, t("products") %><br />
+<%= grouped_collection_select(:video, :product_ids, Taxon.all, :products, :name, :id, :name, { :selected => @video.product_ids }, { :multiple => true, :size => 10 }) %>

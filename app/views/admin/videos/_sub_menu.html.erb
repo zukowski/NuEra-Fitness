@@ -1,0 +1,7 @@
+<% content_for :sub_menu do %>
+  <ul id="sub_nav">
+    <% # Default tab helper function always on for video sub-tab so <li> constructed manually below %>
+    <li class="<%= ( params[:action] == "index" ) ? "selected" : "" %>"><%= link_to t("videos") , admin_videos_path %></li>
+    <%= tab :new_video , :route => :new_admin_video , :match_path => '/videos/new' , :css_class => 'last' %>
+  </ul>
+<% end %>

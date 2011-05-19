@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110512192817) do
+ActiveRecord::Schema.define(:version => 20110519040242) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -360,6 +360,11 @@ ActiveRecord::Schema.define(:version => 20110512192817) do
   add_index "products_taxons", ["product_id"], :name => "index_products_taxons_on_product_id"
   add_index "products_taxons", ["taxon_id"], :name => "index_products_taxons_on_taxon_id"
 
+  create_table "products_videos", :id => false, :force => true do |t|
+    t.integer "product_id", :null => false
+    t.integer "video_id",   :null => false
+  end
+
   create_table "promotion_rules", :force => true do |t|
     t.integer  "promotion_id"
     t.integer  "user_id"
@@ -602,6 +607,16 @@ ActiveRecord::Schema.define(:version => 20110512192817) do
   end
 
   add_index "variants", ["product_id"], :name => "index_variants_on_product_id"
+
+  create_table "videos", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "url"
+    t.datetime "publish_up"
+    t.datetime "publish_down"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "zone_members", :force => true do |t|
     t.integer  "zone_id"

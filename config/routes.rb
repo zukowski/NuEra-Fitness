@@ -5,6 +5,7 @@ NuEraFitness::Application.routes.draw do
 
   namespace :admin do
     resources :suppliers
+    resources :videos
     resources :products do
       resource :package, :only => [:edit, :update] do
         delete :remove_variant, :on => :member

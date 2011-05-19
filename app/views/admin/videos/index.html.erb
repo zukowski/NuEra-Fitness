@@ -1,0 +1,33 @@
+<%= render :partial => 'sub_menu' %>
+<h1><%= t("videos")%></h1>
+<table class="index">
+  <tr>
+    <%= hook :admin_video_index_headers do %>
+      <th><%= sort_link @search, :name, t("name") %></th>
+      <th><%= t("youtube_url") %></th>
+      <th><%= sort_link @search, :publish_up, t("publish_up") %></th>
+      <th><%= sort_link @search, :publish_down, t("publish_down") %></th>
+    <% end %>
+    <th>
+      <%= hook :admin_video_index_header_actions %>
+    </th>
+  </tr>
+  <% @videos.each do |video| %>
+    <tr id="<%= dom_id video %>">
+      <%- locals = { :video => video } %>
+      <%= hook :admin_video_index_rows, locals do %>
+        <td width="15%"><%= video.name %></td>
+        <td><iframe width="180" src="http://www.youtube.com/embed/<%= video.url %>" frameborder="0" allowfullscreen></iframe></td>
+      	<td><%= video.publish_up.to_date %></td>
+      	<td><%= video.publish_down.to_date if video.publish_down %></td>
+      <% end %>
+      <td class="actions" style="white-space:nowrap;">
+        <%= hook :admin_video_index_row_actions, locals do %>
+          <%= link_to_edit video %>
+          &nbsp;
+          <%= link_to_delete video %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>

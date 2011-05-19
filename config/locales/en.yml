@@ -29,6 +29,15 @@ en:
   created_at: "Date Created"
   updated_at: "Date Updated"
   continue_shopping: "Continue Shopping"
+  videos: Videos
+  video: Video
+  name: Name
+  description: Description
+  youtube_url: YouTube ID
+  publish_up: Start Publishing
+  publish_down: End Publishing
+  new_video: New Video
+  edit_video: Edit Video
 
 # Display order status
   quote: "Quote"
