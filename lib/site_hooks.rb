@@ -2,6 +2,7 @@ class SiteHooks < Spree::ThemeSupport::HookListener
   insert_after :admin_tabs do
     %(
     <%= tab(:suppliers) %>
+    <%= tab(:videos) %>
     )
   end
   
@@ -58,6 +59,12 @@ class SiteHooks < Spree::ThemeSupport::HookListener
         <%= render :partial => partial %>
       </div>
     <% end %>
+    )
+  end
+  
+  replace :subscriber_static_content do
+    %(
+    <h1>Get the <span style="color:#fff;">Nu</span> <span style="color:#00ff00;">Era</span> Fitness Newsletter</h1>
     )
   end
 end
