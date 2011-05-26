@@ -96,7 +96,7 @@ Calculator::ActiveShipping.class_eval do
   # each with unique keys
   def cache_key(origin, destination, line_items, id)
     origin_key = "#{origin.country}-#{origin.state}-#{origin.zip}"
-    dest_key   = "#{destination.country}-#{destination.state}-#{origin.city}-#{destination.zip}"
+    dest_key   = "#{destination.country}-#{destination.state}-#{destination.city}-#{destination.zip}"
     items_key  = "#{line_items.map {|li| li.variant_id.to_s + "_" + li.quantity.to_s}.join('|')}"
     "#{carrier.name}-#{id}-#{origin_key}-#{dest_key}-#{items_key}".gsub(" ","")
   end
