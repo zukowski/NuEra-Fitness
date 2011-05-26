@@ -50,7 +50,7 @@ Order.class_eval do
     after_transition :to => 'canceled', :do => :after_cancel
   end
   
-  UNITED_STATES = Country.find_by_name("United States")
+  UNITED_STATES = Country.find_by_name("United States") unless defined? UNITED_STATES
 
   def empty
     # Need to remove any shipments / line items / payments / adjustments
@@ -85,6 +85,7 @@ Order.class_eval do
     self.out_of_stock_items = InventoryUnit.assign_opening_inventory(self)
     adjustments.optional.each {|adjustment| adjustment.update_attribute(:locked, true)}
     set_order_number
+    # TODO Push to delayed job
     OrderMailer.confirm_email(self).deliver
   end
 
