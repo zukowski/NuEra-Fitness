@@ -19,7 +19,7 @@ Calculator::ActiveShipping.class_eval do
       :city => supplier.city,
       :zip => supplier.zip
     )
-    
+
     return 0 unless has_rateable_items(shipment)
     rates = Rails.cache.fetch(cache_key(origin, destination, shipment.line_items, shipment.order.id)) do 
       rates = retrieve_rates(origin, destination, packages(shipment))
@@ -42,19 +42,19 @@ Calculator::ActiveShipping.class_eval do
       packages = [package(weight)]
       #destination = location(address)
       #destination = location(supplier.address)
-      destination = location({
+      origin = location({
         :country => supplier.country,
         :state => supplier.state,
         :city => supplier.city,
         :zip => supplier.zip
       })
-      origin = location({
+      destination = location({
         :country => address.country.iso,
         :state => (address.state ? address.state.abbr : address.state_name),
-        :city => nil,
+        :city => address.city,
         :zip => address.zipcode
       })
-      
+
       rates = Rails.cache.fetch(cache_key(origin, destination, line_items, order.id)) do
         rates = retrieve_rates(origin, destination, packages)
       end

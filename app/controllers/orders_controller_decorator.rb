@@ -19,7 +19,7 @@ OrdersController.class_eval do
   end
 
   def quote
-    session[:address] = params[:address] if session[:address].nil?
+    session[:address] = params[:address] if params[:address] != session[:address]
     @order = current_order
     @address = Address.new(params[:address])
     begin
