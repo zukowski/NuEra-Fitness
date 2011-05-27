@@ -13,7 +13,7 @@
   <% products.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
       <li id="product_<%= product.id %>" class="<%= product.has_variants? ? "variants" : "" %>">
-        <%= link_to small_image(product, :width => '100') , product,  %>
+        <%= link_to small_image(product, :width => '100') , product  %>
         <%= link_to raw(product.name + " <span class='price selling'>#{product_price(product)}</span>"), product, :class => 'info' %>
       	<% if product.has_stock? || Spree::Config[:allow_backorders] %>
         <% else %>
