@@ -1160,7 +1160,7 @@ p button img { margin: 0 5px 0 0; }
   padding: 0px;
 }
 .taxon .product-listing li {
-  height: 180px;
+  height: 225px;
   width: 127px;
   text-align: center;
   float: left;
@@ -1200,7 +1200,7 @@ p button img { margin: 0 5px 0 0; }
   bottom: 0px;
   right: 0px;
   padding: 0px 5px;
-  width: 127px;
+  width: 117px;
   font-size:12px;
   line-height:16px;
   min-height: 73px;
