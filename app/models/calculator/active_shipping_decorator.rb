@@ -19,11 +19,10 @@ Calculator::ActiveShipping.class_eval do
       :city => supplier.city,
       :zip => supplier.zip
     )
-    
-    if has_rateable_items(shipment)
+
+    return 0 unless has_rateable_items(shipment)
+    rates = Rails.cache.fetch(cache_key(origin, destination, shipment.line_items, shipment.order.id)) do 
       rates = retrieve_rates(origin, destination, packages(shipment))
-    else
-      return 0
     end
     return nil if rates.empty? or not rates[self.class.description].present?
     (rates[self.class.description].to_f + (supplier.handling_fee.to_f || 0.0)) / 100.0
@@ -34,28 +33,34 @@ Calculator::ActiveShipping.class_eval do
   end
 
   def quick_quote(order, address)
+    Rails.logger.debug("# of Suppliers: #{order.suppliers.count}")
     order.suppliers.inject(0) do |sum,supplier|
       weight = order.weight_of_line_items_for_supplier(supplier) * multiplier
-      rate = 0
-      if weight > 0
-        packages = [package(weight)]
-        #destination = location(address)
-        #destination = location(supplier.address)
-        destination = location({
-          :country => supplier.country,
-          :state => supplier.state,
-          :city => supplier.city,
-          :zip => supplier.zip
-        })
-        origin = location({
-          :country => address.country.iso,
-          :state => (address.state ? address.state.abbr : address.state_name),
-          :city => nil,
-          :zip => address.zipcode
-        })
-        rate = retrieve_rates(origin, destination, packages)[self.description].to_f / 100.0
+      line_items = order.line_items_for_supplier(supplier)
+      next sum if weight == 0
+      
+      packages = [package(weight)]
+      #destination = location(address)
+      #destination = location(supplier.address)
+      origin = location({
+        :country => supplier.country,
+        :state => supplier.state,
+        :city => supplier.city,
+        :zip => supplier.zip
+      })
+      destination = location({
+        :country => address.country.iso,
+        :state => (address.state ? address.state.abbr : address.state_name),
+        :city => address.city,
+        :zip => address.zipcode
+      })
+
+      rates = Rails.cache.fetch(cache_key(origin, destination, line_items, order.id)) do
+        rates = retrieve_rates(origin, destination, packages)
       end
-      sum + rate
+
+      next sum if rates.empty? or rates[self.class.description].nil?
+      sum + rates[self.description].to_f / 100.0
     end
   end
 
@@ -70,8 +75,7 @@ Calculator::ActiveShipping.class_eval do
   def retrieve_rates(origin, destination, packages)
     begin
       response = carrier.find_rates(origin, destination, packages)
-      rate_hash = Hash[*response.rates.map {|rate| [rate.service_name, rate.price] }.flatten]
-      return rate_hash
+      return Hash[*response.rates.map {|rate| [rate.service_name, rate.price] }.flatten]
     rescue ActiveMerchant::ActiveMerchantError => e
       if [ActiveMerchant::ResponseError, ActiveMerchant::Shipping::ResponseError].include? e.class
         params = e.response.params
@@ -83,8 +87,18 @@ Calculator::ActiveShipping.class_eval do
       else
         message = e.to_s
       end
+      Rails.cache.write @cache_key, {}
       raise Spree::ShippingError.new("#{I18n.t(:shipping_error)}: #{message})")
     end
+  end
+
+  # We can't cache the keys in an instance var as there may be multiple shipments
+  # each with unique keys
+  def cache_key(origin, destination, line_items, id)
+    origin_key = "#{origin.country}-#{origin.state}-#{origin.zip}"
+    dest_key   = "#{destination.country}-#{destination.state}-#{destination.city}-#{destination.zip}"
+    items_key  = "#{line_items.map {|li| li.variant_id.to_s + "_" + li.quantity.to_s}.join('|')}"
+    "#{carrier.name}-#{id}-#{origin_key}-#{dest_key}-#{items_key}".gsub(" ","")
   end
 
   def package(weight)

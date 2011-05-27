@@ -22,57 +22,64 @@
 <% else %>
 
   <%= form_for(@order, :url => update_cart_path, :html=>{:id=>'updatecart'}) do |order_form| %>
-  <%= hook :inside_cart_form do %>
+    <%= hook :inside_cart_form do %>
 
-    <%= hook :cart_items do %>
-      <%= render :partial => 'form', :locals => {:order_form => order_form} %>
-    <% end %>
-    <div id="subtotal">
-      <h3><%= "#{t("subtotal")}: #{order_price(@order)}" %></h3>
-      <h3 id="quick-quote">Shipping: <%= "#{@quote}" if @quote %></h3>
-      <div class="links">
-        <%= link_to image_tag('/images/update.png') + t("update"), '#', :class => 'button checkout primary', :onclick => "$('form#updatecart').submit(); return false;" %>
-        <%= link_to image_tag('/images/checkout.png') + t("checkout"), checkout_path, :class => 'button checkout primary' %>
+      <%= hook :cart_items do %>
+        <%= render :partial => 'form', :locals => {:order_form => order_form} %>
+      <% end %>
+      <div id="subtotal">
+        <h3><%= "#{t("subtotal")}: #{order_price(@order)}" %></h3>
+        <h3 id="quick-quote"><%= "Shipping: #{@quote}" if @quote %></h3>
+        <div class="links">
+          <%= link_to image_tag('/images/update.png') + t("update"), '#', :class => 'button checkout primary', :onclick => "$('form#updatecart').submit(); return false;" %>
+          <%= link_to image_tag('/images/checkout.png') + t("checkout"), checkout_path, :class => 'button checkout primary' %>
+        </div>
       </div>
-    </div>
 
 
+    <% end %>
   <% end %>
-  <% end %>
-  <div style="float:left;">
-		<span id="empty"> <%= button_to t("empty_cart"), empty_cart_path, :method => :put, :class => 'button continue red' %></span>
-		<span id="continue"><%= link_to t("continue_shopping"), products_path, :class => 'button continue green' %></span>
-		<div class="clear"></div>
-		<div class="rounded-box" id="quick-quote-container">
-		<h2>Calculate Shipping Quote</h2>
-		<%= form_tag quote_cart_path, :remote => true, :method => :post, :class => 'cart-quick-quote' do |f| %>
-			<span id="country">
-				<%= collection_select :address, :country_id, Country.all, :id, :name %>
-			</span>
-			<span id="state">
-				<% state_elements = [
-					collection_select(:address, :state_id, Country.find(Spree::Config[:default_country_id]).states,
-														:id, :name, {:include_blank => true},
-														{:class => "required"}) +
-					text_field(:address, :state_name, :style => "display:none;", :disabled => true)
-					].join.gsub('"',"'").gsub("\n","")
-				%>
-				<script type="text/javascript">document.write("<%= raw state_elements %>");</script>
-			</span>
-			<span id="zip">
-				<span id="zip-code-label">Zip Code</span>: <%= text_field :address, :zipcode %>
-			</span>
-			<span id="submit">
-				<%= submit_tag "Get Quote", :class => 'button' %>
-				<div id="loading" style="display:none;"><%= image_tag "/images/ajax-loader.gif", :style => "display:inline;" %> Calculating Quote</div>
-			</span>
-			<div style="clear:both;"></div>
-		<% end %>
-		<h4>International Shipping</h4>
-		<span class="note">Yes, Nu Era ships outside of North America. For a quote, contact us at <a href="mailto:questions@nuerafitness.com">questions@nuerafitness.com</a>.</span>
-		</div>
-	<% end %>
-	</div>
+
+  <div class="rounded-box" id="quick-quote-container">
+	<h2>Calculate Shipping Quote</h2>
+    <%= form_tag quote_cart_path, :remote => true, :method => :post, :class => 'cart-quick-quote' do |f| %>
+      <span id="country">
+        <%= collection_select :address, :country_id, Country.all, :id, :name %>
+      </span>
+      <span id="state">
+        <% state_elements = [
+          collection_select(:address, :state_id, Country.find(Spree::Config[:default_country_id]).states,
+                            :id, :name, {:include_blank => true},
+                            {:class => "required"}) +
+          text_field(:address, :state_name, :style => "display:none;", :disabled => true)
+          ].join.gsub('"',"'").gsub("\n","")
+        %>
+        <script type="text/javascript">
+          document.write("<%= raw state_elements %>");
+        </script>
+      </span>
+      <span id="zip">
+        <span id="zip-code-label">Zip Code</span>: <%= text_field :address, :zipcode %>
+      </span>
+      <span id="submit">
+        <%= submit_tag "Get Quote", :class => 'button' %>
+        <div id="loading" style="display:none;"><%= image_tag "/images/ajax-loader.gif", :style => "display:inline;" %> Calculating Quote</div>
+      </span>
+      <div style="clear:both;"></div>
+    <% end %>
+    <h4>International Shipping</h4>
+    <span class="note">
+      Yes, Nu Era ships outside of North America. For a quote, contact us at <a href="mailto:questions@nuerafitness.com">questions@nuerafitness.com</a>.
+    </span>
+  </div>
+  
+  <span id="empty">
+    <%= button_to t("empty_cart"), empty_cart_path, :method => :put, :class => 'button continue red' %>
+  </span>
+  <span id="continue">
+    <%= link_to t("continue_shopping"), products_path, :class => 'button continue green' %>
+  </span>
+<% end %>
   
 <style type="text/css">
 div#quick-quote-container { width:300px; color:#ddd; margin-bottom:10px; margin-top:10px; } 
