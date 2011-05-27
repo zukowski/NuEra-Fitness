@@ -1,4 +1,5 @@
 <% cache("taxonomies_sidebar_#{@taxon ? @taxon.id : '0'}") do %>
+<div class="rounded-box" style="width:140px;">
 <div id="taxonomies" class="sidebar-item">
 <% get_taxonomies.each do |taxonomy| %>
   <% next if taxonomy.name == 'Google' %>
@@ -9,5 +10,6 @@
     <% end %>
   </ul>
 <% end %>
+</div>
 </div>
 <% end %>

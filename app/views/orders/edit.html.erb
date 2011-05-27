@@ -11,9 +11,6 @@
 <% end %>
 
 <h1><%= t("shopping_cart")%></h1>
-<span id="continue" style="float:right;margin-top:-38px;"><%= link_to t("continue_shopping"), products_path, :class => 'button continue green' %></span>
-
-<div style="clear:both;"></div>
 
 <% if @order.line_items.empty? %>
 

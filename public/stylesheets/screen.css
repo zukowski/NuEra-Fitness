@@ -148,6 +148,15 @@ div.taxon-description {
 	color:#ddd;
 }
 
+div.taxon h2 a {
+	color:#ccc;
+	text-decoration:none;
+}	
+
+div.taxon h3 a {
+	font-size:16px;
+}	
+
 img.taxon-description-image {
 	height:75px;
 	padding-right:8px;
@@ -231,9 +240,9 @@ div.top-product-category-image {
 	margin:0 auto;
 }
 
-table#cart-detail { font-size:14px; }
+table#cart-detail { font-size:14px; margin-bottom:10px; }
 table#cart-detail th { font-size:16px; }
-table#cart-detail h4 { font-size:28px; }
+table#cart-detail h4 { font-size:24px; }
 table#cart-detail a { display:block; padding:3px; text-decoration:none;}
 table#cart-detail a:hover { display:block; padding:3px; text-decoration:underline;}
 table#cart-detail tr.line-item td div.line-item-image img { width:90px; }
@@ -255,6 +264,43 @@ table#cart-detail tr.line-item td.last {
 	border-bottom-right-radius: 6px;
 	-moz-border-radius-bottomright: 6px;
 }
+#cart-widget {
+	width:156px;
+	padding:7px 3px 7px 7px;
+	z-index:9999;
+	position:fixed;
+	bottom:20px;
+	right:0;
+	background:#222;
+	border:2px solid #444;
+	border-right:none;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+#cart-widget-minimized {
+	cursor:pointer;
+	text-align:center;
+	width:30px;
+	padding:7px 3px 2px 7px;
+	z-index:9999;
+	position:fixed;
+	bottom:20px;
+	right:0;
+	background:#222;
+	border:2px solid #444;
+	border-right:none;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+#cart-widget h4,
+#cart-widget-minimized h4 { color:#00ff00; margin-bottom:5px; }
+#cart-widget h4 a,
+#cart-widget-minimized h4 a { text-decoration:none; }
+#cart-widget a.button.small.checkout { margin:4px 2px 0 0; padding:0 7px 0 0px; font-weight:bold; font-size:11px !important; height:20px; }
 subtotal
 blockquote {
   margin: 1.5em;
@@ -442,7 +488,7 @@ body.two-col #wrapper { }
 #sidebar {
   display: inline;
   float: left;
-  width: 160px;
+  width: 150px;
   margin-left: 0px;
   margin-top:20px;
   padding-right: 19px;
@@ -641,7 +687,7 @@ p img {
 }
 .navigation-list {
   list-style: none;
-  margin: 0 0 1.5em -15px;
+  margin: 0 0 1.5em 0;
 }
 .navigation-list li { margin: 0; }
 .navigation-list li a {
@@ -651,8 +697,8 @@ p img {
   display: block;
   line-height: 1.6em;
   font-size: 1.2em;
-  padding-left: 30px;
-  width: 170px;
+  padding-left: 10px;
+  width: 140px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -669,12 +715,13 @@ p img {
 }
 .navigation-list li.current a.root { width: 183px; }
 .navigation-list a.root {
-  padding-left: 22px;
+  padding-left: 10px;
   font-weight: bold;
   color: #222222;
   font-size: 1.9em;
   text-indent: -5px;
   line-height: 2.2em;
+  margin-bottom:5px;
 }
 .navigation-list a.root:hover {
   color: #333333;
@@ -710,7 +757,7 @@ p img {
   color: #666666;
 }
 .breadcrumbs ul li span { color: #333333; }
-div#login-bar { float:right; margin-top: 70px; }
+div#login-bar { float:right; margin-top: 50px; }
 ul#language-bar {
   list-style-type: none;
   margin: 0px;
@@ -730,7 +777,7 @@ ul#social-and-search {
   clear: both;
   font-size: 0.9em;
   list-style: none;
-  margin: 0 50px 0 0;
+  margin: 0 35px 0 0;
   padding: 0;
 }
 ul#social-and-search li {
@@ -745,7 +792,7 @@ ul.nav-bar {
   clear: both;
   font-size: 0.9em;
   list-style: none;
-  margin: 0 50px 0 0;
+  margin: 0 35px 0 0;
   padding: 0;
 }
 ul.nav-bar li {
@@ -799,7 +846,33 @@ ul.nav-bar-3 li {
 }
 #header ul.nav-bar-3 li a { color: #e1e1e1; }
 #header ul.nav-bar-3 li a:hover { color: #00ff00; }
-#header .nuera-phone { position:absolute; top:77px; right:435px; font-size:35px; color:#bbb; }
+#header .nuera-phone { position:absolute; top:57px; right:435px; font-size:35px; color:#bbb; }
+div.main-menu {
+	padding-left:4px;
+	float:left;width:100px;height:40px;border-left:1px solid #777;text-align:center;color:#ccc;
+}
+#header div.main-menu a {
+	font-family:courier; 
+	font-size:14px;
+	display:block;
+	margin-top:12px;
+	text-decoration:none;
+	color:#fff;
+	letter-spacing:1px;
+}
+
+#header div.main-menu.cart a {
+	font-weight:bold;
+	color:#ffff00;
+}
+
+/* Taxonomies */
+div#taxonomies { width:; }
+div#taxonomies a.root { color:#00ff00; }
+div#taxonomies ul { margin:-; padding:0; }
+div#taxonomies li a { display:block; width:100%; color:#ccc; }
+div#taxonomies li a:hover { color:#00ff00; }
+
 .pagination a.page {
   padding: 0px 5px;
   margin: 0px 3px;
@@ -1001,7 +1074,12 @@ button.large, a.button.large, input.button.large {
   border-radius: 0.3em;
   font-size: 1.1em !important;
   line-height: 1.3em;
-  padding:2px 6px 1px 6px;
+  padding:2px 10px 1px 9px;
+}
+#cart-form button.large {
+	display:table-cell;
+	vertical-align:middle;
+	margin:0;
 }
 button.small, a.button.small, input.button.small {
   -moz-border-radius: 4px;
@@ -1032,10 +1110,10 @@ button::-moz-focus-inner {
 }
 p a.button img { margin: 0 5px 0 0; }
 p button img { margin: 0 5px 0 0; }
-.prices { font-weight: bold; }
+.prices { font-weight: bold; color:#fff;}
 .prices #product-details .prices { font-size: 1.25em; }
-.price.selling { color: #00ff00; }
-#product-details .price.selling { font-size: 1.5em; }
+.price.selling { color: #00ff00; font-weight:normal; font-size:16px; }
+#product-details .price.selling { font-size: 2em; }
 .price.diff {
   font-style: italic;
   font-weight: normal;
@@ -1081,6 +1159,16 @@ p button img { margin: 0 5px 0 0; }
   margin: 0em 0px 0px 0px;
   padding: 0px;
 }
+.taxon .product-listing li {
+  height: 180px;
+  width: 127px;
+  text-align: center;
+  float: left;
+  margin: 6px;
+  padding: 10px 0 0 0;
+  position: relative;
+  background: #1e1e1e url(http://assets-0.nuerafitness.com/images/product-list-item-bg.png) top left no-repeat;
+}
 .product-listing li {
   height: 298px;
   width: 221px;
@@ -1102,7 +1190,20 @@ p button img { margin: 0 5px 0 0; }
   right: 0px;
   padding: 0px 5px;
   width: 211px;
+  font-size:13px;
+  line-height:16px;
   min-height: 83px;
+  background: #1e1e1e;
+}
+.taxon .product-listing li a.info {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0px 5px;
+  width: 127px;
+  font-size:12px;
+  line-height:16px;
+  min-height: 73px;
   background: #1e1e1e;
 }
 .product-listing li a.info span { display: block; }
@@ -1111,7 +1212,7 @@ p button img { margin: 0 5px 0 0; }
   background: #1b1b1b url(http://assets-0.nuerafitness.com/images/bottom_shine.png) bottom left repeat-x;
   color: #cccccc;
 }
-.product-listing li input { position:absolute; bottom:5px; left:56px; height:15px; width:18px; padding:0px;}
+.product-listing li input { position:absolute; bottom:5px; left:56px; height:15px; width:14px; padding:0px;}
 .product-listing li select { position:absolute; bottom:5px; left:5px; height:22px; width:85px;}
 .product-listing li button {
 	position:absolute;
@@ -1124,7 +1225,7 @@ p button img { margin: 0 5px 0 0; }
 	font-size:11px !important;
 }
 .product-listing li.variants input {left: 97px;}
-.product-listing li.variants button {left: 128px;}
+.product-listing li.variants button {left: 123px; white-space:nowrap;}
 
 .product-listing li button:hover { background: #aaa !important; color: #222; }
 .product-listing li button img { height:20px; margin-top:-1px; }
@@ -1192,6 +1293,7 @@ ul.thumbnails li.selected { border-color: #ccc; }
   list-style: none;
   margin: 0;
   padding: 0;
+  color:#ddd;
 }
 #product-images-and-description {
   display: inline;
@@ -1201,15 +1303,16 @@ ul.thumbnails li.selected { border-color: #ccc; }
   border-radius: 15px;
   padding: 15px;
   margin-right: 20px;
-  -moz-box-shadow: inset 5px 5px 12px 5px #000;
-  -webkit-box-shadow: inset 5px 5px 12px 5px #000;
-  box-shadow: inset 5px 5px 12px 5px #000;
+  -moz-box-shadow: inset 5px 5px 12px 5px #111;
+  -webkit-box-shadow: inset 5px 5px 12px 5px #111;
+  box-shadow: inset 5px 5px 12px 5px #111;
 }
 #product-images {
   display: inline;
   float: left;
   width: 270px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 #product-images h4 {
   padding: 6px 0px;
@@ -1233,19 +1336,27 @@ ul.thumbnails li.selected { border-color: #ccc; }
 #product-description {
   display: inline;
   float: left;
-  width: 400px;
+  width: 680px;
+  padding:15px;
 }
 #product-description p {
   color:#ddd;
 }
 #cart-form {
+	overflow:hidden;
+	background:#333;
+	border-radius:10px;
+	border:1px solid #555;
   display: inline;
-  float: left;
-  width: 200px;
+  float: right;
+  width: 170px;
+  padding:15px;
 }
 #cart-form input {
+	vertical-align:middle;
   font-size: 16px;
   width: 30px;
+  margin-top:-1px;
 }
 #taxon-crumbs {
   display: inline;

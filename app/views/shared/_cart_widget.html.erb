@@ -1,0 +1,28 @@
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery("#cart-widget-minimized").hide();
+	});
+	
+	function hide_cart_widget() {
+		jQuery("#cart-widget").hide();
+		jQuery("#cart-widget-minimized").show();
+	}
+	
+	function show_cart_widget() {
+		jQuery("#cart-widget-minimized").hide();
+		jQuery("#cart-widget").show();
+	}
+</script>
+<div id="cart-widget">
+	<div style="position:absolute;right:4px;top:-18px;font-size:10px;"><a href="javascript:hide_cart_widget();">Hide</a></div>
+	<h4 class="cart-widget"><%= link_to_cart "Shopping Cart" %></h4>
+	<% current_order.line_items.each do |line_item| %>
+		<%= image_tag line_item.variant.product.images.first.attachment(:mini), :width => '30', :style => 'padding:3px;float:left;' %>
+	<% end %>
+	<div class="clear"></div>
+	<%= link_to image_tag('/images/checkout.png') + t("cart"), cart_path, :class => 'button small checkout' %>
+	<%= link_to image_tag('/images/checkout.png') + t("checkout"), checkout_path, :class => 'button small checkout' %>
+</div>
+<div id="cart-widget-minimized">
+	<h4 class="cart-widget" onclick="show_cart_widget();"><%= image_tag '/images/checkout.png', :style => 'float:left;' %> <a>Cart</a></h4>
+</div>

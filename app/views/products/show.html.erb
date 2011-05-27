@@ -1,6 +1,13 @@
 <% @body_id = 'product-details' %>
 <h1><%= @product.name %></h1>
 
+<% content_for :sidebar do %>
+	<div style="height:37px;">&nbsp;</div>
+  <%= hook :taxon_sidebar_navigation do %>
+    <%= render :partial => "shared/taxonomies" %>
+  <% end %>
+<% end %>
+
 <div id="product-images-and-description">
   <div id="product-images">
     <%= hook :product_images do %>
@@ -12,6 +19,12 @@
     </div>
     <% end %>
   </div>
+  
+  <%= hook :cart_form do %>
+		<div id="cart-form">
+			<%= render 'cart_form' %>
+		</div>
+	<% end %>
 
   <div id="product-description">
     <%= hook :product_description do %>
@@ -21,12 +34,9 @@
 	  <%= render 'properties' %>
     <% end %>
   </div>
+
 </div>
 
-<%= hook :cart_form do %>
-  <div id="cart-form">
-    <%= render 'cart_form' %>
-  </div>
-<% end %>
+
 
 <% #render 'taxons' %>

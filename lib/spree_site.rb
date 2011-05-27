@@ -12,11 +12,13 @@ module SpreeSite
         Calculator::Ups::Standard,
         Calculator::Freight
       ].each(&:register)
+      
+      Spree::Config.set(:products_per_page => 50) 
 
     end
 
     def load_tasks; end
-
+	
     config.to_prepare &method(:activate).to_proc
   end
 end
