@@ -1,4 +1,4 @@
-<% if tracker = Tracker.current %>
+<% if tracker = Tracker.current || (current_user && !current_user.roles.map(&:name).include?("admin")) %>
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
