@@ -457,7 +457,7 @@ a { outline: none; }
 body.two-col #wrapper { }
 #bottom-shadow {
   width: 100%;
-  background: url(http://assets-0.nuerafitness.com/images/bottom-shadow.png) center bottom no-repeat; 
+  /*background: url(http://assets-0.nuerafitness.com/images/bottom-shadow.png) center bottom no-repeat; */
   padding-bottom: 90px;
 }
 #main-wrapper { 
@@ -509,21 +509,21 @@ body.two-col #content {
   position: relative;
   color: #2e6ab1;
   clear: both;
-  height:170px;
+  height:158px;
 }
 #header a {
-  color: #353535;
+  color: #151515;
   text-decoration: none;
 }
 #header a:hover { color: #eeeeee; }
-#header #logo img {margin:32px 0 0 16px;}
+#header #logo { position:absolute;z-index:9999;top:35px;left:20px; width:170px;height:144px; background: url(http://assets-0.nuerafitness.com/images/sprite.png) top left;}
 #header input.search-submit,
 #footer input.search-submit {
   display: block;
   width: 28px;
   height:28px;
   float:right;
-  background: url(http://assets-0.nuerafitness.com/images/search-submit.png) top left no-repeat;
+  background: url(http://assets-0.nuerafitness.com/images/sprite.png) -178px -30px;
   margin-left: 4px;
   border: 0;
   outline: 0;
@@ -534,13 +534,14 @@ body.two-col #content {
 #footer input#email,
 #footer input#name {
   float: right;
-  width: 200px;
-  padding: 0 10px;
+  width: 204px;
+  padding: 0 8px;
   margin-right: 2px;
-  height: 28px;
+  height: 23px;
   line-height: 30px;
-  background: url(http://assets-0.nuerafitness.com/images/search-box-bg.png) top left no-repeat;
-  border: 0;
+  /*background: url(http://assets-0.nuerafitness.com/images/search-box-bg.png) top left no-repeat;*/
+  background:#444;
+  border: 2px solid #222;
   font-size: 1.2em;
   color: #ffffff;
 }
@@ -599,6 +600,8 @@ body.two-col #content {
   width: 63%;
   text-align: right;
 }
+#footer #logo { display:block; width:170px;height:144px; background: url(http://assets-0.nuerafitness.com/images/sprite.png) top left;}
+
 #subfooter {
   width:100%;
   text-align:center;
@@ -785,6 +788,18 @@ ul#social-and-search li {
 	float:left;
 	margin-left:7px;
 }
+a#facebook {
+	display:block;
+	width:28px;
+	height:30px;
+	background:url(http://assets-0.nuerafitness.com/images/sprite.png) -234px -29px;
+}
+a#twitter {
+	display:block;
+	width:28px;
+	height:30px;
+	background:url(http://assets-0.nuerafitness.com/images/sprite.png) -206px -30px;
+}
 ul.nav-bar {
   line-height: 30px;
   float: right;
@@ -846,7 +861,16 @@ ul.nav-bar-3 li {
 }
 #header ul.nav-bar-3 li a { color: #e1e1e1; }
 #header ul.nav-bar-3 li a:hover { color: #00ff00; }
-#header .nuera-phone { position:absolute; top:57px; right:435px; font-size:35px; color:#bbb; }
+#header .nuera-phone {
+	position:absolute;
+	top:57px;
+	right:435px;
+	width:227px;
+	height:17px;
+	font-size:35px;
+	color:#bbb;
+	background:url(http://assets-0.nuerafitness.com/images/sprite.png) -177px -6px;
+}
 div.main-menu {
 	padding-left:4px;
 	float:left;width:100px;height:40px;border-left:1px solid #777;text-align:center;color:#ccc;
@@ -1170,14 +1194,16 @@ p button img { margin: 0 5px 0 0; }
   background: #1e1e1e url(http://assets-0.nuerafitness.com/images/product-list-item-bg.png) top left no-repeat;
 }
 .product-listing li {
-  height: 298px;
-  width: 221px;
+  height: 290px;
+  width: 217px;
   text-align: center;
   float: left;
   margin: 6px;
   padding: 10px 0 0 0;
   position: relative;
-  background: #1e1e1e url(http://assets-0.nuerafitness.com/images/product-list-item-bg.png) top left no-repeat;
+  background:#333;
+  border:4px solid #222;
+  /*background: #1e1e1e url(http://assets-0.nuerafitness.com/images/product-list-item-bg.png) top left no-repeat;*/
 }
 .product-listing li a {
   display: block;
@@ -1189,7 +1215,7 @@ p button img { margin: 0 5px 0 0; }
   bottom: 0px;
   right: 0px;
   padding: 0px 5px;
-  width: 211px;
+  width: 207px;
   font-size:13px;
   line-height:16px;
   min-height: 83px;
@@ -1200,16 +1226,16 @@ p button img { margin: 0 5px 0 0; }
   bottom: 0px;
   right: 0px;
   padding: 0px 5px;
-  width: 117px;
+  width: 113px;
   font-size:12px;
   line-height:16px;
   min-height: 73px;
   background: #1e1e1e;
 }
 .product-listing li a.info span { display: block; }
-.product-listing li:hover { border-color: #1b1b1b; }
+.product-listing li:hover { border-color: #424242; }
 .product-listing li:hover a.info {
-  background: #1b1b1b url(http://assets-0.nuerafitness.com/images/bottom_shine.png) bottom left repeat-x;
+  /*background: #1b1b1b url(http://assets-0.nuerafitness.com/images/bottom_shine.png) bottom left repeat-x;*/
   color: #cccccc;
 }
 .product-listing li input { position:absolute; bottom:5px; left:56px; height:15px; width:14px; padding:0px;}
