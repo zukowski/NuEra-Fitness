@@ -7,19 +7,17 @@
 <!-- cufon text -->
 <%= javascript_include_tag 'cufon.js', 'Din_400.font.js' %>
 <script type="text/javascript">
-  Cufon.replace('h1, h2, h4.cart-widget, #cart-detail h4, a.root, .nuera-phone, ');
-  Cufon.replace('h2, span.video-title');
-  Cufon.replace('legend');
-  Cufon.replace('#cart-detail h4');
-  Cufon.replace('a.root');
-  Cufon.replace('.nuera-phone');
-  Cufon.replace('a.home-page-menu span.title, a.home-page-menu span.title-hover');
-  //Cufon.replace('a.main-menu');
+  //Cufon.replace('h1, h2, h4.cart-widget, #cart-detail h4, a.root, .nuera-phone, ');
+  //Cufon.replace('h2, span.video-title');
+  //Cufon.replace('legend');
+  //Cufon.replace('#cart-detail h4');
+  //Cufon.replace('a.root');
 </script>
-<%= javascript_include_tag 'courier-bold-700.font.js' %>
-<script type="text/javascript">
-  Cufon.replace('div.main-menu a');
-</script>
+<% #javascript_include_tag 'courier-bold-700.font.js' 
+#<script type="text/javascript">
+#  Cufon.replace('div.main-menu a');
+#</script>
+%>
 <!-- end cufon -->
 <!--[if IE 7]>
         <link rel="stylesheet" type="text/css" href="/stylesheets/ie7.css">
@@ -106,9 +104,6 @@ end
       </div>
       <% cache(:footer) do %>
         <%= render :partial => 'shared/footer'%>
-      <% end %>
-      <% if !current_user || !current_user.roles.map(&:name).include?("admin") %>
-        <%= render 'shared/google_analytics' %>
       <% end %>
     </div>
     <% cache(:subfooter) do %>

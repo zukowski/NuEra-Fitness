@@ -61,7 +61,7 @@ body {
   font-size: 75%;
 }
 h1 {
-  font-family: arial;
+  font-family: arial narrow, arial;
   text-transform: uppercase;
   font-weight: bold;
   color: #222222;
@@ -74,12 +74,14 @@ h1 {
 }
 h1 img { margin: 0; }
 h2 {
+	font-family: arial narrow, arial;
   font-weight: normal;
   color: #222222;
   font-size: 2em;
   margin-bottom: 0.75em;
 }
 h3 {
+	font-family: arial narrow, arial;
   font-weight: normal;
   color: #222222;
   font-size: 1.5em;
@@ -87,6 +89,7 @@ h3 {
   margin-bottom: 1em;
 }
 h4 {
+	font-family: arial narrow, arial;
   font-weight: normal;
   color: #222222;
   font-size: 1.2em;
@@ -101,6 +104,7 @@ h5 {
   margin-bottom: 1.5em;
 }
 h6 {
+	font-family: arial narrow, arial;
   font-weight: normal;
   color: #222222;
   font-size: 1em;
@@ -718,12 +722,13 @@ p img {
 }
 .navigation-list li.current a.root { width: 183px; }
 .navigation-list a.root {
+	font-family: arial narrow, arial;
   padding-left: 10px;
-  font-weight: bold;
+  font-weight: normal;
   color: #222222;
-  font-size: 1.9em;
+  font-size: 1.7em;
   text-indent: -5px;
-  line-height: 2.2em;
+  line-height: 1.2em;
   margin-bottom:5px;
 }
 .navigation-list a.root:hover {
@@ -879,7 +884,7 @@ div.main-menu {
 	font-family:courier; 
 	font-size:14px;
 	display:block;
-	margin-top:12px;
+	margin-top:10px;
 	text-decoration:none;
 	color:#fff;
 	letter-spacing:1px;
@@ -1185,10 +1190,10 @@ p button img { margin: 0 5px 0 0; }
 }
 .taxon .product-listing li {
   height: 225px;
-  width: 127px;
+  width: 123px;
   text-align: center;
   float: left;
-  margin: 6px;
+  margin: 4px;
   padding: 10px 0 0 0;
   position: relative;
   background: #1e1e1e url(http://assets-0.nuerafitness.com/images/product-list-item-bg.png) top left no-repeat;
@@ -1454,6 +1459,7 @@ div#subtotal {
   text-align: left;
 }
 div#subtotal h3 {
+	font-family:arial;
   font-weight:bold;
   font-size:16px;
   color:#eee;
