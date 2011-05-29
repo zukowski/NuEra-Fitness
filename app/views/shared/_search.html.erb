@@ -3,3 +3,21 @@
   <%= submit_tag '', :name => nil, :class => 'search-submit' %>
   <%= text_field_tag :keywords, params[:keywords] %>
 <% end %>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#header input#keywords").focus(function() {
+			if($(this).val() == 'Find a product') {
+				$(this).val('');
+				$(this).css('color','#ffffff');
+			}
+		});
+		$("#header input#keywords").blur(function() {
+			if($(this).val() == '') {
+				$(this).val('Find a product');
+				$(this).css('color','#bbbbbb');
+			}
+		});
+		$("#header input#keywords").blur();
+	});
+</script>

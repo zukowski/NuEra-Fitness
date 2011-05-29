@@ -13,19 +13,9 @@
   <% products.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
       <li id="product_<%= product.id %>" class="<%= product.has_variants? ? "variants" : "" %>">
-        <%= link_to small_image(product), product %>
+        <%= link_to small_image(product, :width => '100') , product  %>
         <%= link_to raw(product.name + " <span class='price selling'>#{product_price(product)}</span>"), product, :class => 'info' %>
       	<% if product.has_stock? || Spree::Config[:allow_backorders] %>
-          <%= form_for :order, :url => populate_orders_url do |f| %>
-            <% if product.has_variants? %>
-              <%= select_tag "products[#{product.id}]", options_from_collection_for_select(product.variants, :id, :options_text) %>
-            <% end %>
-            <%= text_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"), 1, :class => "title", :size => 3 %>
-            &nbsp;
-            <button type='submit'>
-              <%= image_tag('/images/add-to-cart.png') + t('add_to_cart') %>
-            </button>
-          <% end %>
         <% else %>
           <%= content_tag('strong', t('out_of_stock')) %>
         <% end %>
@@ -46,5 +36,7 @@
                     :next_label => "#{t('next')} &#187;") %>
 <hr class="space" />
 <% end %>
+<div class="clear"></div>
+<h3><%= link_to "See all " + taxon.name , seo_url(taxon) %></h3>
 <div class="clear"></div>
 

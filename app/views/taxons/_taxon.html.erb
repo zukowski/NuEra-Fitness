@@ -1,0 +1,7 @@
+<div class="rounded-box">
+<div class="taxon">
+  <h2><%= link_to taxon.name, seo_url(taxon), :class => 'breadcrumbs' %></h2>
+  <%= render :partial => "shared/products_small", :locals => {:products => taxon_preview(taxon), :taxon => taxon} %>
+</div>
+</div>
+<br />

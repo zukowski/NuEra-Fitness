@@ -1,6 +1,14 @@
 <%= javascript_include_tag 'quick_quote' %>
 <script type="text/javascript" src="/states.js"></script>
 <% @body_id = 'cart' %>
+<% @body_class = 'two-col' %>
+
+<% content_for :sidebar do %>
+	<div style="height:37px;">&nbsp;</div>
+  <%= hook :taxon_sidebar_navigation do %>
+    <%= render :partial => "shared/taxonomies" %>
+  <% end %>
+<% end %>
 
 <h1><%= t("shopping_cart")%></h1>
 
@@ -31,6 +39,7 @@
 
     <% end %>
   <% end %>
+
   <div class="rounded-box" id="quick-quote-container">
 	<h2>Calculate Shipping Quote</h2>
     <%= form_tag quote_cart_path, :remote => true, :method => :post, :class => 'cart-quick-quote' do |f| %>
@@ -73,7 +82,7 @@
 <% end %>
   
 <style type="text/css">
-div#quick-quote-container { width:300px; color:#ddd; margin-bottom:10px; } 
+div#quick-quote-container { width:300px; color:#ddd; margin-bottom:10px; margin-top:10px; } 
 form.cart-quick-quote { width: 300px; }
 span#country select { width: 300px; }
 span#state select { width: 300px; }
