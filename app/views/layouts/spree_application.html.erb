@@ -107,6 +107,9 @@ end
       <% cache(:footer) do %>
         <%= render :partial => 'shared/footer'%>
       <% end %>
+      <% if !current_user || !current_user.roles.map(&:name).include?("admin") %>
+        <%= render 'shared/google_analytics' %>
+      <% end %>
     </div>
     <% cache(:subfooter) do %>
     	<%= render :partial => 'shared/subfooter' %>
