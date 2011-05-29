@@ -39,8 +39,8 @@ end
     <div id="main-wrapper"> <!-- includes left and right side repeating shadows -->
       <div id="steel-main"> <!-- includes flat bg color and main steel graphic -->
         <div id="steel-top">
-          <div id="header" style="height:158px;" class="container_bg">
-          	<div class="nuera-phone"><%= image_tag '/images/nuera-phone-number.png' %></div>
+          <div id="header" class="container_bg">
+          	<div class="nuera-phone"></div>
             <div class="container" style="height:190px;">
             <div id="login-bar">
                 <%= render 'shared/nav_bar' %>
@@ -62,9 +62,7 @@ end
                   <li><%= link_to t("crossfit"), '/crossfit' %></li>
               </ul>
               -->
-              <div id="logo" style="position:relative;z-index:9999;">
-                <%= logo %>
-              </div>
+              <div id="logo"></div>
             <% end %>
             <div style="position:absolute;z-index:6;top:125px;width:975px;height:40px;background:url(/images/store-menu-bg.jpg) top left;">
 							<div style="margin-left:210px;">
@@ -113,7 +111,10 @@ end
         <%= render 'shared/google_analytics' %>
       <% end %>
     </div>
-  </div>
+    <% cache(:subfooter) do %>
+    	<%= render :partial => 'shared/subfooter' %>
+    <% end %>
+  
   <% if current_order && current_order.line_items.any? && request.request_uri != cart_path %>
   	<%= render :partial => 'shared/cart_widget'%>
   <% end %>
