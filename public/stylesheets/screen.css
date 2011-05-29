@@ -520,7 +520,7 @@ body.two-col #content {
   text-decoration: none;
 }
 #header a:hover { color: #eeeeee; }
-#header #logo { position:absolute;z-index:9999;top:35px;left:20px; width:170px;height:144px; background: url(http://assets-0.nuerafitness.com/images/sprite.png) top left;}
+#header #logo { display:block; position:absolute;z-index:9999;top:35px;left:20px; width:170px;height:144px; background: url(http://assets-0.nuerafitness.com/images/sprite.png) top left;}
 #header input.search-submit,
 #footer input.search-submit {
   display: block;
