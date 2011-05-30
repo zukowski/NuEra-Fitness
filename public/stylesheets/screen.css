@@ -335,6 +335,7 @@ pre, code, tt {
 li ul { margin: 0 1.5em; }
 li ol { margin: 0 1.5em; }
 ul {
+	color:#ddd;
   margin: 0 1.5em 1.5em 1.5em;
   list-style-type: disc;
 }
@@ -1372,6 +1373,10 @@ ul.thumbnails li.selected { border-color: #ccc; }
 }
 #product-description p {
   color:#ddd;
+}
+#product-description ul {
+  color:#ddd;
+  font-size:150%;
 }
 #cart-form {
 	overflow:hidden;
