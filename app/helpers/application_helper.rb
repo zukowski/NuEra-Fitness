@@ -21,6 +21,6 @@ module ApplicationHelper
   # FIXME
   # Potential XSS source if any of the address fields contain html tags
   def customer_details(address)
-    "#{address.firstname} #{address.lastname}<br />#{address.address1}<br />#{address.address2 + '<br />' unless address.address2.blank?}#{address.city}, #{address.state.name} #{address.zipcode}<br />#{address.country.name}".html_safe
+    "#{address.firstname} #{address.lastname}<br />#{address.address1}<br />#{address.address2 + '<br />' unless address.address2.blank?}#{address.city}, #{address.state ? address.state.name : address.state_name} #{address.zipcode}<br />#{address.country.name}".html_safe
   end
 end
