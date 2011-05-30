@@ -4,21 +4,6 @@
 <%= hook :inside_head do %>
   <%= render :partial => 'shared/head'%>
 <% end %>
-<!-- cufon text -->
-<%= javascript_include_tag 'cufon.js', 'Din_400.font.js' %>
-<script type="text/javascript">
-  //Cufon.replace('h1, h2, h4.cart-widget, #cart-detail h4, a.root, .nuera-phone, ');
-  Cufon.replace('h2.raised, h2.lowered');
-  //Cufon.replace('legend');
-  //Cufon.replace('#cart-detail h4');
-  //Cufon.replace('a.root');
-</script>
-<% #javascript_include_tag 'courier-bold-700.font.js' 
-#<script type="text/javascript">
-#  Cufon.replace('div.main-menu a');
-#</script>
-%>
-<!-- end cufon -->
 <!--[if IE 7]>
         <link rel="stylesheet" type="text/css" href="/stylesheets/ie7.css">
 <![endif]-->
