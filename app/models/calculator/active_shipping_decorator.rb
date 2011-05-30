@@ -92,13 +92,13 @@ Calculator::ActiveShipping.class_eval do
     end
   end
 
-  # We can't cache the keys in an instance var as there may be multiple shipments
-  # each with unique keys
   def cache_key(origin, destination, line_items, id)
     origin_key = "#{origin.country}-#{origin.state}-#{origin.zip}"
     dest_key   = "#{destination.country}-#{destination.state}-#{destination.city}-#{destination.zip}"
     items_key  = "#{line_items.map {|li| li.variant_id.to_s + "_" + li.quantity.to_s}.join('|')}"
-    "#{carrier.name}-#{id}-#{origin_key}-#{dest_key}-#{items_key}".gsub(" ","")
+    # We hold the key but don't hard cache it, this is just in case an error is generated and the
+    # cache key needs to be set blank
+    @cache_key = "#{carrier.name}-#{id}-#{origin_key}-#{dest_key}-#{items_key}".gsub(" ","")
   end
 
   def package(weight)

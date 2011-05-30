@@ -5,6 +5,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'spree', '0.40.3'
 gem 'spree_active_shipping'
 gem 'spree_mail'
+gem 'memcache-client'
 
 group :development, :test do
   gem 'compass'

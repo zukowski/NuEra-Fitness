@@ -8,7 +8,9 @@
 
 <% if @taxon.children.empty? || !params[:keywords].blank? %>
   <%= hook :taxon_products do %>
-    <%= render :partial => "shared/products", :locals => {:products => @products, :taxon => @taxon } %>
+    <% cache("t-p-#{@taxon.name}") do %>
+      <%= render :partial => "shared/products", :locals => {:products => @products, :taxon => @taxon } %>
+    <% end %>
   <% end %>
 <% else %>
   <%= hook :taxon_children do %>

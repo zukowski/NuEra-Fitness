@@ -5,6 +5,31 @@
     _gaq.push(['_setAccount', '<%= tracker.analytics_id %>']);
     _gaq.push(['_trackPageview']);
 
+    <% if flash[:commerce_tracking] %>
+      _gaq.push(['_addTrans',
+        '<%= @order.number %>',
+        '',   // Affiliation
+        '<%= @order.total %>',
+        '<%= @order.tax_total %>',
+        '<%= @order.ship_total %>',
+        '<%= @order.bill_address.city %>',
+        '<%= @order.bill_address.state ? @order.bill_address.state.name : @order.bill_address.state_name %>',
+        '<%= @order.bill_address.country.name %>'
+      );
+      <% @order.line_items.each do |li| %>
+        _gaq.push(['_addItem',
+          '<%= @order.number %>',
+          '<%= li.variant.sku %>',
+          '<%= li.variant.name %>',
+          '',   // Category or Variation
+          '<%= li.price %>',
+          '<%= li.quantity %>'
+        );
+      <% end %>
+      _gaq.push(['_trackTrans'])
+    <% end %>
+
+
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
