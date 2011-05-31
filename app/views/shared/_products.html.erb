@@ -10,7 +10,7 @@
  
 <% if products.any? %>
 <ul class="product-listing">
-  <% products.each do |product| %>
+  <% products.sort {|a,b| a.name <=> b.name}.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
       <li id="product_<%= product.id %>" class="<%= product.has_variants? ? "variants" : "" %>">
         <%= link_to small_image(product), product %>
