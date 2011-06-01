@@ -98,6 +98,7 @@ end
   <% unless current_user && current_user.roles.map(&:name).include?('admin') %>
     <%= render 'shared/google_analytics' %>
   <% end %>
+  <%= render 'shared/facebook_sdk' %>
   <% if current_order && current_order.line_items.any? && request.request_uri != cart_path %>
   	<%= render :partial => 'shared/cart_widget'%>
   <% end %>

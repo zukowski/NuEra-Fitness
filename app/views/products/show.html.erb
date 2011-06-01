@@ -21,10 +21,14 @@
   </div>
   
   <%= hook :cart_form do %>
-		<div id="cart-form">
-			<%= render 'cart_form' %>
-		</div>
-	<% end %>
+    <div id="cart-form">
+      <%= render 'cart_form' %>
+    </div>
+  <% end %>
+  
+  <div style="margin-left:10px;">
+    <fb:like href="<%= product_url(@product) %>" colorscheme="dark" send="true" show_faces="true" width="450" action="recommend"></fb:like>
+  </div>
 
   <div id="product-description">
     <%= hook :product_description do %>
