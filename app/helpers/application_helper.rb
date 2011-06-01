@@ -29,7 +29,7 @@ module ApplicationHelper
       content = content_tag(:meta,nil, {:property => 'og:title', :content => title})
       content << content_tag(:meta,nil, {:property => 'og:type', :content => type})
       content << content_tag(:meta,nil, {:property => 'og:url', :content => url})
-      content << content_tag(:meta,nil, {:property => 'og:images', :content => image})
+      content << content_tag(:meta,nil, {:property => 'og:image', :content => image})
     end
   end
 end
