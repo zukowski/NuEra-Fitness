@@ -1,4 +1,5 @@
 <% @body_id = 'product-details' %>
+<%= facebook_meta(@product.name, 'product', product_url(@product), "http://www.nuerafitness.com#{@product.images.first.attachment.url(:product)}") %>
 <h1><%= @product.name %></h1>
 
 <% content_for :sidebar do %>

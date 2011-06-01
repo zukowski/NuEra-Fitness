@@ -23,4 +23,13 @@ module ApplicationHelper
   def customer_details(address)
     "#{address.firstname} #{address.lastname}<br />#{address.address1}<br />#{address.address2 + '<br />' unless address.address2.blank?}#{address.city}, #{address.state ? address.state.name : address.state_name} #{address.zipcode}<br />#{address.country.name}".html_safe
   end
+
+  def facebook_meta(title, type, url, image)
+    content_for :head do
+      content = content_tag(:meta,nil, {:property => 'og:title', :content => title})
+      content << content_tag(:meta,nil, {:property => 'og:type', :content => type})
+      content << content_tag(:meta,nil, {:property => 'og:url', :content => url})
+      content << content_tag(:meta,nil, {:property => 'og:images', :content => image})
+    end
+  end
 end
