@@ -23,9 +23,29 @@ person you became will meet the person you could have become."</div>
 					pleasure at the day's WOD. While others beg for water breaks, we beg for more.<br />We
 					are CrossFitters. We are <b>Nu Era Fitness</b>.</p>
 		</div>
-    <div class="col last">
+		<div class="col last">
+			<h2 style="font-size:18px;"><a href="/t/category/crossfit-packages">CrossFit Packages: Free Shipping</a></h2>
+      <a href="/t/category/crossfit-packages"><img src="/images/banners/free-shipping.jpg" border="0" width="265"/></a>
+    </div>
+    <div class="col last" style="margin-top:15px;">
       <h2>Proud Sponsor of:</h2>
       <a href="https://www.capalio.com/AG2011-Event.php" target="_blank"><img src="/images/afghan-games.jpg" border="0" style="padding:6px 0;"/></a>
     </div>
   </div>
+  <div class="three-col">
+    <div class="col double">
+      <h2><a href="/t/category/crossfit-packages">Shop NuEra CrossFit Equipment Packages</a></h2>
+      <table>
+      	<tr>
+					<% taxon = Taxon.find_by_name("Crossfit Packages") %>
+					<% products = taxon.products.active %>
+					<% products.each do |product| %>
+					<td style="text-align:center;vertical-align:top;" valign="top">
+						<%= link_to raw(product.name), product, :class => 'info', :style => 'color:#ddd;text-decoration:none;' %>
+						<%= link_to small_image(product) %>
+					</td>
+					<% end %>
+				</tr>
+			</table>
+		</div>
 </div>
