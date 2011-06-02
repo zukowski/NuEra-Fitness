@@ -49,10 +49,11 @@ hr.space {
   float: none;
   width: 100%;
   height: 0.1em;
-  margin: 0 0 1.45em;
+  margin: 0 0 .5em;
   border: none;
   background: #ffffff;
   color: #ffffff;
+  visibility:hidden;
 }
 body {
   line-height: 1.5;
@@ -65,7 +66,7 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   color: #222222;
-  font-size: 3em;
+  font-size: 2.7em;
   line-height: 1;
   letter-spacing:1px;
   margin-top: 0.1em;
@@ -134,7 +135,8 @@ a {
 }
 span.note { font-size:11px; }
 /* ROUNDED BOXES */
-div.rounded-box {
+div.rounded-box,
+li.rounded-box{
   background-color:#222;
   background-color:rgba(0,0,0,0.7);
   -moz-border-radius: 15px;
@@ -463,7 +465,7 @@ body.two-col #wrapper { }
 #bottom-shadow {
   width: 100%;
   /*background: url(http://assets-0.nuerafitness.com/images/bottom-shadow.png) center bottom no-repeat; */
-  padding-bottom: 90px;
+  padding-bottom: 30px;
 }
 #main-wrapper { 
   width: 1028px;
@@ -1197,7 +1199,7 @@ p button img { margin: 0 5px 0 0; }
   margin: 4px;
   padding: 10px 0 0 0;
   position: relative;
-  background: #353535;
+  background: #555;
 }
 .product-listing li {
   height: 290px;
@@ -1207,7 +1209,7 @@ p button img { margin: 0 5px 0 0; }
   margin: 6px;
   padding: 10px 0 0 0;
   position: relative;
-  background:#333;
+  background:#555;
   border:4px solid #222;
   /*background: #1e1e1e url(http://assets-0.nuerafitness.com/images/product-list-item-bg.png) top left no-repeat;*/
 }
@@ -1364,6 +1366,7 @@ ul.thumbnails li.selected { border-color: #ccc; }
   left: 0;
   right: 0;
   margin: auto;
+  border:1px solid #000;
 }
 #product-description {
   display: inline;
