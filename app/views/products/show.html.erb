@@ -1,4 +1,7 @@
 <% @body_id = 'product-details' %>
+<% if @product.images.any? %>
+  <%= facebook_meta(@product.name, 'product', product_url(@product), "http://www.nuerafitness.com#{@product.images.first.attachment.url(:product)}") %>
+<% end %>
 <h1><%= @product.name %></h1>
 
 <% content_for :sidebar do %>
@@ -21,10 +24,14 @@
   </div>
   
   <%= hook :cart_form do %>
-		<div id="cart-form">
-			<%= render 'cart_form' %>
-		</div>
-	<% end %>
+    <div id="cart-form">
+      <%= render 'cart_form' %>
+    </div>
+  <% end %>
+  
+  <div style="margin-left:10px;">
+    <fb:like href="<%= product_url(@product) %>" colorscheme="dark" send="true" show_faces="true" width="450" action="recommend"></fb:like>
+  </div>
 
   <div id="product-description">
     <%= hook :product_description do %>
