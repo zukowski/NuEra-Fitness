@@ -48,7 +48,7 @@ class SiteHooks < Spree::ThemeSupport::HookListener
     )
   end
 
-  insert_before :taxon_products do
+  insert_after :taxon_products do
     %(
     <% pattern = /([A-Za-z\-]*)\\/$/ %>
     <% m = pattern.match(@taxon.permalink) %>
