@@ -42,7 +42,7 @@ person you became will meet the person you could have become."</div>
 					<% products.each do |product| %>
 					<td style="text-align:center;vertical-align:top;" valign="top">
 						<%= link_to raw(product.name), product, :class => 'info', :style => 'color:#ddd;text-decoration:none;' %>
-						<%= link_to small_image(product) %>
+						<%= link_to mini_image(product) %>
 					</td>
 					<% end %>
 				</tr>
