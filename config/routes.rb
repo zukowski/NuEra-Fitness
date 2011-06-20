@@ -2,6 +2,7 @@ NuEraFitness::Application.routes.draw do
   root :to => "content#home"
 
   match '/cart/quote', :to => 'orders#quote', :via => :post, :as => :quote_cart
+	match '/cart/coupon', :to => 'orders#coupon', :via => :post, :as => :coupon_cart
 
   namespace :admin do
     resources :suppliers

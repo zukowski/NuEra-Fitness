@@ -3,10 +3,10 @@ $(document).ready(function() {
   $('form.cart-quick-quote').bind('ajax:before', function() {
     $(this).find('input[type="submit"]').attr('disabled','disabled');
     $(this).find('input[type="submit"]').hide();
-    $('#loading').show();
+    $('#loading-quote').show();
   }).bind('ajax:complete', function() {
       $(this).find('input[type="submit"]').removeAttr('disabled');
-      $('#loading').hide();
+      $('#loading-quote').hide();
       $(this).find('input[type="submit"]').show();
   });
 

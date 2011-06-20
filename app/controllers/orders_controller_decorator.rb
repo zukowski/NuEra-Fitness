@@ -37,6 +37,23 @@ OrdersController.class_eval do
       wants.js
     end
   end
+  
+  def coupon
+  	 @order = current_order
+  	 @order.update_attributes(params[:order])
+  	 @discount = 0
+  	 @order.adjustments.where('source_type' => 'Promotion').each do |p|
+  	 	@discount += p.amount
+  	 end
+  	 
+  	 respond_to do |wants|
+      wants.html do
+        flash[:error] = @message unless @discount
+        render :edit
+      end
+      wants.js
+    end
+  end
 
   def empty
     @order.empty if @order = current_order
