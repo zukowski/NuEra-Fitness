@@ -1,4 +1,5 @@
 <%= javascript_include_tag 'quick_quote' %>
+<%= javascript_include_tag 'coupon_code' %>
 <script type="text/javascript" src="/states.js"></script>
 <% @body_id = 'cart' %>
 <% @body_class = 'two-col' %>
@@ -28,8 +29,14 @@
         <%= render :partial => 'form', :locals => {:order_form => order_form} %>
       <% end %>
       <div id="subtotal">
-        <h3><%= "#{t("subtotal")}: #{order_price(@order)}" %></h3>
+      	<h3><%= "Item Total: $#{@order.item_total}" %></h3>
+      	<% @discount = 0.00
+      		 @discount = @order.adjustments.where('source_type' => 'Promotion').first.amount # do |p|
+      	%>
+      	<h3 id="coupon-discount"><%= "Coupons: -$#{@discount*-1}" if @discount %></h3>
+        <h3><%= "#{t("subtotal")}: " + number_to_currency(@order.item_total + @discount) %></h3>
         <h3 id="quick-quote"><%= "Shipping: #{@quote}" if @quote %></h3>
+        
         <div class="links">
           <%= link_to image_tag('/images/update.png') + t("update"), '#', :class => 'button checkout primary', :onclick => "$('form#updatecart').submit(); return false;" %>
           <%= link_to image_tag('/images/checkout.png') + t("checkout"), checkout_path, :class => 'button checkout primary' %>
@@ -63,7 +70,7 @@
       </span>
       <span id="submit">
         <%= submit_tag "Get Quote", :class => 'button' %>
-        <div id="loading" style="display:none;"><%= image_tag "/images/ajax-loader.gif", :style => "display:inline;" %> Calculating Quote</div>
+        <div id="loading-quote" style="display:none;"><%= image_tag "/images/ajax-loader.gif", :style => "display:inline;" %> Calculating Quote</div>
       </span>
       <div style="clear:both;"></div>
     <% end %>
@@ -72,6 +79,20 @@
       Yes, Nu Era ships outside of North America. For a quote, contact us at <a href="mailto:questions@nuerafitness.com">questions@nuerafitness.com</a>.
     </span>
   </div>
+  <div class="rounded-box" id="coupon-container">
+  	<%= form_tag coupon_cart_path, :remote => true, :method => :post, :class => 'cart-coupon' do |f| %>
+  	<h2>Coupon</h2>
+  	<p>
+      <label><%= t(:coupon_code) %></label><br />
+      <%= text_field :order, :coupon_code, :size => 14 %>
+    </p>
+    	<span id="submit">
+			<%= submit_tag "Add Coupon", :class => 'button' %>
+			<div id="loading-coupon" style="display:none;"><%= image_tag "/images/ajax-loader.gif", :style => "display:inline;" %> Calculating Coupon</div>
+		</span>
+		<% end %>
+  </div>
+  <div class="clear"></div>
   
   <span id="empty">
     <%= button_to t("empty_cart"), empty_cart_path, :method => :put, :class => 'button continue red' %>
@@ -82,14 +103,16 @@
 <% end %>
   
 <style type="text/css">
-div#quick-quote-container { width:300px; color:#ddd; margin-bottom:10px; margin-top:10px; } 
+div#quick-quote-container { float:left; width:300px; color:#ddd; margin-bottom:10px; margin-top:10px; } 
+div#coupon-container { float:left; width:125px; color:#ddd; margin-left:10px; margin-bottom:10px; margin-top:10px; }
 form.cart-quick-quote { width: 300px; }
 span#country select { width: 300px; }
 span#state select { width: 300px; }
 span#zip input { width: 295px; }
 span#submit { height: 25px; margin-bottom: 5px; display:block; }
 span#submit input { float: right; }
-div#loading { text-align:right; }
+div#loading-coupon,
+div#loading-quote { text-align:right; }
 .cart-quick-quote select { font-size:13px; }
 .cart-quick-quote span {display:block; margin-bottom:4px; }
 .cart-quick-quote span#zip { font-size:14px; margin-bottom:6px; }

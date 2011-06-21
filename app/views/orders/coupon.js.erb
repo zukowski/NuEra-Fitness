@@ -1,0 +1,5 @@
+<% if @discount %>
+  $("#coupon-discount").html('<%= escape_javascript("Coupon: -$#{@discount*-1}"); %>')
+<% else %>
+  alert("<%= @message %>");
+<% end %>
