@@ -69,7 +69,7 @@
         <span id="zip-code-label">Zip Code</span>: <%= text_field :address, :zipcode %>
       </span>
       <span id="submit">
-        <%= submit_tag "Get Quote", :class => 'button' %>
+        <%= submit_tag "Get Quote", :class => 'button', :onclick => "_gaq.push(['_trackEvent', 'Cart', 'Get Quote', 'Clicked Get Quote button']);" %>
         <div id="loading-quote" style="display:none;"><%= image_tag "/images/ajax-loader.gif", :style => "display:inline;" %> Calculating Quote</div>
       </span>
       <div style="clear:both;"></div>
@@ -87,7 +87,7 @@
       <%= text_field :order, :coupon_code, :size => 14 %>
     </p>
     	<span id="submit">
-			<%= submit_tag "Add Coupon", :class => 'button' %>
+			<%= submit_tag "Add Coupon", :class => 'button', :onclick => "_gaq.push(['_trackEvent', 'Cart', 'Add Coupon', 'Clicked Add Coupon button']);" %>
 			<div id="loading-coupon" style="display:none;"><%= image_tag "/images/ajax-loader.gif", :style => "display:inline;" %> Calculating Coupon</div>
 		</span>
 		<% end %>
@@ -95,10 +95,10 @@
   <div class="clear"></div>
   
   <span id="empty">
-    <%= button_to t("empty_cart"), empty_cart_path, :method => :put, :class => 'button continue red' %>
+    <%= button_to t("empty_cart"), empty_cart_path, :method => :put, :class => 'button continue red', :onclick => "_gaq.push(['_trackEvent', 'Cart', 'Empty Cart', 'Clicked Empty Cart button']);" %>
   </span>
   <span id="continue">
-    <%= link_to t("continue_shopping"), products_path, :class => 'button continue green' %>
+    <%= link_to t("continue_shopping"), products_path, :class => 'button continue green', :onclick => "_gaq.push(['_trackEvent', 'Cart', 'Continue Shopping', 'Clicked Continue Shopping button']);" %>
   </span>
 <% end %>
   
