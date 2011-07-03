@@ -31,7 +31,7 @@
       <div id="subtotal">
       	<h3><%= "Item Total: $#{@order.item_total}" %></h3>
       	<% @discount = 0.00
-      		 @discount = @order.adjustments.where('source_type' => 'Promotion').first.amount # do |p|
+      		 @discount = @order.adjustments.where('source_type' => 'Promotion').first.try(:amount) || 0
       	%>
       	<h3 id="coupon-discount"><%= "Coupons: -$#{@discount*-1}" if @discount %></h3>
         <h3><%= "#{t("subtotal")}: " + number_to_currency(@order.item_total + @discount) %></h3>

@@ -47,3 +47,7 @@ table#cart-detail tr.line-item td,
 div.top-product-category {
 	background-color:#444;
 }
+div.rounded-box, li.rounded-box {
+    background-color: #222;
+    padding: 15px;
+}
