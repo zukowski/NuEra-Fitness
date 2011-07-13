@@ -7,6 +7,7 @@ gem 'spree_active_shipping'
 gem 'spree_mail'
 gem 'memcache-client'
 gem 'nokogiri'
+gem 'RedCloth', '4.2.7'
 
 group :development, :test do
   gem 'rspec-rails'
