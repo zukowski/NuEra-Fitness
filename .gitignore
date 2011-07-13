@@ -10,7 +10,6 @@ config/initializers/hoptoad.rb
 public/sitemap.xml
 public/ror.xml
 config/newrelic.yml
-public/502.html
 public/BingSiteAuth.xml
 public/googleaf3e1a137a637ca8.html
 public/maintenance.html.off

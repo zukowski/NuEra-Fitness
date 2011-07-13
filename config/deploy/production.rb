@@ -7,7 +7,7 @@ set :port, 2222
 set :scm, :git
 set :deploy_to, "/var/www/#{application}"
 set :app_server, '/etc/init.d/thin'
-set :rvm_ruby_string, '1.9.2@nuera'
+set :rvm_ruby_string, '1.8.7@nuera'
 set :rvm_type, :user
 
 role :web, 'nuerafitness.com'
@@ -16,7 +16,6 @@ role :db, 'nuerafitness.com'
 
 after 'deploy', 'deploy:cleanup'
 after 'deploy', 'deploy:symlink_db'
-after 'deploy', 'deploy:migrate'
 
 namespace :deploy do
   [:start, :stop, :restart].each do |action|
@@ -26,7 +25,7 @@ namespace :deploy do
   end
 
   task :migrate do
-    run 'cd #{release_path}; RAILS_ENV=production bundle exec rake db:migrate'
+    run "cd #{release_path}; RAILS_ENV=production bundle exec rake db:migrate --trace"
   end
 
   task :symlink_db, :except => { :no_release => true } do
