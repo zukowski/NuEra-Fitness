@@ -47,20 +47,6 @@ class SiteHooks < Spree::ThemeSupport::HookListener
     <%= variant_options variant %>
     )
   end
-
-  insert_after :taxon_products do
-    %(
-    <% pattern = /([A-Za-z\-]*)\\/$/ %>
-    <% m = pattern.match(@taxon.permalink) %>
-    <% path = Rails.root.to_s + "/app/views/taxons/descriptions/_" + m[1] + ".html.erb" %>
-    <% partial = "taxons/descriptions/" + m[1] %>
-    <% if File.exist?(path) %>
-      <div class="rounded-box taxon-description">
-        <%= render :partial => partial %>
-      </div>
-    <% end %>
-    )
-  end
   
   replace :subscriber_static_content do
     %(

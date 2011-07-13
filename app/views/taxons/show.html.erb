@@ -17,3 +17,7 @@
     <%= render :partial => "taxon", :collection => @taxon.children %>
   <% end %>
 <% end %>
+
+<div class="rounded-box taxon-description">
+<%= RedCloth.new(@taxon.description).to_html.html_safe %>
+</div>
