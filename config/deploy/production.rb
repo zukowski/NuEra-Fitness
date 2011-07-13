@@ -7,6 +7,8 @@ set :port, 2222
 set :scm, :git
 set :deploy_to, "/var/www/#{application}"
 set :app_server, '/etc/init.d/thin'
+set :rvm_ruby_string, '1.9.2@nuera'
+set :rvm_type, :user
 
 role :web, 'nuerafitness.com'
 role :app, 'nuerafitness.com'
