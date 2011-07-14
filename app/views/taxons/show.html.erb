@@ -19,5 +19,5 @@
 <% end %>
 
 <div class="rounded-box taxon-description">
-<%= RedCloth.new(@taxon.description).to_html.html_safe %>
+<%= RedCloth.new(@taxon.description).to_html.html_safe unless @taxon.description.nil? %>
 </div>
