@@ -20,7 +20,7 @@ role :db, 'nuerafitness.com'
 
 after 'deploy', 'deploy:cleanup'
 after 'deploy:symlink', 'deploy:symlink_configs'
-after "deploy:symlink', 'deploy:symlink_assets'
+after 'deploy:symlink', 'deploy:symlink_assets'
 
 namespace :deploy do
   [:start, :stop, :restart].each do |action|
