@@ -105,6 +105,15 @@ Order.class_eval do
 
   def create_shipment!
     create_or_update_shipments!
+    if shipments.any?(&:quote?)
+      update_attribute :shipment_state, 'pending'
+      shipments.each do |shipment|
+        if shipment.needs_quote?
+          shipment.adjustment.update_attribute_without_callbacks :amount, 0.01
+          shipment.update_attribute_without_callbacks :state, 'pending'
+        end
+      end
+    end
   end
 
   def create_or_update_shipments!

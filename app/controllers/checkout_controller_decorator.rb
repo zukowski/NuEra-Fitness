@@ -28,6 +28,7 @@ CheckoutController.class_eval do
   def load_order
     if params[:id] && params[:state] == 'payment'
       @order = Order.find_by_id(params[:id])
+      session[:order_id] = @order.id
     end
     @order = current_order unless @order && @order.user == current_user
     redirect_to cart_path and return unless @order and @order.checkout_allowed?

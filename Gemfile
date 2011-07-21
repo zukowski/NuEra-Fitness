@@ -9,14 +9,15 @@ gem 'memcache-client', '1.8.5'
 gem 'nokogiri', '1.4.4'
 gem 'RedCloth', '4.2.7'
 gem 'htmlentities', '4.3.0'
+gem 'mysql2', '0.2.7'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'faker'
   gem 'spork', '0.9.0.rc8'
-  gem 'annotate-models'
   gem 'capistrano'
   gem 'capistrano-ext'
+  gem 'ruby-debug'
 end
 
 group :test do
@@ -32,7 +33,6 @@ end
 
 
 group :production do
-  gem 'mysql2', '0.2.7'
   gem 'hoptoad_notifier'
   gem 'newrelic_rpm'
 end
