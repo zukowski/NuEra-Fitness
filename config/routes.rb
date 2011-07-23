@@ -12,5 +12,11 @@ NuEraFitness::Application.routes.draw do
         delete :remove_variant, :on => :member
       end
     end
+
+    resources :orders do
+      member do
+        get :send_quote
+      end
+    end
   end
 end

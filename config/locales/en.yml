@@ -22,6 +22,7 @@ en:
     quote: "quote"
   shipment_states:
     quote: "quote"
+  send_quote: Send Quote
   packages: "Packages"
   new_package: "New Package"
   edit_package: "Edit Package"

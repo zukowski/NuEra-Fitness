@@ -29,6 +29,7 @@ Shipment.class_eval do
 
   def needs_quote?
     # We need a quote if there are line items that total over 150 lbs
+    return false unless adjustment.nil? or adjustment.amount == 0.0
     order.weight_of_line_items_for_supplier(supplier) > 150
   end
 
