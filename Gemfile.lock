@@ -43,7 +43,6 @@ GEM
       activesupport (= 3.0.4)
     activesupport (3.0.4)
     acts_as_list (0.1.2)
-    annotate-models (1.0.4)
     arel (2.0.9)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
@@ -250,7 +249,6 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (= 4.2.7)
-  annotate-models
   autotest
   capistrano
   capistrano-ext

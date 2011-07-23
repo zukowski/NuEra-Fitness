@@ -14,7 +14,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'faker'
   gem 'spork', '0.9.0.rc8'
-  gem 'annotate-models'
   gem 'capistrano'
   gem 'capistrano-ext'
 end
