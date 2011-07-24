@@ -18,40 +18,15 @@
 
 <div class="clear"></div><br />
 
+<div style="float:left;">
+  <%= hook :taxon_sidebar_navigation do %>
+  <%= render :partial => "shared/taxonomies" %>
+  <% end %>
 
-<div style="float:left;width:172px;margin-left:15px;">
-<div class="rounded-box" style="width: 140px;">
-<div id="taxonomies" class="sidebar-item">
-
-  <ul class="navigation-list">
-    <li><a href="/t/category/" class="root">Shop by Category</a></li>
-      <li><a href="/t/category/apparel/">Apparel</a></li>
-      <li><a href="/t/category/bars-and-racks/">Bars &amp; Racks</a></li>
-      <li><a href="/t/category/bumper-plates/">Bumper Plates</a></li>
-      <li><a href="/t/category/crossfit-packages/">CrossFit Packages</a></li>
-
-      <li><a href="/t/category/kettlebells/">Kettlebells</a></li>
-      <li class="&quot;current&quot;"><a href="/t/category/medicine-balls/">Medicine Balls</a></li>
-      <li><a href="/t/category/miscellaneous/">Miscellaneous</a></li>
-      <li><a href="/t/category/modular-units">Modular Units</a></li>
-      <li><a href="/t/category/nutrition/">Nutrition</a></li>
-      <li><a href="/t/category/plyo-boxes/">Plyo Boxes</a></li>
-      <li><a href="/t/category/recovery/">Recovery</a></li>
-
-      <li><a href="/t/category/ropes-and-rings/">Ropes &amp; Rings</a></li>
-      <li><a href="/t/category/row-machines/">Row Machines</a></li>
-      <li><a href="/t/category/slammer-balls/">Slammer Balls</a></li>
-      <li><a href="/t/category/sleds-and-sandbags/">Sleds &amp; Sandbags</a></li>
-      <li><a href="/t/category/strength-bands/">Strength Bands</a></li>
-
-  </ul>
-</div>
-</div>
-
-<div class="rounded-box" style="margin-top:14px;width: 140px;">
-<h2 style="color:#ddd;font-size:1.7em;">The Latest</h2>
-<div class="twitter"></div>
-</div>
+  <div class="rounded-box" style="margin-top:14px;width: 140px;">
+    <h2 style="color:#ddd;font-size:1.7em;">The Latest</h2>
+    <div class="twitter"></div>
+  </div>
 </div>
 
 <div class="grid" style="float:left;width:720px;margin-left:20px;">
