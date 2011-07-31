@@ -19,6 +19,7 @@ role :app, 'nuerafitness.com'
 role :db, 'nuerafitness.com'
 
 after 'deploy', 'deploy:cleanup'
+after 'deploy', 'deploy:migrate'
 after 'deploy:symlink', 'deploy:symlink_configs'
 after 'deploy:symlink', 'deploy:symlink_assets'
 
