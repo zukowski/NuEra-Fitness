@@ -1,0 +1,38 @@
+<%= hook :admin_inside_taxon_form do %>
+  <%= f.field_container :name do %>
+    <%= f.label :name, t("name") %> <span class="required">*</span><br />
+    <%= error_message_on :taxon, :name, :class => 'fullwidth title'  %>
+    <%= text_field :taxon, :name  %>
+  <% end %>
+
+  <%= f.field_container :permalink_part do %>
+    <%= f.label :permalink_part, t("permalink") %><span class="required">*</span><br />
+    <%= @taxon.permalink.split("/")[0...-1].join("/") + "/" %><%= text_field_tag :permalink_part, @permalink_part  %>
+  <% end %>
+
+  <%= f.field_container :icon do %>
+    <%= f.label :icon, t('icon') %><br />
+    <%= f.file_field :icon %>
+  <% end %>
+
+  <%= f.field_container :description do %>
+    <%= f.label :description, t(:description) %><br />
+    <%= f.text_area :description %>
+  <% end %>
+
+  <h3>Metadata</h3>
+  <%= f.field_container :page_title do %>
+    <%= f.label :page_title, t(:page_title) %><br />
+    <%= f.text_field :page_title %>
+  <% end %>
+
+  <%= f.field_container :meta_keywords do %>
+    <%= f.label :meta_keywords, t(:meta_keywords) %><br />
+    <%= f.text_area :meta_keywords %>
+  <% end %>
+
+  <%= f.field_container :meta_description do %>
+    <%= f.label :meta_description, t(:meta_description) %><br />
+    <%= f.text_area :meta_description %>
+  <% end %>
+<% end %>
