@@ -1,5 +1,6 @@
 <script type="text/javascript">
-	jQuery(document).ready(function() {
+	jQuery(document).ready(function() {i
+    jQuery("#cart-widget").show();
 		jQuery("#cart-widget-minimized").hide();
 	});
 	
@@ -13,8 +14,8 @@
 		jQuery("#cart-widget").show();
 	}
 </script>
-<div id="cart-widget">
-	<div style="position:absolute;right:4px;top:-18px;font-size:10px;"><a href="javascript:hide_cart_widget();_gaq.push(['_trackEvent', 'Cart Widget', 'Hide/Show', 'Toggled Hide/Show button']);">Hide</a></div>
+<div style="display:none;" id="cart-widget">
+	<div style="position:absolute;right:4px;top:-18px;font-size:10px;"><span style="color:#00ff00;text-decoration:underline;cursor:pointer;" onclick="hide_cart_widget();_gaq.push(['_trackEvent', 'Cart Widget', 'Hide/Show', 'Toggled Hide/Show button']);">Hide</span></div>
 	<h4 class="cart-widget"><%= link_to_cart "Shopping Cart" %></h4>
 	<% current_order.line_items.each do |line_item| %>
 		<%= image_tag line_item.variant.product.images.first.attachment(:mini), :width => '30', :style => 'padding:3px;float:left;' %>
@@ -24,5 +25,5 @@
 	<%= link_to image_tag('/images/checkout.png') + t("checkout"), checkout_path, :class => 'button small checkout' %>
 </div>
 <div id="cart-widget-minimized">
-	<h4 class="cart-widget" onclick="show_cart_widget();"><%= image_tag '/images/checkout.png', :style => 'float:left;' %> <a>Cart</a></h4>
+	<h4 class="cart-widget" onclick="show_cart_widget();"><%= image_tag '/images/checkout.png', :style => 'float:left;' %> <span style="color:#00ff00;text-decoration:underline;cursor:pointer;">Cart</span></h4>
 </div>
